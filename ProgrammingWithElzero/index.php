@@ -2958,8 +2958,51 @@ echo '<hr>';
 // ----- Lesson 94 (Datetime Functions - Part 3 - Date Format Part 2) ----
 echo "<h3><u>Lesson 94</u></h3>";
 /*
-same as last lesson
+    Date And Time Functions
+
+        date_format()
+
+    [Year]
+        Y => Four Digits
+        y => Two Digits
+
+    [Month]
+        m => 01-12
+        M => Text Month => 3 Letters
+        F => Full Text
+        t => Number Of Days In This Month
+
+    [Day]
+        d => Day Of The Month 1-31
+        j => Day Without Leading Zero
+        D => Text Day => 3 Letters
+        l => Full Text
+        z => Day Of The Year 0-365
+        S => Suffix For Day Of The Month (st, nd, rd, nth) 
+
+    [Time]
+        a => small am/pm
+        A => Capital am/pm
+
+    [Hour]
+        g => 1-12
+        G => 0-23
+        h => 01-12
+        H => 00-23
+    
+    [Minutes, Seconds, Micro]
+        i => 00-59
+        s => 00-59
+        u => Microseconds
 */
+
+$d = date_create("2022-10-1 15:10:10");
+echo date_format($d, "Y-m-d , ga") . '<br>';
+echo date_format($d, "Y-m-d , hA") . '<br>';
+echo date_format($d, "Y-m-d , G") . '<br>';
+echo date_format($d, "Y-m-d , H") . '<br>';
+echo '############## <br>';
+
 $d = date_create("2022-10-1");
 echo date_format($d, "Y-m-d , ga") . '<br>';
 echo date_format($d, "Y-m-d , hA") . '<br>';
