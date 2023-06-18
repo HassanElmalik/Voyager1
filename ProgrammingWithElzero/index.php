@@ -3085,11 +3085,7 @@ echo $t["year"] . "<br>";
 
 echo "<pre>";
 print_r(date_parse("1987-9-1 14:25:30"));
-echo "</pre>";
-echo "<pre>";
 print_r(date_parse("1987-9-1 45:25:30"));
-echo "</pre>";
-echo "<pre>";
 print_r(date_parse("1987-9-50 45:25:30 UTCC"));
 echo "</pre>";
 echo '<hr>';
