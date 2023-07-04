@@ -3114,3 +3114,4 @@ echo 'You Are A Member For ' . $diff->days . " Days<br>";
 echo date("Y-m-d H:i:s", strtotime("next thursday")) . "<br>";
 echo date("Y-m-d H:i:s", strtotime("+1 year")) . "<br>";
 echo date("Y-m-d D H:i:s", strtotime("tomorrow", strtotime("1987-9-1"))) . "<br>";
+echo date("Y-m-d D H:i:s", strtotime("now", strtotime("1987-9-1"))) . "<br>";

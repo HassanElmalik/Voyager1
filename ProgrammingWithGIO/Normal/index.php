@@ -1579,7 +1579,8 @@ echo $y;
 echo '<hr>';
 
 //---------------------------------------------------------------
-// Date & Time
+// 26-How_To_Work_With_Dates_Time_Zones_-_Full_PHP_8_Tutorial
+echo "<u><h3>Lesson 26</u></h3>";
 
 echo time() . '<br>';
 $currenttime = time();
@@ -1591,15 +1592,20 @@ echo date('d/m/Y g:ia') . '<br>';
 echo date('d/m/Y g:ia', $currenttime + 5 * 24 * 60 * 60) . '<br>';
 echo date('d/m/Y g:ia', $currenttime - 24 * 60 * 60) . '<br>';
 echo date_default_timezone_get() . '<br>';
+echo '############ <br>';
 
 date_default_timezone_set('America/Mexico_City');
 echo date('d/m/Y g:ia') . '<br>';
 echo date('d/m/Y g:ia', $currenttime + 5 * 24 * 60 * 60) . '<br>';
 echo date('d/m/Y g:ia', $currenttime - 24 * 60 * 60) . '<br>';
 echo date_default_timezone_get() . '<br>';
+echo '############ <br>';
 
-echo date_default_timezone_set('Africa/Cairo') . '<br>';
+date_default_timezone_set('Africa/Cairo') . '<br>';
+echo mktime(0,0,0,3,23, null) . '<br>';
 echo date('d/m/Y D', mktime(0,0,0,3,23, null)) . '<br>';
+echo strtotime("19-06-2023 1:00:00") . '<br>';
+echo date('d/m/Y D', strtotime("19-06-2023 1:00:00")) . '<br>';
 echo date('d/m/Y D', strtotime('tomorrow')) . '<br>';
 echo date('d/m/Y D', strtotime('last day of march ')) . '<br>';
 echo date('d/m/Y D', strtotime('second friday of march ')) . '<br>';
@@ -1612,9 +1618,11 @@ echo '</pre>';
 echo '<pre>';
 print_r(date_parse_from_format('d/m/y',$date));
 echo '</pre>';
+echo '<hr>';
 
 //------------------------------------------------------------
-// array functions
+// 27-How_To_Work_With_Arrays_In_PHP_-_Full_PHP_8_Tutorial
+echo "<u><h3>Lesson 27</u></h3>";
 
 function printarray(array $value){
     echo '<pre>';
@@ -1622,21 +1630,24 @@ function printarray(array $value){
     echo '</pre>';
 }
 // array_chunk(array $array, int $length, biil $preservekeys = false): array
+echo 'array_chunck';
 $items = ['a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5];
 printarray(array_chunk($items, 2));
 printarray(array_chunk($items, 2, true));
 
 // array combine(array $keys, array $values): array
+echo 'array_combine';
 $array1 = ['a', 'b', 'c'];
 $array2 = [5, 10, 15];
 printarray(array_combine($array1, $array2)); // if size didn't match it will throw an error
 
 // array_filter(array $array, callable|null $callback = null, int $mode = 0): array
+echo 'array_filter';
 $array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 $even = array_filter($array, fn($number) => $number % 2 === 0);
 printarray($even);
-$even = array_values($even);
-printarray($even);
+$even1 = array_values($even);
+printarray($even1);
 $even = array_filter($array, fn($number) => $number % 2 === 0, ARRAY_FILTER_USE_KEY);
 printarray($even);
 $even = array_filter($array, fn($number) => $number % 2 === 0, ARRAY_FILTER_USE_BOTH);
@@ -1646,6 +1657,7 @@ $even = array_filter($array);
 printarray($even);
 
 // array_keys
+echo 'array_keys';
 $array = ['a' => 5, 'b' => 10, 'c' => 15, 'd' => 5, 'e' => 10];
 $keys = array_keys($array);
 printarray($keys);
@@ -1659,6 +1671,7 @@ $keys = array_keys($array, '15', true);
 printarray($keys);
 
 //array_map(calllable|null $callback, array $array, array ...$arrays): array
+echo 'array_map';
 $array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 $array = array_map(fn($number) => $number * 3, $array);
 printarray($array);
@@ -1677,13 +1690,15 @@ $array = array_map(null, $array1, $array2);
 printarray($array);
 
 //array_merge(array ...$arrays): array
+echo 'array_merge';
 $array1 = ['a' => 1,'b' => 2,'c' => 3];
 $array2 = [6 => 4, 7 => 5, 8 => 6];
-$array3 = [7, 8, 9, 'b' => 10];
+$array3 = [7, 8, 'd' => 9, 'b' => 10];
 $merged = array_merge($array1, $array2, $array3);
 printarray($merged);
 
 //array_reduce(array $array, callable $callback, mixed $initialvalue = null): mixed
+echo 'array_reduce <br>';
 $invoiceItems = [
     ['price' => 9.99,  'qty' => 3, 'desc' => 'Item 1'],
     ['price' => 29.99, 'qty' => 1, 'desc' => 'Item 2'],
@@ -1697,6 +1712,7 @@ $total = array_reduce($invoiceItems, fn($sum, $item) => $sum + $item['qty'] * $i
 echo $total . '<br>';
 
 //array_search(mixed $needle, array $haystack, bool $strict = false): int|string|false
+echo 'array_search <br>';
 $array = ['a', 'b', 'c', 'D', 'E', 'ab', 'cd', 'b', 'd'];
 $key = array_search('b', $array);
 echo $key . '<br>';
@@ -1721,13 +1737,16 @@ if($key === false){
 }
 
 // in_array
+echo 'in_array <br>';
 if(!in_array('a', $array)){
     echo 'Letter not Found';
 }else {
     echo 'Letter is found and it is ' . $array[$key];
 }
+echo '<br>';
 
 //array_diff() , array_diff_assoc()
+echo 'array_diff , array_diff_assoc';
 $array1 = ['a' => 1,'b' => 2,'c' => 3, 'd' => 4, 'e' => 5];
 $array2 = ['d' => 4,'g' => 5,'i' => 6, 'j' => 7, 'k' => 8];
 $array3 = ['l' => 3,'m' => 9,'n' => 10];
@@ -1737,6 +1756,7 @@ printarray(array_diff_assoc($array1, $array2, $array3));
 printarray(array_diff_key($array1, $array2, $array3));
 
 //asort
+echo 'asort';
 $array = ['d' => 3, 'b' => 1, 'c' => 4, 'a' => 2 , 2 => 'f'];
 printarray($array);
 asort($array);
@@ -1761,8 +1781,11 @@ echo $a .',' . $b . ',' . $c . ',' . $d . ',<br>' ;
 $array = [1, 2, 3];
 [1 => $a, 2 => $b,0 => $c] = $array;
 echo $a .',' . $b . ',' . $c . ',<br>' ;
+echo '<hr>';
 
-// php.ini & configuration
+// 28-How_To_Work_With_PHPs_Configuration_File_-_PHP.INI_-_Full_PHP_8_Tutorial
+echo "<u><h3>Lesson 28</u></h3>";
+
 // error_reporting, error_log, display_errors
 var_dump(ini_get('error_reporting'));
 var_dump(E_ALL);
@@ -1785,9 +1808,12 @@ $string = 'X';
 //     $string .= $string;
 // }
 // echo $string;
+echo '<hr>';
 
 
-// Error Hnadling
+// 29-PHP_Error_Handling_Error_Handlers_-_Full_PHP_8_Tutorial
+echo "<u><h3>Lesson 29</u></h3>";
+
 error_reporting(0); // this will not display any errors at all
 error_reporting(E_ALL & ~E_WARNING); // this will report all errors but not warrnings
 error_reporting(E_ALL); // this will report all errors and warrnings
@@ -1796,7 +1822,11 @@ error_reporting(E_ALL); // this will report all errors and warrnings
 // echo 1;
 // trigger_error('Example error', E_USER_WARNING); // this will throw a warning and will not stop the script
 // echo 1;
-// trigger_error('Example error', E_WARNING); // this will throw a fatal error because we used E_WARNING intead of E_USER_WARNING
+/* E_USER_ERROR & E_USER_WARNING are like E_ERROR & E_WARNING constants but
+the difference is that the one with the user are generated manually by
+using error trigger function
+*/
+// trigger_error('Example error', E_WARNING); // this will throw a fatal error because we used E_WARNING instead of E_USER_WARNING
 // echo 1;
 
 function errorHandler(
@@ -1825,8 +1855,8 @@ echo 'Hello <br>';
 // echo 'Hello';
 
 
-// APACHE CONFIGURATION (Basic_Apache_Webserver_Configuration_Virtual_Hosts7)
-
+// 30-Basic_Apache_Webserver_Configuration_Virtual_Hosts_-_Full_PHP_8_Tutorial
+echo "<u><h3>Lesson 30</u></h3>";
 
 // Working with filesystem
 $dir = scandir(__DIR__);
