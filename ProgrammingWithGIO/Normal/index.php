@@ -1858,7 +1858,9 @@ echo 'Hello <br>';
 // 30-Basic_Apache_Webserver_Configuration_Virtual_Hosts_-_Full_PHP_8_Tutorial
 echo "<u><h3>Lesson 30</u></h3>";
 
-// Working with filesystem
+// 31-Working_With_File_System_In_PHP_-_Full_PHP_8_Tutorial
+echo "<u><h3>Lesson 31</u></h3>";
+
 $dir = scandir(__DIR__);
 var_dump($dir);
 var_dump($dir[3]);
@@ -1883,17 +1885,36 @@ if(file_exists('foo.txt')){
 }
 echo '<br>';
 
+/* something to be aware of here is that php will cashe the return values
+of some of the file related functions for better performance and i am going to
+post the link in the description for the full list but the function filesize
+is one of them
+*/
+
 if(! file_exists('foo.txt')){
     echo 'file not found';
-    return;
 }
 $file = fopen('foo.txt', 'r');
 var_dump($file);
+
+/* the result of fopen is whats called a resource and a resource is a data 
+type that we haven't covered yet , the resource is just avariable that 
+refers to an external resource , it is a refrence to that external resource 
+which can be stream , file , .. etc ,there are functions in php that create,  
+return and work with resources and fopen is one of them.
+in addation to openining local files , you could also open remote files by
+specifing URL , but that might not always work because opening files remotely
+might be disabled by the server.
+*/
 
 while(($line = fgets($file)) !== false){
     echo $line . '<br>';
 }
 fclose($file);
+/* note the use of a strict comparison here because the return value from 
+fgets might be a value that could evaluate to a false , so doing a loose
+comparison could result to an unexpected bugs
+*/
 
 $file2 = fopen('foo2.txt', 'r');
 while(($line = fgetcsv($file2)) !== false){
@@ -1910,8 +1931,17 @@ file_put_contents('bar.txt', 'Hello');
 file_put_contents('bar.txt', 'world', FILE_APPEND);
 unlink('bar.txt');
 copy('foo.txt', 'bar.txt');
-rename('foo.txt', 'bar.txt');
+//rename('foo.txt', 'bar.txt');
 
+/* it will not be a nessesarly to use file_get_contents to get the content
+of a remote file , there is a better way to get the content of a file from 
+a remote server and make http request by using a library called curl and 
+we will cover curl in a seprate video.
+*/
+echo '<hr>';
+
+// 32-Mini_Exercise_Project_Overview_-_Full_PHP_8_Tutorial
+echo "<u><h3>Lesson 32</u></h3>";
 
 //Building small part of application with procedural php
 
