@@ -1943,6 +1943,6 @@ echo '<hr>';
 // 32-Mini_Exercise_Project_Overview_-_Full_PHP_8_Tutorial
 echo "<u><h3>Lesson 32</u></h3>";
 
-//Building small part of application with procedural php
+// 33-Building small part of application with procedural php
 
 

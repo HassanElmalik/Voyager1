@@ -1,10 +1,10 @@
 <?php
 
 
-// PHP-OOP-tutorial-section 2 - introduction to OOP
+// 34-PHP_OOP_Tutorial_Section_2_-_Intro_to_Object_Oriented_Programming_-_Full_PHP_8_Tutorial
 
 
-// PHP_DOCKER_TUTORIAL_Nginx_PHPFPM_vs_Apache
+// 35-PHP_Docker_Tutorial_-_Nginx_-_PHPFPM_VS_Apache_-_Full_PHP_8_Tutorial
 
 
 // CLasses_Objects_Typed_Properties_Constructors_Destructors
