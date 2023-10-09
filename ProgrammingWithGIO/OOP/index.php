@@ -7,7 +7,7 @@
 // 35-PHP_Docker_Tutorial_-_Nginx_-_PHPFPM_VS_Apache_-_Full_PHP_8_Tutorial
 
 
-// CLasses_Objects_Typed_Properties_Constructors_Destructors
+// 36-PHP_Classes_Objects_-_Typed_Properties_-_Constructors_Destructors_-_Full_PHP_8_Tutorial
 require_once 'Transaction.php';
 $transaction1 = new Transaction(20, 'Transaction');
 var_dump($transaction1);
@@ -59,7 +59,7 @@ var_dump(((object) false)->scalar);
 var_dump((object) null);
 
 
-// Constructor_Property_Promotion_-_Nullsafe_Operator
+// 37-Constructor_Property_Promotion_-_Nullsafe_Operator_-_Full_PHP_8_Tutorial
 $class = new Transaction2(10,'Hi', 5,);
 var_dump($class);
 
@@ -81,7 +81,7 @@ echo $profileId;
 echo '<hr>';
 
 
-// NameSpaces
+// 38-PHP_Namespace_Tutorial_-_Full_PHP_8_Tutorial
 $direc = 'C:\xampp\htdocs\elmalik\ProgrammingWithGIO\OOP\app';
 require_once $direc . '\Stripe\Transaction.php';
 require_once $direc . '\Paddle\Transaction.php';
@@ -110,7 +110,7 @@ var_dump(new App\OOP\Stripe\TransactionStripe());
 echo '<hr>';
 
 
-//PHP_Coding_Standards_Autoloading_PSR-4_Composer_
+// 39-PHP_Coding_Standards_Autoloading_PSR-4_Composer_-_Full_PHP_8_Tutorial
 
 // spl_autoload_register(function($class){
 //     $path = __DIR__ . '\\' . lcfirst(str_replace('\\OOP\\Paddle\\TransactionStripe', '\\Paddle\\Transaction',$class)) . '.php';
@@ -126,7 +126,7 @@ echo '<hr>';
 // var_dump($paddleTransaction);
 
 
-// Class_Constants
+// 40-Object_Oriented_PHP_-_Class_Constants_-_Full_PHP_8_Tutorial
 require_once $direc . '\Enums\Status.php';
 
 echo Status::STATUS_PAID;
@@ -140,7 +140,7 @@ var_dump($transaction);
 echo '<hr>';
 
 
-// Static_Properties_Methods
+// 41-Static_Properties_Methods_In_Object_Oriented_PHP_-_Full_PHP_8_Tutorial
 var_dump($transaction::$count);
 var_dump(Transaction::$count);
 var_dump(Transaction::$count2);
@@ -164,7 +164,7 @@ $db = DB::getInstance([]);
 echo '<hr>';
 
 
-// Encapsulation_Abstraction 
+// 42-PHP_-_Encapsulation_Abstraction_-_Full_PHP_8_Tutorial 
 $transaction5 = new Transaction(25,'ok');
 $transaction5->process();
 echo '<br>';
