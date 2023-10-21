@@ -183,7 +183,7 @@ $transaction5->copyFrom(new Transaction(500,'yes'));
 echo '<hr>';
 
 
-// Inheritance_Explained_-_Is_Inheritance_Good
+// 43-PHP_-_Inheritance_Explained_-_Is_Inheritance_Good_-_Full_PHP_8_Tutorial
 require_once $direc . '\Toaster\Toaster.php';
 require_once $direc . '\Toaster\ToasterPro.php';
 
