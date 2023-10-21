@@ -1,0 +1,20 @@
+p {
+    color: black;
+    font-size: 40px;
+}
+
+body {
+    background-color: blue;
+    background-color: rgb(50 50 50 / 90%);
+    background-image: url(../../../MyWebSite/images/background1.jpg);
+    background-repeat: no-repeat;
+    /* background-repeat: repeat-x; */
+    background-position: bottom left;
+    background-position: center ;
+    background-position: 30px 50px ;
+    background-position: 60%px 50px ;
+    background-size: cover;
+    background-size: contain;
+    background-size: 50% 50%;
+
+}
