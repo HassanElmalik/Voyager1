@@ -64,6 +64,7 @@ section{
    /* background-color: black; */
    font-size: 1.4em;
    font-weight: 500;
+   text-shadow: 0.4px 0.4px 0.4px red;
 }
 
 .main h2 span{
@@ -71,15 +72,17 @@ section{
    color:rgb(52, 38, 252);
    font-size: 3em;
    font-weight: 600;
+   text-shadow: 1px 1px 1px red;
 }
 
 .main h3{
-   color: rgb(52, 38, 252);
+    color: rgb(52, 38, 252);
    font-size: 2em;
    font-weight: 700;
    letter-spacing: 1px;
    margin-top: 10px;
    margin-bottom: 30px;
+   text-shadow: 0.7px 0.7px 0.7px red;
 }
 
 .main-btn{
