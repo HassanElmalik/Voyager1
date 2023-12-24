@@ -64,10 +64,7 @@ section{
    /* background-color: black; */
    font-size: 1.4em;
    font-weight: 500;
-<<<<<<< HEAD
-=======
    text-shadow: 0.4px 0.4px 0.4px red;
->>>>>>> 633b9fc1aa4215acc8c57072a842b1ae9b928785
 }
 
 .main h2 span{
@@ -95,7 +92,6 @@ section{
 <<<<<<< HEAD
 =======
    text-shadow: 0.7px 0.7px 0.7px red;
->>>>>>> 633b9fc1aa4215acc8c57072a842b1ae9b928785
 }
 
 .main-btn{
@@ -138,16 +134,9 @@ section{
   flex-wrap: wrap;
 }
 
-<<<<<<< HEAD
-/* .cards {
-    background-image: url(images/background2.jpg);
-    background-size: cover;
-} */
-=======
 .cards {
     background-color: rgb(255, 255, 255);
 }
->>>>>>> 633b9fc1aa4215acc8c57072a842b1ae9b928785
 
 .card {
     background-color: #fff;
@@ -196,11 +185,8 @@ section{
   background-color: #fff;
   border: 1px solid #fff;
   min-height: 14em;
-<<<<<<< HEAD
   width: 20em;
-=======
   width: 23em;
->>>>>>> 633b9fc1aa4215acc8c57072a842b1ae9b928785
   overflow: hidden;
   border-radius: 10px;
   margin: 20px;
@@ -215,11 +201,7 @@ section{
     opacity: 0.9;
 }
 
-<<<<<<< HEAD
 .project-image {
-=======
-.project-image img {
->>>>>>> 633b9fc1aa4215acc8c57072a842b1ae9b928785
     width: 100%;
 }
 
