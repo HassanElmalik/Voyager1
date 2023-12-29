@@ -293,9 +293,327 @@
  <u><h3>Lesson 18 , (Entities)</h3></u>
 
 <div>
-  This Is My &lt;p&gt; Div &copy; &radic; 
+  This Is My &lt;p&gt; Div &copy; &radic;
+</div>
+<hr>
+
+<!-- _________________________________________________________________________-->
+<u><h3>Lesson 19 , (Semantic Elements)</h3></u>
+
+<header>Head Of Website</header>
+<nav>Link - Link - link</nav>
+<section>
+  <section></section>
+  <aside></aside>
+</section>
+<footer>Footer</footer>
+<hr>
+
+<!-- _________________________________________________________________________-->
+<u><h3>Lesson 20 , (Layout With Div And Classes)</h3></u>
+
+<div class="header">
+  <h2>Logo</h2>
+  <ul>
+    <li>Home</li>
+    <li>About</li>
+    <li>Services</li>
+    <li>Contact Us</li>
+  </ul>
 </div>
 
+  <ul class="navigation">
+    <li>Link</li>
+    <li>Link</li>
+    <li>Link</li>
+    <li>Link</li>
+    <li>Link</li>
+    <li>Link</li>
+  </ul>
+
+<div class="content">
+  Content
+  <img src="0x0.webp"  width=300>
+</div>
+<div class="sidebar">
+  Sidebar
+</div>
+
+<div class="footer">
+  Footer
+</div>
+<hr>
+
+<!-- ________________________________________________________________________ -->
+<u><h3>Lesson 21 , (Layout With Semantic Elements)</h3></u>
+
+<header>
+  <h2>Logo</h2>
+  <ul>
+    <li>Home</li>
+    <li>About</li>
+    <li>Services</li>
+    <li>Contact Us</li>
+  </ul>
+</header>
+
+  <nav>
+    <li>Link</li>
+    <li>Link</li>
+    <li>Link</li>
+    <li>Link</li>
+    <li>Link</li>
+    <li>Link</li>
+  </nav>
+
+<section>
+  Content
+  <figure>
+    <img src="0x0.webp"  width=300>
+    <figcaption>Caption Of The Image</figcaption>
+  </figure>
+</section>
+
+<article>
+
+</article>
+
+<aside>
+  Sidebar
+</aside>
+
+<footer>
+  Footer
+</footer>
+<hr>
+
+<!-- ________________________________________________________________________ -->
+<u><h3>Lesson 22 , (Audio)</h3></u>
+
+<audio src="002.mp3" controls loop>
+  <source src="002.mp3" type="audio/mpeg">
+  <source src="002.oog" type="audio/oog">
+  <source src="002.wav" type="audio/wav">
+Your Browser Does Not Support Audio Tags
+</audio>
+<hr>
+
+<!-- ________________________________________________________________________ -->
+<u><h3>Lesson 23 , (Video)</h3></u>
+
+<video controls width="600" height="400" poster="0x0.webp">
+  <source src="" type="video/mp4">
+  <source src="https://" type="video/">
+  Your Browser Does Not Support Video Tag
+  <track kind="subtitles" src="sampleSubtitles_en.srt" srclang="en" label="English">
+  <track kind="subtitles" src="sampleSubtitles_en.srt" srclang="it" label="Italian">
+</video>
+<hr>
+
+<!-- ________________________________________________________________________ -->
+<u><h3>Lesson 24 , (Form Part1 Input Type And Label)</h3></u>
+<u><h3>Lesson 25 , (Form Part2 Required, Placeholder, Value)</h3></u>
+<u><h3>Lesson 26 , (Form Part3 Action, Name, Method)</h3></u>
+<u><h3>Lesson 27 , (Form Part4 Hidden, Reset, Color, Range, Num)</h3></u>
+<u><h3>Lesson 28 , (Form Part5 Readonly, Disabled, Autofocus, minlength, maxlength)</h3></u>
+<u><h3>Lesson 29 , (Form Part6 Radio And Checkbox)</h3></u>
+<u><h3>Lesson 30 , (Form Part7 Select And Textarea)</h3></u>
+<u><h3>Lesson 31 , (Form Part8 File, Search, Url, Time)</h3></u>
+<u><h3>Lesson 31 , (Form Part9 DataList, NoValidate, Target)</h3></u>
+
+<form action="" method="get" novalidate target="_blank">
+  <input type="hidden" name="" value="Hassan">
+  <div>
+    <label>Username</label>
+    <input type="text" required placeholder="Username" value="Hassan" readonly name="user">
+  </div>
+  <br>
+
+  <div>
+    <label>Subject</label>
+    <input type="text" name="subject" autofocus>
+  </div>
+  <br>
+
+  <div>
+    <label>Password</label>
+    <input type="password" required placeholder="Write A Complex Password" minlength="5" maxlength="15" name="pass">
+  </div>
+  <br>
+
+  <div>
+    <label>Email</label>
+    <input type="email" placeholder="Write A Valid Email" value="h@ss.an" name="mail" disabled>
+  </div>
+  <br>
+
+  <div>
+    <label>Color</label>
+    <input type="color" name="Color">
+  </div>
+  <br>
+
+  <div>
+    <label>Range</label>
+    <input type="range" name="Range" min="0" max="100" step="20" value="55">
+  </div>
+  <br>
+
+  <div>
+    <label for="num">Number</label>
+    <input id="num" type="number" name="Range" min="10" max="1000" step="20" value="55">
+  </div>
+  <br>
+
+  <div>
+    <input id="win" type="radio" name="os" value="Windows" checked>
+    <label for="win">Windows</label>
+  </div>
+
+  <div>
+    <input id="lin" type="radio" name="os" value="Linux">
+    <label for="lin">Linux</label>
+  </div>
+
+  <div>
+    <input id="mac" type="radio" name="os" value="Mac">
+    <label for="mac">Mac</label>
+  </div>
+  <br>
+
+  <div>
+    <input id="win1" type="checkbox" name="os" value="Windows" checked>
+    <label for="win1">Windows</label>
+  </div>
+
+  <div>
+    <input id="lin1" type="checkbox" name="os" value="Linux">
+    <label for="lin1">Linux</label>
+  </div>
+
+  <div>
+    <input id="mac1" type="checkbox" name="os" value="Mac">
+    <label for="mac1">Mac</label>
+  </div>
+  <br>
+
+  <div>
+  <label for="book">Choose Book:</label>
+  <select id="book" name="book" multiple>
+    <optgroup label="Romantic Books">
+      <option value="1">Book 1</option>
+      <option value="2">Book 2</option>
+      <option value="3">Book 3</option>
+    </optgroup>
+    <optgroup label="Police Books">
+      <option value="4" selected>Book 4</option>
+      <option value="5">Book 5</option>
+      <option value="6">Book 6</option>
+    </optgroup>
+  </select>
+  </div>
+  <br>
+
+  <textarea name="subject" rows="10" cols="20" placeholder="Test Text"></textarea>
+  <br>
+
+  <div>
+    <label for="">Upload</label>
+    <input type="file" name="" value="">
+  </div>
+  <br>
+
+  <div>
+    <label for="">Search</label>
+    <input type="search" name="" value="">
+  </div>
+  <br>
+
+  <div>
+    <label for="">Url</label>
+    <input type="url" name="" value="">
+  </div>
+  <br>
+
+  <div>
+    <label for="">Date</label>
+    <input type="date" name="" value="">
+  </div>
+  <br>
+
+  <div>
+    <label for="">Month</label>
+    <input type="month" name="" value="">
+  </div>
+  <br>
+
+  <div>
+    <label for="">Time</label>
+    <input type="time" name="" value="">
+  </div>
+  <br>
+
+  <input list="programming" name="prog">
+  <datalist id="programming">
+    <option value="Python"></option>
+    <option value="PHP"></option>
+    <option value="C#"></option>
+    <option value="C"></option>
+    <option value="C++"></option>
+    <option value="Scala"></option>
+  </datalist>
+  <br>
+  <br>
+
+  <input type="reset" value="reset">
+  <input type="submit" value="save">
+
+</form>
+<hr>
+
+<!-- ________________________________________________________________________ -->
+<u><h3>Lesson 33 , (Q And BlockQuote, Wbr, Button, Bdi)</h3></u>
+
+<q cite="">This Is Wise Word</q>
+<blockquote cite="http://">This Is Wise Word</blockquote>
+<button type="button" name="button">Click</button>
+<div class="">
+  http://localhost/Voyager1/Atom/<wbr>ProgramingWithElzero/HTML/index.html?user=Hassan&subject=<wbr>&pass=123123123123123123&Color=%23000000&Range=60&Range=70#hassan
+</div>
+<!-- bdi => Be Direction isolation -->
+<p> 2 السلام welcome</p>
+<p><bdi dir="rtl">السلام</bdi> 2 welcome</p>
+<hr>
+
+<!-- ________________________________________________________________________ -->
+<u><h3>Lesson 34 , (iFrame, Pre And Code)</h3></u>
+
+<code>
+  var x = 10;
+  var y = 20;
+  console.log(x+y);
+</code>
+<p>
+  This Is
+  p
+  New Line
+  New Line
+</p>
+<pre>
+       This Is
+  p
+  New Line
+  New Line
+</pre>
+<pre>
+  <code>
+    var x = 10;
+    var y = 20;
+    console.log(x+y);
+  </code>
+</pre>
+
+<iframe src="Book Store.html" width="" height=""></iframe>
 
   </body>
 </html>

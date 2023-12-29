@@ -1,0 +1,83 @@
+/* Lesson 2 (Your First Project And Syntax) */
+
+/* Selector {
+    Property: Value;
+    PropertyTwo: Value
+} */
+p {
+    color: red;
+    font-size: 40px;
+}
+.my-p {
+    color: blue;
+    font-size: 40px;
+}
+#my-p {
+    color: green;
+    font-size: 40px;
+}
+
+/* --------------------------------------------------------------------------------- */
+/* Lesson 3 (Elements Styling) */
+
+.special {
+    color: blue;
+}
+
+/* --------------------------------------------------------------------------------- */
+/* Lesson 4 (Name Conventions And Rules) */
+
+
+/* --------------------------------------------------------------------------------- */
+/* Lesson 5 (Background Color, Image, Repeat) */
+
+div p {
+    color: white;
+}
+div h2 {
+    color: blue;
+}
+div {
+    background-color: red; /* Color Name */
+    background-color: rgb(0,0,0,50%); /* Red Green Blue Alpha Channel*/
+    background-color: #ff0000; /* Color Hex Code */
+    background-image: url("../imgs/0x0.webp");
+    background-size: 200px;
+    background-repeat: no-repeat;
+}
+/* --------------------------------------------------------------------------------- */
+/* Lesson 6 (Background Attachment, Position, Size) */
+
+div {
+    /* background-attachment: fixed;
+    background-position: right center;
+    background-position: 100px 50px;
+    background-position: 100% 20%; 
+    background-size: contain;
+    background-size: 200px 200px; 
+    background-size: 100%; */
+    background-size: cover; 
+}
+/* --------------------------------------------------------------------------------- */
+/* Lesson 7 (Padding) */
+
+.div2 p{
+    color: #ff0000;}
+    .div2 {
+        background: #ddd;
+        /* Top Right Bootom Left */
+        /* 10px 10px 10px 10px */
+        padding: 10px;
+        /* Top Right Bootom Left */
+        /* 10px 20px 10px 20px */
+        padding: 10px 20px;
+        /* Top Right Bootom Left */
+        /* 10px 20px 15px 20px */
+        padding: 10px 20px 15px;
+        padding: 0 0 10px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    /* padding does not accept a negative value  */
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 8 (Margin) */
