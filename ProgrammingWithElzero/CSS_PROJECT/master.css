@@ -61,8 +61,9 @@ div {
 /* --------------------------------------------------------------------------------- */
 /* Lesson 7 (Padding) */
 
-.div2 p{
-    color: #ff0000;}
+.div2 p {
+    color: #ff0000;
+}
     .div2 {
         background: #ddd;
         /* Top Right Bootom Left */
@@ -81,3 +82,36 @@ div {
     /* padding does not accept a negative value  */
     /* --------------------------------------------------------------------------------- */
     /* Lesson 8 (Margin) */
+    
+    .div2 {
+        padding: 21.5%;
+        margin: 16%;
+    }
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 9 (Border) */
+    
+    .div2 {
+        border: 10px solid red;
+        border-width: 10px;
+        border-color: red green blue yellow;
+        border-style: solid;
+    }
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 10 (Outline) */
+    
+    
+    .div3 {
+        background-color: #ddd;
+        width: 300px;
+        padding: 10px;
+        border: 10px solid red;
+        outline: 10px solid blue;
+    }
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 11 (Display, Block, Inline, Inline-Block) */
+
+    
+
+
+
+    
