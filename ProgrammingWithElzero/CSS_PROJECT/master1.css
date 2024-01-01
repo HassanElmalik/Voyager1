@@ -1,0 +1,251 @@
+/* Lesson 2 (Your First Project And Syntax) */
+
+/* Selector {
+    Property: Value;
+    PropertyTwo: Value
+} */
+p {
+    color: red;
+    font-size: 40px;
+}
+.my-p {
+    color: blue;
+    font-size: 40px;
+}
+#my-p {
+    color: green;
+    font-size: 40px;
+}
+
+/* --------------------------------------------------------------------------------- */
+/* Lesson 3 (Elements Styling) */
+
+.special {
+    color: blue;
+}
+
+/* --------------------------------------------------------------------------------- */
+/* Lesson 4 (Name Conventions And Rules) */
+
+
+/* --------------------------------------------------------------------------------- */
+/* Lesson 5 (Background Color, Image, Repeat) */
+
+div p {
+    color: white;
+}
+div h2 {
+    color: blue;
+}
+div {
+    background-color: red; /* Color Name */
+    background-color: rgb(0,0,0,50%); /* Red Green Blue Alpha Channel*/
+    background-color: #ff0000; /* Color Hex Code */
+    background-image: url("../imgs/0x0.webp");
+    background-size: 200px;
+    background-repeat: no-repeat;
+}
+/* --------------------------------------------------------------------------------- */
+/* Lesson 6 (Background Attachment, Position, Size) */
+
+div {
+    /* background-attachment: fixed;
+    background-position: right center;
+    background-position: 100px 50px;
+    background-position: 100% 20%; 
+    background-size: contain;
+    background-size: 200px 200px; 
+    background-size: 100%; */
+    background-size: cover; 
+}
+/* --------------------------------------------------------------------------------- */
+/* Lesson 7 (Padding) */
+
+.div2 p {
+    color: #ff0000;
+}
+    .div2 {
+        background: #ddd;
+        /* Top Right Bootom Left */
+        /* 10px 10px 10px 10px */
+        padding: 10px;
+        /* Top Right Bootom Left */
+        /* 10px 20px 10px 20px */
+        padding: 10px 20px;
+        /* Top Right Bootom Left */
+        /* 10px 20px 15px 20px */
+        padding: 10px 20px 15px;
+        padding: 0 0 10px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    /* padding does not accept a negative value  */
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 8 (Margin) */
+    
+    .div2 {
+        padding: 21.5%;
+        margin: 16%;
+    }
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 9 (Border) */
+    
+    .div2 {
+        border: 10px solid red;
+        border-width: 10px;
+        border-color: red green blue yellow;
+        border-style: solid;
+    }
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 10 (Outline) */
+    
+    
+    .div3 {
+        background-color: #ddd;
+        width: 300px;
+        padding: 10px;
+        border: 10px solid red;
+        outline: 10px solid blue;
+    }
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 11 (Display, Block, Inline, Inline-Block) */
+    
+    /*
+    Block
+
+    - Take Full Width In No Width
+    - Respect Padding, Margin, Width, Height
+    - Add Line Break
+    
+    Inline
+    
+    - Do Not Respect Width And Height
+    - Respect Padding And Margin [ Just Left + Right ]
+    - Do Not Add Line Break
+    - Allow Elements Before And After It
+    
+        Inline-Block
+        
+        -
+        - Respect Padding, Margin, Width, Height
+        - Do Not Add Line Break
+        - Allow Elements Before And After It
+        
+        */
+        
+        .div4 {
+            background-color: #eee;
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+            height: 30px;
+        }
+        
+        .span1 {
+            background-color: bisque;
+            width: 300px;
+            height: 30px;
+            padding: 30px;
+            margin: 20px;
+        }
+        
+        .span2 {
+            background-color: bisque;
+            width: 300px;
+            height: 30px;
+            padding: 0 30px;
+            margin: 20px;
+        }
+        
+        .span3 {
+            background-color: bisque;
+            display: inline-block;
+            padding: 30px;
+            margin: 20px;
+            width: 100px;
+            height: 30px;
+        }
+
+        
+        /* --------------------------------------------------------------------------------- */
+        /* Lesson 12 (Element Visibility And Use Cases) */
+        
+        .div5 {
+            background-color: #ff0000;
+            margin: 10px 0;
+            display: none;
+        }
+
+        .div6 {
+            background-color: #ff0000;
+            margin: 10px 0;
+        }
+        .div7 {
+            background-color: #ff0000;
+            margin: 10px 0;
+            visibility: hidden;
+        }
+        .div8 {
+            background-color: #ff0000;
+            margin: 10px 0;
+        }
+        
+        /* --------------------------------------------------------------------------------- */
+        /* Lesson 13 (Element Visibility And Use Cases) */
+        
+        .one {
+            border-bottom: 2px solid red;
+            color: #ff0000;
+        }
+        
+        .two {
+            border-bottom: 2px solid green;
+            color: green;
+        }
+        
+        .three {
+            border-bottom: 2px solid blue;
+            color: blue;
+        }
+
+        .four {
+            border-bottom: 2px solid black;
+            color: black;
+        }
+        
+        .one,
+        .two,
+        .three,
+        .four,
+        .my-p1 {
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #ddd;
+        }
+
+        /* --------------------------------------------------------------------------------- */
+        /* Lesson 14 (Nesting) */
+        
+        p {
+            color: black;
+            font-size: 18px;
+        }
+        
+        div {
+            background-color: white;
+        }
+
+        div h2 {
+            color: black;
+        }
+        
+        div p {
+            color: black;
+        }
+        
+        div .special1 {
+            color: red;
+        }
+
+        /* --------------------------------------------------------------------------------- */
+        /* Lesson 15 (Lesson 15 (Dimensions Width And Height)) */
