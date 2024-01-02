@@ -248,4 +248,183 @@ div {
         }
 
         /* --------------------------------------------------------------------------------- */
-        /* Lesson 15 (Lesson 15 (Dimensions Width And Height)) */
+        /* Lesson 15 (Dimensions Width And Height) */
+        
+        .div9 {
+            background-color: red;
+            padding: 10px;
+            display: inline-block;
+            width: 400px;
+            /* the normal value of height is auto */
+        }
+
+        .div10 {
+            background-color: red;
+            padding: 10px;
+            display: inline-block;
+            min-width: 400px;
+            height: 40px;
+        }
+
+        .div11 {
+            background-color: red;
+            padding: 10px;
+            display: inline-block;
+            min-width: 400px;
+            max-width: 500px;
+            min-height: 40px;
+            max-height: 80px;
+        }
+        
+        .div12 {
+            background-color: red;
+            padding: 10px;
+            width: fit-content;
+        }
+
+        /* --------------------------------------------------------------------------------- */
+        /* Lesson 16 (Overflow X And Y) */
+        
+        .div13 {
+            width: 150px;
+            height: 150px;
+            background-color: #eee;
+            margin: 20px auto;
+            border-radius: 6px;
+            overflow: hidden;
+            display: inline-block;
+        }
+        
+        .div14 {
+            width: 150px;
+            height: 150px;
+            background-color: #eee;
+            margin: 20px auto;
+            border-radius: 6px;
+            overflow: scroll;
+            display: inline-block;
+        }
+        
+        .div15 {
+            width: 150px;
+            height: 150px;
+            background-color: #eee;
+            margin: 20px auto;
+            border-radius: 6px;
+            overflow: scroll;
+            display: inline-block;
+        }
+        
+        .div16 {
+            width: 150px;
+            height: 150px;
+            background-color: #eee;
+            margin: 20px auto;
+            border-radius: 6px;
+            overflow: auto;
+            display: inline-block;
+        }
+        
+        .div17 {
+            width: 150px;
+            height: 150px;
+            background-color: #eee;
+            margin: 20px auto;
+            border-radius: 6px;
+            overflow: auto;
+            display: inline-block;
+        }
+        
+        .div18 {
+            width: 150px;
+            height: 150px;
+            background-color: #eee;
+            margin: 20px auto;
+            border-radius: 6px;
+            overflow-y: auto;
+            display: inline-block;
+        }
+
+        .div19 {
+            width: 150px;
+            height: 150px;
+            background-color: #eee;
+            margin: 20px auto;
+            border-radius: 6px;
+            overflow-y: hidden;
+            display: inline-block;
+        }
+        
+        .div20 {
+            width: 150px;
+            height: 150px;
+            background-color: #eee;
+            margin: 20px auto;
+            border-radius: 6px;
+            overflow-x: hidden;
+            display: inline-block;
+        }
+
+        /* --------------------------------------------------------------------------------- */
+        /* Lesson 17 (Text, Color, Shadow) */
+        
+        /* 
+        Text Shadow
+        Syntax => text-shadow: H-Shadow V-Shadow Blur Color   
+        */
+        
+        
+        .div21 {
+            background-color: #f9f9f9;
+            color: rebeccapurple;
+            text-shadow: 1px   1px   1px      #b5943ad9 ;
+        }
+        
+        /* --------------------------------------------------------------------------------- */
+        /* Lesson 18 (Text Alignment) */
+        
+        .div22 {
+            background-color: #f9f9f9;
+            text-align: center;
+            direction: ltr;
+        }
+
+        .div23 {
+            background-color: #f9f9f9;
+            text-align: center;
+            direction: rtl;
+        }
+
+        .div24 {
+            background-color: #f9f9f9;
+            text-align: right;
+            direction: ltr;
+        }
+        
+        .div25 {
+            background-color: #f9f9f9;
+            text-align: left;
+            direction: rtl;
+        }
+
+        .div26 {
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .div26 img{
+            background-color: #f9f9f9;
+            vertical-align:top;
+        }
+        
+        .div27 img {
+            background-color: #f9f9f9;
+            text-align: right;
+            vertical-align: middle;
+        }
+        
+        /* --------------------------------------------------------------------------------- */
+        /* Lesson 19 (Text Decoration, Transform) */
+
+        
+
