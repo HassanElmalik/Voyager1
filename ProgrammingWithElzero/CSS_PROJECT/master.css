@@ -17,6 +17,10 @@ p {
     font-size: 40px;
 }
 
+h3 {
+    color: #1b5a74;
+}
+
 /* --------------------------------------------------------------------------------- */
 /* Lesson 3 (Elements Styling) */
 
@@ -375,7 +379,7 @@ div {
         
         
         .div21 {
-            background-color: #f9f9f9;
+            background-color: #d9d9d9;
             color: rebeccapurple;
             text-shadow: 1px   1px   1px      #b5943ad9 ;
         }
@@ -384,47 +388,147 @@ div {
         /* Lesson 18 (Text Alignment) */
         
         .div22 {
-            background-color: #f9f9f9;
+            background-color: #d9d9d9;
             text-align: center;
             direction: ltr;
         }
 
         .div23 {
-            background-color: #f9f9f9;
+            background-color: #d9d9d9;
             text-align: center;
             direction: rtl;
         }
 
         .div24 {
-            background-color: #f9f9f9;
+            background-color: #d9d9d9;
             text-align: right;
             direction: ltr;
         }
         
         .div25 {
-            background-color: #f9f9f9;
+            background-color: #d9d9d9;
             text-align: left;
             direction: rtl;
         }
 
         .div26 {
-            background-color: #f9f9f9;
+            background-color: #d9d9d9;
             text-align: center;
         }
 
         .div26 img{
-            background-color: #f9f9f9;
+            background-color: #d9d9d9;
             vertical-align:top;
+        }
+
+        .div27 {
+            background-color: #d9d9d9;
         }
         
         .div27 img {
-            background-color: #f9f9f9;
+            background-color: #d9d9d9;
             text-align: right;
             vertical-align: middle;
         }
         
         /* --------------------------------------------------------------------------------- */
         /* Lesson 19 (Text Decoration, Transform) */
+        
+        .div28 {
+            background-color: #d9d9d9;
+            text-decoration: line-through;
+            text-decoration: underline;
+            text-decoration: overline;
+        }
+        
+        .my-web {
+            background-color: black;
+            padding: 10px 10px;
+            margin: 5px;
+            display: inline-block;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        
+        .div28 {
+            text-transform: uppercase;
+        }
+        
+        /* --------------------------------------------------------------------------------- */
+        /* Lesson 20 (Text Spacing) */
+        
+        .div29 {
+            background-color: #d9d9d9;
+            letter-spacing: 2px;
+            text-indent: 100px;
+            word-spacing: 15px;
+        }
+        
+        .div30 {
+            background-color: #d9d9d9;
+            line-height: 1.6;
+            width: 500px;
+            white-space: nowrap;
+        }
+
+        .div31 {
+            background-color: #d9d9d9;
+            width: 100px;
+            word-break: break-all;
+            margin: 10px 0;
+        }
+        
+        .div32 {
+            background-color: #d9d9d9;
+            width: 100px;
+            word-break: break-word;
+            margin: 10px 0;
+        }
+
+        /* --------------------------------------------------------------------------------- */
+        /* Lesson 21 (Text Overflow And Use Cases) */
+        
+        .div33 {
+            background-color: #d9d9d9;
+            padding: 10px;
+            width: 200px;
+            letter-spacing:  1px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .div33:hover {
+            overflow: visible;
+            width: fit-content;
+            color: blueviolet;
+            text-shadow: 0.5px 1px 2px black;
+            background-color: burlywood;
+            border-radius: 4px;
+        }
+        
+        /* --------------------------------------------------------------------------------- */
+        /* Lesson 22 (Inheritance) */
+        
+        .div34 {
+            text-align: center;
+            background-color: #d9d9d9;
+            font-size: 20px;
+            padding: 20px;
+            border: 2px solid #39457d;
+        }
+        
+        .p3 {
+            border: 2px solid;
+            border-color: inherit;
+            padding: inherit;
+        }
+
+        /* --------------------------------------------------------------------------------- */
+        /* Lesson 23 (Typography Font Family)*/
 
         
+
+
+
 
