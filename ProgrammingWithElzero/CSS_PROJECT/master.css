@@ -68,20 +68,20 @@ div {
 .div2 p {
     color: #ff0000;
 }
-    .div2 {
-        background: #ddd;
-        /* Top Right Bootom Left */
-        /* 10px 10px 10px 10px */
-        padding: 10px;
-        /* Top Right Bootom Left */
-        /* 10px 20px 10px 20px */
-        padding: 10px 20px;
-        /* Top Right Bootom Left */
-        /* 10px 20px 15px 20px */
-        padding: 10px 20px 15px;
-        padding: 0 0 10px;
-        padding-bottom: 10px;
-        padding-top: 10px;
+.div2 {
+    background: #ddd;
+    /* Top Right Bootom Left */
+    /* 10px 10px 10px 10px */
+    padding: 10px;
+    /* Top Right Bootom Left */
+    /* 10px 20px 10px 20px */
+    padding: 10px 20px;
+    /* Top Right Bootom Left */
+    /* 10px 20px 15px 20px */
+    padding: 10px 20px 15px;
+    padding: 0 0 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
     }
     /* padding does not accept a negative value  */
     /* --------------------------------------------------------------------------------- */
@@ -128,577 +128,688 @@ div {
     - Do Not Add Line Break
     - Allow Elements Before And After It
     
-        Inline-Block
+    Inline-Block
+    
+    -
+    - Respect Padding, Margin, Width, Height
+    - Do Not Add Line Break
+    - Allow Elements Before And After It
+    
+    */
         
-        -
-        - Respect Padding, Margin, Width, Height
-        - Do Not Add Line Break
-        - Allow Elements Before And After It
+    .div4 {
+        background-color: #eee;
+        padding: 10px;
+        margin: 10px;
+        width: 300px;
+        height: 30px;
+    }
+    
+    .span1 {
+        background-color: bisque;
+        width: 300px;
+        height: 30px;
+        padding: 30px;
+        margin: 20px;
+    }
+    
+    .span2 {
+        background-color: bisque;
+        width: 300px;
+        height: 30px;
+        padding: 0 30px;
+        margin: 20px;
+    }
+    
+    .span3 {
+        background-color: bisque;
+        display: inline-block;
+        padding: 30px;
+        margin: 20px;
+        width: 100px;
+        height: 30px;
+    }
+
+    
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 12 (Element Visibility And Use Cases) */
+    
+    .div5 {
+        background-color: #ff0000;
+        margin: 10px 0;
+        display: none;
+    }
+
+    .div6 {
+        background-color: #ff0000;
+        margin: 10px 0;
+    }
+    .div7 {
+        background-color: #ff0000;
+        margin: 10px 0;
+        visibility: hidden;
+    }
+    .div8 {
+        background-color: #ff0000;
+        margin: 10px 0;
+    }
+    
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 13 (Element Visibility And Use Cases) */
+    
+    .one {
+        border-bottom: 2px solid red;
+        color: #ff0000;
+    }
         
+    .two {
+        border-bottom: 2px solid green;
+        color: green;
+    }
+    
+    .three {
+        border-bottom: 2px solid blue;
+        color: blue;
+    }
+
+    .four {
+        border-bottom: 2px solid black;
+        color: black;
+    }
+    
+    .one,
+    .two,
+    .three,
+    .four,
+    .my-p1 {
+        padding: 10px;
+        margin: 10px 0;
+        background-color: #ddd;
+    }
+
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 14 (Nesting) */
+    
+    p {
+        color: black;
+        font-size: 18px;
+    }
+    
+    div {
+        background-color: white;
+    }
+
+    div h2 {
+        color: black;
+    }
+    
+    div p {
+        color: black;
+    }
+    
+    div .special1 {
+        color: red;
+    }
+
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 15 (Dimensions Width And Height) */
+    
+    .div9 {
+        background-color: red;
+        padding: 10px;
+        display: inline-block;
+        width: 400px;
+        /* the normal value of height is auto */
+    }
+
+    .div10 {
+        background-color: red;
+        padding: 10px;
+        display: inline-block;
+        min-width: 400px;
+        height: 40px;
+    }
+
+    .div11 {
+        background-color: red;
+        padding: 10px;
+        display: inline-block;
+        min-width: 400px;
+        max-width: 500px;
+        min-height: 40px;
+        max-height: 80px;
+    }
+    
+    .div12 {
+        background-color: red;
+        padding: 10px;
+        width: fit-content;
+    }
+
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 16 (Overflow X And Y) */
+    
+    .div13 {
+        width: 150px;
+        height: 150px;
+        background-color: #eee;
+        margin: 20px auto;
+        border-radius: 6px;
+        overflow: hidden;
+        display: inline-block;
+    }
+    
+    .div14 {
+        width: 150px;
+        height: 150px;
+        background-color: #eee;
+        margin: 20px auto;
+        border-radius: 6px;
+        overflow: scroll;
+        display: inline-block;
+    }
+    
+    .div15 {
+        width: 150px;
+        height: 150px;
+        background-color: #eee;
+        margin: 20px auto;
+        border-radius: 6px;
+        overflow: scroll;
+        display: inline-block;
+    }
+    
+    .div16 {
+        width: 150px;
+        height: 150px;
+        background-color: #eee;
+        margin: 20px auto;
+        border-radius: 6px;
+        overflow: auto;
+        display: inline-block;
+    }
+    
+    .div17 {
+        width: 150px;
+        height: 150px;
+        background-color: #eee;
+        margin: 20px auto;
+        border-radius: 6px;
+        overflow: auto;
+        display: inline-block;
+    }
+        
+    .div18 {
+        width: 150px;
+        height: 150px;
+        background-color: #eee;
+        margin: 20px auto;
+        border-radius: 6px;
+        overflow-y: auto;
+        display: inline-block;
+    }
+
+    .div19 {
+        width: 150px;
+        height: 150px;
+        background-color: #eee;
+        margin: 20px auto;
+        border-radius: 6px;
+        overflow-y: hidden;
+        display: inline-block;
+    }
+    
+    .div20 {
+        width: 150px;
+        height: 150px;
+        background-color: #eee;
+        margin: 20px auto;
+        border-radius: 6px;
+        overflow-x: hidden;
+        display: inline-block;
+    }
+
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 17 (Text, Color, Shadow) */
+    
+    /* 
+    Text Shadow
+    Syntax => text-shadow: H-Shadow V-Shadow Blur Color   
+    */
+    
+    
+    .div21 {
+        background-color: #d9d9d9;
+        color: rebeccapurple;
+        text-shadow: 1px   1px   1px      #b5943ad9 ;
+    }
+    
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 18 (Text Alignment) */
+    
+    .div22 {
+        background-color: #d9d9d9;
+        text-align: center;
+        direction: ltr;
+    }
+
+    .div23 {
+        background-color: #d9d9d9;
+        text-align: center;
+        direction: rtl;
+    }
+
+    .div24 {
+        background-color: #d9d9d9;
+        text-align: right;
+        direction: ltr;
+    }
+    
+    .div25 {
+        background-color: #d9d9d9;
+        text-align: left;
+        direction: rtl;
+    }
+
+    .div26 {
+        background-color: #d9d9d9;
+        text-align: center;
+    }
+
+    .div26 img{
+        background-color: #d9d9d9;
+        vertical-align:top;
+    }
+
+    .div27 {
+        background-color: #d9d9d9;
+    }
+    
+    .div27 img {
+        background-color: #d9d9d9;
+        text-align: right;
+        vertical-align: middle;
+    }
+    
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 19 (Text Decoration, Transform) */
+    
+    .div28 {
+        background-color: #d9d9d9;
+        text-decoration: line-through;
+        text-decoration: underline;
+        text-decoration: overline;
+    }
+    
+    .my-web {
+        background-color: black;
+        padding: 10px 10px;
+        margin: 5px;
+        display: inline-block;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+    
+    .div28 {
+        text-transform: uppercase;
+    }
+    
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 20 (Text Spacing) */
+    
+    .div29 {
+        background-color: #d9d9d9;
+        letter-spacing: 2px;
+        text-indent: 100px;
+        word-spacing: 15px;
+    }
+    
+    .div30 {
+        background-color: #d9d9d9;
+        line-height: 1.6;
+        width: 500px;
+        white-space: nowrap;
+    }
+
+    .div31 {
+        background-color: #d9d9d9;
+        width: 100px;
+        word-break: break-all;
+        margin: 10px 0;
+    }
+    
+    .div32 {
+        background-color: #d9d9d9;
+        width: 100px;
+        word-break: break-word;
+        margin: 10px 0;
+    }
+
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 21 (Text Overflow And Use Cases) */
+    
+    .div33 {
+        background-color: #d9d9d9;
+        padding: 10px;
+        width: 200px;
+        letter-spacing:  1px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .div33:hover {
+        overflow: visible;
+        width: fit-content;
+        color: blueviolet;
+        text-shadow: 0.5px 1px 2px black;
+        background-color: burlywood;
+        border-radius: 4px;
+    }
+
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 22 (Inheritance) */
+
+    .div34 {
+        text-align: center;
+        background-color: #d9d9d9;
+        font-size: 20px;
+        padding: 20px;
+        border: 2px solid #39457d;
+    }
+
+    .p3 {
+        border: 2px solid;
+        border-color: inherit;
+        padding: inherit;
+    }
+
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 23 (Typography Font Family)*/
+
+    .div35 {
+        background-color: #d9d9d9;
+        padding: 10px;
+        font-family:cursive, Arial;
+    }
+
+    .with-ser,
+    .san-ser {
+        background-color: #d9d9d9;
+        padding: 10px;
+    }
+
+    .with-ser {
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .san-ser {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .div36 {
+        background-color: #d9d9d9;
+        padding: 10px;
+        font-family:'Cairo', sans-serif;
+    }
+
+    /* body {
+            font-family:'Cairo', sans-serif; 
+        
+    } */
+
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 24 (Typography Font Size & CSS Units) */
+
+    /*
+
+    CSS Units
+    - px
+    - em => Time     1em = 16px This Is Wrong
+    - rem => Root Time
+    -precentage
+    - vw
+    
+    Read
+    - vmin
+    - vh
+    
+    Default Font Size For Web Page Is 16px
+    */
+    
+    /* body {
+            font-size: 40px; 
+    }
+    */
+    .div37 {
+        font-size: 20px;
+    }
+
+    .div37 span {
+        font-size: 2em;  /* = 2 x (parent font size = 2 x div37 font size) = 2 x 20 = 40px */
+        font-size: 2rem; /* = 2 x (root element font size = 2 x html font size) = 2 x 16 = 32px */
+        font-size: 150%; /* = 1.5 x (parent font size = 1.5 x div37 font size) = 1.5 x 20 = 30px */
+        font-size: 5vw;  /* = 5 x (  1% view port width = 5% of the view port width ) */
+    }
+    
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 25 (Typography Font Style, Variant, Weight) */
+    
+    .div38 {
+        font-style: italic;
+        font-style: oblique;
+        font-variant: small-caps;
+        font-weight: bold;
+    }
+
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 26 (Mouse Cursor) */
+    
+    .button1 {
+        background: transparent;
+        border: none;
+        color: red;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    .p4 {
+        cursor: grab;
+    }
+    
+    .p5 {
+        cursor: move;
+    }
+    
+    .p6 {
+        cursor:crosshair;
+    }
+    
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 27 (Float And Clear) */
+    
+    .parent {
+        background-color: red;
+        padding: 10px;
+    }
+    
+    .parent div {
+        padding: 10px 0;
+        text-align: center;
+        background-color: #d9d9d9;
+        float:left;
+        width: 25%;
+    }
+    
+    .clear {
+        clear: both;
+    }
+    
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 28 (Master The CSS Calculation) */
+    
+    .parent1 {
+        padding: 10px 0;
+        text-align: center;
+        background-color: #d9d9d9;
+        float: left;
+        margin-left: 1%;
+        width: calc(95% / 4) ;
+    }
+
+    /*  
+    Content Width Is: 100%
+    5 Spaces 1% * 5 => 5% From Content Width
+    95% Available Space
+    4 Elements The Width IS: 95% / 4
+    */
+    
+    .parent2 {
+        padding: 10px 0;
+        text-align: center;
+        background-color: #d9d9d9;
+        float: left;
+        margin-left: 1%;
+        width: calc(94% / 5) ;
+        margin-top:1% ;
+    }
+    
+    /*
+    Content Width Is: 100%
+    6 Spaces 1% * 6 => 6% From Content Width
+    94% Available Space
+    4 Elements The Width IS: 94% / 5
+    */
+    
+    .parent3 {
+        padding: 10px 0;
+        text-align: center;
+        background-color: #d9d9d9;
+        float: left;
+        margin-left: 15px;
+        width: calc((100% - 90px) / 5) ;
+        margin-top:1% ;
+    }
+
+    .h3 {
+        margin-top: 5%;
+    }
+        
+    /*
+    Content Width Is: 100%
+    6 Spaces 15px * 6 => 90px From Content Width
+    100% - 90px Available Space
+    4 Elements The Width IS: (100% - 90px) / 5
+    */
+    
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 29 (Opacity) */
+    
+    .div39 {
+        background-color: red;
+        opacity: 0.5;
+    }
+    
+    .div40 {
+        background-color: rgba(255, 0, 0, 0.5);
+    }
+    
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 30 (Position) */
+    
+    /*
+    Position
+        - Static => Default
+        - Relative
+        - Absolute
+        - Fixed
+        - Sticky
         */
-        
-        .div4 {
-            background-color: #eee;
-            padding: 10px;
-            margin: 10px;
-            width: 300px;
-            height: 30px;
-        }
-        
-        .span1 {
-            background-color: bisque;
-            width: 300px;
-            height: 30px;
-            padding: 30px;
-            margin: 20px;
-        }
-        
-        .span2 {
-            background-color: bisque;
-            width: 300px;
-            height: 30px;
-            padding: 0 30px;
-            margin: 20px;
-        }
-        
-        .span3 {
-            background-color: bisque;
-            display: inline-block;
-            padding: 30px;
-            margin: 20px;
-            width: 100px;
-            height: 30px;
-        }
-
-        
-        /* --------------------------------------------------------------------------------- */
-        /* Lesson 12 (Element Visibility And Use Cases) */
-        
-        .div5 {
-            background-color: #ff0000;
-            margin: 10px 0;
-            display: none;
-        }
-
-        .div6 {
-            background-color: #ff0000;
-            margin: 10px 0;
-        }
-        .div7 {
-            background-color: #ff0000;
-            margin: 10px 0;
-            visibility: hidden;
-        }
-        .div8 {
-            background-color: #ff0000;
-            margin: 10px 0;
-        }
-        
-        /* --------------------------------------------------------------------------------- */
-        /* Lesson 13 (Element Visibility And Use Cases) */
-        
-        .one {
-            border-bottom: 2px solid red;
-            color: #ff0000;
-        }
-        
-        .two {
-            border-bottom: 2px solid green;
-            color: green;
-        }
-        
-        .three {
-            border-bottom: 2px solid blue;
-            color: blue;
-        }
-
-        .four {
-            border-bottom: 2px solid black;
-            color: black;
-        }
-        
-        .one,
-        .two,
-        .three,
-        .four,
-        .my-p1 {
-            padding: 10px;
-            margin: 10px 0;
-            background-color: #ddd;
-        }
-
-        /* --------------------------------------------------------------------------------- */
-        /* Lesson 14 (Nesting) */
-        
-        p {
-            color: black;
-            font-size: 18px;
-        }
-        
-        div {
-            background-color: white;
-        }
-
-        div h2 {
-            color: black;
-        }
-        
-        div p {
-            color: black;
-        }
-        
-        div .special1 {
-            color: red;
-        }
-
-        /* --------------------------------------------------------------------------------- */
-        /* Lesson 15 (Dimensions Width And Height) */
-        
-        .div9 {
-            background-color: red;
-            padding: 10px;
-            display: inline-block;
-            width: 400px;
-            /* the normal value of height is auto */
-        }
-
-        .div10 {
-            background-color: red;
-            padding: 10px;
-            display: inline-block;
-            min-width: 400px;
-            height: 40px;
-        }
-
-        .div11 {
-            background-color: red;
-            padding: 10px;
-            display: inline-block;
-            min-width: 400px;
-            max-width: 500px;
-            min-height: 40px;
-            max-height: 80px;
-        }
-        
-        .div12 {
-            background-color: red;
-            padding: 10px;
-            width: fit-content;
-        }
-
-        /* --------------------------------------------------------------------------------- */
-        /* Lesson 16 (Overflow X And Y) */
-        
-        .div13 {
-            width: 150px;
-            height: 150px;
-            background-color: #eee;
-            margin: 20px auto;
-            border-radius: 6px;
-            overflow: hidden;
-            display: inline-block;
-        }
-        
-        .div14 {
-            width: 150px;
-            height: 150px;
-            background-color: #eee;
-            margin: 20px auto;
-            border-radius: 6px;
-            overflow: scroll;
-            display: inline-block;
-        }
-        
-        .div15 {
-            width: 150px;
-            height: 150px;
-            background-color: #eee;
-            margin: 20px auto;
-            border-radius: 6px;
-            overflow: scroll;
-            display: inline-block;
-        }
-        
-        .div16 {
-            width: 150px;
-            height: 150px;
-            background-color: #eee;
-            margin: 20px auto;
-            border-radius: 6px;
-            overflow: auto;
-            display: inline-block;
-        }
-        
-        .div17 {
-            width: 150px;
-            height: 150px;
-            background-color: #eee;
-            margin: 20px auto;
-            border-radius: 6px;
-            overflow: auto;
-            display: inline-block;
-        }
-        
-        .div18 {
-            width: 150px;
-            height: 150px;
-            background-color: #eee;
-            margin: 20px auto;
-            border-radius: 6px;
-            overflow-y: auto;
-            display: inline-block;
-        }
-
-        .div19 {
-            width: 150px;
-            height: 150px;
-            background-color: #eee;
-            margin: 20px auto;
-            border-radius: 6px;
-            overflow-y: hidden;
-            display: inline-block;
-        }
-        
-        .div20 {
-            width: 150px;
-            height: 150px;
-            background-color: #eee;
-            margin: 20px auto;
-            border-radius: 6px;
-            overflow-x: hidden;
-            display: inline-block;
-        }
-
-        /* --------------------------------------------------------------------------------- */
-        /* Lesson 17 (Text, Color, Shadow) */
-        
-        /* 
-        Text Shadow
-        Syntax => text-shadow: H-Shadow V-Shadow Blur Color   
-        */
-        
-        
-        .div21 {
-            background-color: #d9d9d9;
-            color: rebeccapurple;
-            text-shadow: 1px   1px   1px      #b5943ad9 ;
-        }
-        
-        /* --------------------------------------------------------------------------------- */
-        /* Lesson 18 (Text Alignment) */
-        
-        .div22 {
-            background-color: #d9d9d9;
-            text-align: center;
-            direction: ltr;
-        }
-
-        .div23 {
-            background-color: #d9d9d9;
-            text-align: center;
-            direction: rtl;
-        }
-
-        .div24 {
-            background-color: #d9d9d9;
-            text-align: right;
-            direction: ltr;
-        }
-        
-        .div25 {
-            background-color: #d9d9d9;
-            text-align: left;
-            direction: rtl;
-        }
-
-        .div26 {
-            background-color: #d9d9d9;
-            text-align: center;
-        }
-
-        .div26 img{
-            background-color: #d9d9d9;
-            vertical-align:top;
-        }
-
-        .div27 {
-            background-color: #d9d9d9;
-        }
-        
-        .div27 img {
-            background-color: #d9d9d9;
-            text-align: right;
-            vertical-align: middle;
-        }
-        
-        /* --------------------------------------------------------------------------------- */
-        /* Lesson 19 (Text Decoration, Transform) */
-        
-        .div28 {
-            background-color: #d9d9d9;
-            text-decoration: line-through;
-            text-decoration: underline;
-            text-decoration: overline;
-        }
-        
-        .my-web {
-            background-color: black;
-            padding: 10px 10px;
-            margin: 5px;
-            display: inline-block;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-        
-        .div28 {
-            text-transform: uppercase;
-        }
-        
-        /* --------------------------------------------------------------------------------- */
-        /* Lesson 20 (Text Spacing) */
-        
-        .div29 {
-            background-color: #d9d9d9;
-            letter-spacing: 2px;
-            text-indent: 100px;
-            word-spacing: 15px;
-        }
-        
-        .div30 {
-            background-color: #d9d9d9;
-            line-height: 1.6;
-            width: 500px;
-            white-space: nowrap;
-        }
-
-        .div31 {
-            background-color: #d9d9d9;
-            width: 100px;
-            word-break: break-all;
-            margin: 10px 0;
-        }
-        
-        .div32 {
-            background-color: #d9d9d9;
-            width: 100px;
-            word-break: break-word;
-            margin: 10px 0;
-        }
-
-        /* --------------------------------------------------------------------------------- */
-        /* Lesson 21 (Text Overflow And Use Cases) */
-        
-        .div33 {
-            background-color: #d9d9d9;
-            padding: 10px;
-            width: 200px;
-            letter-spacing:  1px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        
-        .div33:hover {
-            overflow: visible;
-            width: fit-content;
-            color: blueviolet;
-            text-shadow: 0.5px 1px 2px black;
-            background-color: burlywood;
-            border-radius: 4px;
-        }
-        
-        /* --------------------------------------------------------------------------------- */
-        /* Lesson 22 (Inheritance) */
-        
-        .div34 {
-            text-align: center;
-            background-color: #d9d9d9;
-            font-size: 20px;
-            padding: 20px;
-            border: 2px solid #39457d;
-        }
-        
-        .p3 {
-            border: 2px solid;
-            border-color: inherit;
-            padding: inherit;
-        }
-
-        /* --------------------------------------------------------------------------------- */
-        /* Lesson 23 (Typography Font Family)*/
-        
-        .div35 {
-            background-color: #d9d9d9;
-            padding: 10px;
-            font-family:cursive, Arial;
-        }
-        
-        .with-ser,
-        .san-ser {
-            background-color: #d9d9d9;
-            padding: 10px;
-        }
-        
-        .with-ser {
-            font-family: 'Times New Roman', Times, serif;
-        }
-
-        .san-ser {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        
-        .div36 {
-            background-color: #d9d9d9;
-            padding: 10px;
-            font-family:'Cairo', sans-serif;
-        }
         
         body {
-            /* font-family:'Cairo', sans-serif; */
-            
+            min-height: 10000px;
         }
         
-        /* --------------------------------------------------------------------------------- */
-        /* Lesson 24 (Typography Font Size & CSS Units) */
-        
-        /*
-
-            CSS Units
-            - px
-            - em => Time     1em = 16px This Is Wrong
-            - rem => Root Time
-            -precentage
-            - vw
-            
-            Read
-            - vmin
-            - vh
-            
-            Default Font Size For Web Page Is 16px
-            */
-            body {
-                /* font-size: 40px; */
-            }
-            
-            .div37 {
-                font-size: 20px;
-            }
-
-        .div37 span {
-            font-size: 2em;  /* = 2 x (parent font size = 2 x div37 font size) = 2 x 20 = 40px */
-            font-size: 2rem; /* = 2 x (root element font size = 2 x html font size) = 2 x 16 = 32px */
-            font-size: 150%; /* = 1.5 x (parent font size = 1.5 x div37 font size) = 1.5 x 20 = 30px */
-            font-size: 5vw;  /* = 5 x (  1% view port width = 5% of the view port width ) */
-        }
-        
-        /* --------------------------------------------------------------------------------- */
-        /* Lesson 25 (Typography Font Style, Variant, Weight) */
-        
-        .div38 {
-            font-style: italic;
-            font-style: oblique;
-            font-variant: small-caps;
-            font-weight: bold;
-        }
-
-        /* --------------------------------------------------------------------------------- */
-        /* Lesson 26 (Mouse Cursor) */
-        
-        .button1 {
-            background: transparent;
-            border: none;
-            color: red;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        
-        .p4 {
-            cursor: grab;
-        }
-        
-        .p5 {
-            cursor: move;
-        }
-        
-        .p6 {
-            cursor:crosshair;
-        }
-        
-        /* --------------------------------------------------------------------------------- */
-        /* Lesson 27 (Float And Clear) */
-        
-        .parent {
+        .div41 {
+            color: white;
             background-color: red;
+            width: 100px;
             padding: 10px;
+            position: relative;
+            top: 100px;
+            left: 50px;
         }
         
-        .parent div {
-            padding: 10px 0;
-            text-align: center;
-            background-color: #d9d9d9;
-            float:left;
-            width: 25%;
-        }
-        
-        .clear {
-            clear: both;
-        }
-        
-        /* --------------------------------------------------------------------------------- */
-        /* Lesson 28 (Master The CSS Calculation) */
-        
-        .parent1 {
-            padding: 10px 0;
-            text-align: center;
-            background-color: #d9d9d9;
-            float: left;
-            margin-left: 1%;
-            width: calc(95% / 4) ;
+        .div42 {
+            color: white;
+            background-color: green;
+            width: 100px;
+            padding: 10px;
+            position: absolute;
         }
 
-        /*
-            Content Width Is: 100%
-            5 Spaces 1% * 5 => 5% From Content Width
-            95% Available Space
-            4 Elements The Width IS: 95% / 4
-            */
-            
-            .parent2 {
-                padding: 10px 0;
-                text-align: center;
-                background-color: #d9d9d9;
-                float: left;
-                margin-left: 1%;
-                width: calc(94% / 5) ;
-                margin-top:1% ;
-            }
-            
-            /*
-            Content Width Is: 100%
-            6 Spaces 1% * 6 => 6% From Content Width
-            94% Available Space
-            4 Elements The Width IS: 94% / 5
-            */
-            
-            .parent3 {
-                padding: 10px 0;
-                text-align: center;
-                background-color: #d9d9d9;
-                float: left;
-                margin-left: 15px;
-                width: calc((100% - 90px) / 5) ;
-                margin-top:1% ;
-            }
-            
-            /*
-            Content Width Is: 100%
-            6 Spaces 15px * 6 => 90px From Content Width
-            100% - 90px Available Space
-            4 Elements The Width IS: (100% - 90px) / 5
-            */
-            
-            /* --------------------------------------------------------------------------------- */
-            /* Lesson 29 (Opacity) */
-            
-            
-            
+    .div43 {
+        color: white;
+        background-color: blue;
+        width: 100px;
+        padding: 10px;
+        margin: 30px;
+    }
+
+    .div44 {
+        color: black;
+        background-color: yellow;
+        width: 100px;
+        padding: 10px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    
+    .parent4 {
+        width: 250px;
+        height: 150px;
+        background-color:burlywood;
+        position: relative;
+    }
+    
+    .div45 {
+        color: rgb(26, 224, 76);
+        background-color:blueviolet;
+        width: 100px;
+        padding: 10px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    
+    .div46 {
+        color: rgb(226, 16, 16);
+        background-color:rgb(8, 8, 8);
+        width: 100px;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+    }
+    
+    .div47 {
+        color: rgb(226, 16, 16);
+        background-color:rgb(8, 8, 8);
+        width: 100px;
+        padding: 10px;
+        position: sticky;
+        bottom: 0;
+    }
+    
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 31 (Z-Index) */
+
+    
+
+
+
+
+
+
+
