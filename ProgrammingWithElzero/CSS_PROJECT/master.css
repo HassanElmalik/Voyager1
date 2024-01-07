@@ -526,9 +526,179 @@ div {
 
         /* --------------------------------------------------------------------------------- */
         /* Lesson 23 (Typography Font Family)*/
-
         
+        .div35 {
+            background-color: #d9d9d9;
+            padding: 10px;
+            font-family:cursive, Arial;
+        }
+        
+        .with-ser,
+        .san-ser {
+            background-color: #d9d9d9;
+            padding: 10px;
+        }
+        
+        .with-ser {
+            font-family: 'Times New Roman', Times, serif;
+        }
 
+        .san-ser {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .div36 {
+            background-color: #d9d9d9;
+            padding: 10px;
+            font-family:'Cairo', sans-serif;
+        }
+        
+        body {
+            /* font-family:'Cairo', sans-serif; */
+            
+        }
+        
+        /* --------------------------------------------------------------------------------- */
+        /* Lesson 24 (Typography Font Size & CSS Units) */
+        
+        /*
 
+            CSS Units
+            - px
+            - em => Time     1em = 16px This Is Wrong
+            - rem => Root Time
+            -precentage
+            - vw
+            
+            Read
+            - vmin
+            - vh
+            
+            Default Font Size For Web Page Is 16px
+            */
+            body {
+                /* font-size: 40px; */
+            }
+            
+            .div37 {
+                font-size: 20px;
+            }
 
+        .div37 span {
+            font-size: 2em;  /* = 2 x (parent font size = 2 x div37 font size) = 2 x 20 = 40px */
+            font-size: 2rem; /* = 2 x (root element font size = 2 x html font size) = 2 x 16 = 32px */
+            font-size: 150%; /* = 1.5 x (parent font size = 1.5 x div37 font size) = 1.5 x 20 = 30px */
+            font-size: 5vw;  /* = 5 x (  1% view port width = 5% of the view port width ) */
+        }
+        
+        /* --------------------------------------------------------------------------------- */
+        /* Lesson 25 (Typography Font Style, Variant, Weight) */
+        
+        .div38 {
+            font-style: italic;
+            font-style: oblique;
+            font-variant: small-caps;
+            font-weight: bold;
+        }
 
+        /* --------------------------------------------------------------------------------- */
+        /* Lesson 26 (Mouse Cursor) */
+        
+        .button1 {
+            background: transparent;
+            border: none;
+            color: red;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .p4 {
+            cursor: grab;
+        }
+        
+        .p5 {
+            cursor: move;
+        }
+        
+        .p6 {
+            cursor:crosshair;
+        }
+        
+        /* --------------------------------------------------------------------------------- */
+        /* Lesson 27 (Float And Clear) */
+        
+        .parent {
+            background-color: red;
+            padding: 10px;
+        }
+        
+        .parent div {
+            padding: 10px 0;
+            text-align: center;
+            background-color: #d9d9d9;
+            float:left;
+            width: 25%;
+        }
+        
+        .clear {
+            clear: both;
+        }
+        
+        /* --------------------------------------------------------------------------------- */
+        /* Lesson 28 (Master The CSS Calculation) */
+        
+        .parent1 {
+            padding: 10px 0;
+            text-align: center;
+            background-color: #d9d9d9;
+            float: left;
+            margin-left: 1%;
+            width: calc(95% / 4) ;
+        }
+
+        /*
+            Content Width Is: 100%
+            5 Spaces 1% * 5 => 5% From Content Width
+            95% Available Space
+            4 Elements The Width IS: 95% / 4
+            */
+            
+            .parent2 {
+                padding: 10px 0;
+                text-align: center;
+                background-color: #d9d9d9;
+                float: left;
+                margin-left: 1%;
+                width: calc(94% / 5) ;
+                margin-top:1% ;
+            }
+            
+            /*
+            Content Width Is: 100%
+            6 Spaces 1% * 6 => 6% From Content Width
+            94% Available Space
+            4 Elements The Width IS: 94% / 5
+            */
+            
+            .parent3 {
+                padding: 10px 0;
+                text-align: center;
+                background-color: #d9d9d9;
+                float: left;
+                margin-left: 15px;
+                width: calc((100% - 90px) / 5) ;
+                margin-top:1% ;
+            }
+            
+            /*
+            Content Width Is: 100%
+            6 Spaces 15px * 6 => 90px From Content Width
+            100% - 90px Available Space
+            4 Elements The Width IS: (100% - 90px) / 5
+            */
+            
+            /* --------------------------------------------------------------------------------- */
+            /* Lesson 29 (Opacity) */
+            
+            
+            
