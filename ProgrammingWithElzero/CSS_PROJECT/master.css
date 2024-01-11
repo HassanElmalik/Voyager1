@@ -804,8 +804,338 @@ div {
     
     /* --------------------------------------------------------------------------------- */
     /* Lesson 31 (Z-Index) */
+    
+    /* z-index will not work without position property */
+    
+    .div48,
+    .div49,
+    .div50 {
+        padding: 10px;
+        width: 100px;
+        color: #fff;
+        text-align: center;
+        position: absolute;
+    }
+    
+    .div48 {
+        background-color: #ff0000;
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+
+    .div49 {
+        background-color: green;
+        margin-top: 8px;
+        margin-left: 8px;
+    }
+    
+    .div50 {
+        background-color: blue;
+    }
+    
+    .div51,
+    .div52,
+    .div53 {
+        padding: 10px;
+        width: 100px;
+        color: #fff;
+        text-align: center;
+        position: absolute;
+    }
+    
+    .div51 {
+        background-color: #ff0000;
+        margin-top: 15px;
+        margin-left: 15px;
+        z-index: 3;
+    }
+    
+    .div52 {
+        background-color: green;
+        margin-top: 8px;
+        margin-left: 8px;
+        z-index: 2;
+    }
+    
+    .div53 {
+        background-color: blue;
+    }
+    
+    .div54,
+    .div55,
+    .div56 {
+        padding: 10px;
+        width: 100px;
+        color: #fff;
+        text-align: center;
+        position: absolute;
+    }
+    
+    .div54 {
+        background-color: #ff0000;
+        margin-top: 15px;
+        margin-left: 15px;
+        z-index: 3;
+    }
+    
+    .div55 {
+        background-color: green;
+        margin-top: 8px;
+        margin-left: 8px;
+    }
+    
+    .div56 {
+        background-color: blue;
+        z-index: 3;
+    }
+    
+    /* if we want to make an element under all elements of the page we put its z-index = -1 */
+    
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 32 (Lists Styling) */
+    
+    .ul1 {
+        list-style-type: disclosure-open;
+        list-style-position: inside;
+        background-color:#d9d9d9;
+    }
+    
+    .ul2 {
+        list-style-image: url("imgs/1x1.jpg" );
+        list-style: persian inside url("imgs/1x1.jpg" );
+    }
+    
+    .li1 {
+        color: #ff0000;
+    }
+    
+    .ul2 li {
+        color: blue;
+    }
+    
+    .ul3,
+    .ul4 {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+    }
+    
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 33 (Table Styling) */
+    
+    table {
+        width: 100%;
+        /* padding: 2px; */
+        border: 2px solid #e6a657;
+        background-color: #e6a657;
+        color: #39457d;
+        border-spacing: 1px;
+        /* text-align: center; */
+    }
+    
+    table td {
+        padding: 15px;
+        background-color: bisque;
+        /* border: 1px solid #e6a657; */
+    }
+    
+    table thead td{
+        background-color: #1b5a74;
+        color: #e6a657;
+        text-align: center;
+        font-weight: bold;
+    }
+    
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 34 (Pseudo Classes) */
+    
+    /* :empty {
+        border: 1px solid green;
+    } */
+    
+    .one1 {
+        background-color: #ff0000;
+        color: white;
+    }
+
+    .two1 {
+        background-color: #eee;
+        width: 100px;
+        height: 100px;
+    }
+    
+    .p7 {
+        background-color: #eee;
+        width: 100px;
+        height: 100px;
+    }
+    
+    .a1,
+    .a2 {
+        color: green;
+        text-decoration: none;
+    }
+    
+    .a1:hover,
+    .a2:hover {
+        color: red;
+    }
+
+    .ch1:checked + label {
+        color: red;
+    }
+    
+    .ch2:checked {
+        display: none;
+    }
+    
+    .a1:visited,
+    .a2:visited {
+        color: blue;
+    }
+    
+    div:empty {
+        border: 1px solid blue;
+    }
+    
+    :empty {
+        border: 1px solid black;
+    }
+    
+    .in {
+        border: 2px solid black;
+    }
+    
+    .in:focus {
+        border-color: #00ff3b;
+        outline: none;
+    }
+
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 35 (Pseudo Elements, First Letter, First Line, selection) */
+    
+    .p8 span {
+        display: inline-block;
+        background-color: #1b5a74;
+        color: bisque;
+        font-size: 50px;
+        font-weight: bold;
+    }
+    
+    .p9::first-letter {
+        display: inline-block;
+        background-color: #1b5a74;
+        color: bisque;
+        font-size: 50px;
+        font-weight: bold;
+    }
+    
+    .p10::first-line {
+        font-weight: bold;
+        color:darkred;
+    }
+
+    .p11::selection {
+        background-color : black;
+        color:#00ff3b ;
+    }
+    
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 36 (Pseudo Elements, Befor, After, Content) */
+    
+    .parent5 {
+        margin-bottom: 20px;
+        overflow: hidden;
+    }
+    
+    .one2 {
+        color: #1b5a74;
+        background-color: bisque;
+        padding: 10px;
+        max-width: 600px;
+        float: left;
+        position: relative;
+        /* border-right: 5px solid red; */
+    }
+    
+    .user {
+        background-color: #1b5a74;
+        color: bisque;
+        width: 50px;
+        margin-right: 20px;
+        padding: 10px;
+        float: left;
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .one2 .pipeline {
+        position: absolute;
+        height: 100%;
+        width: 5px;
+        top: 0;
+        right: -10px;
+        background-color:#1b5a74 ;
+    }
+
+    .one3 {
+        color:black;
+        background-color:#00ff3c ;
+        padding: 10px;
+        max-width: 600px;
+        float: left;
+        position: relative;
+    }
+    
+    .one3::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 5px;
+        top: 0;
+        right: -10px;
+        background-color: black ;
+    }
+
+    .one3::before {
+        content: "";
+        width: 0px;
+        height: 0px;
+        background-color: transparent;
+        position: absolute;
+        left: -20px;
+        top: 50%;
+        margin-top: -10px;
+        border: 10px solid;
+        border-color: transparent black  transparent transparent;
+    }
+    
+    .user1 {
+        background-color: black;
+        color: #00ff3c;
+        width: 50px;
+        margin-right: 20px;
+        padding: 10px;
+        float: left;
+        font-size: 50px;
+        text-align: center;
+    }
+    
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 37 (Pseudo Elements, Content & Trainings) */
 
     
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
 
 
 
