@@ -1,3 +1,8 @@
+/* Lesson 1 (Introduction And What You Need To Learn*/
+/* 
+    CSS => Cascade Style Sheet
+*/
+
 /* Lesson 2 (Your First Project And Syntax) */
 
 /* Selector {
@@ -8,10 +13,12 @@ p {
     color: red;
     font-size: 40px;
 }
+
 .my-p {
     color: blue;
     font-size: 40px;
 }
+
 #my-p {
     color: green;
     font-size: 40px;
@@ -38,9 +45,11 @@ h3 {
 div p {
     color: white;
 }
+
 div h2 {
     color: blue;
 }
+
 div {
     background-color: red; /* Color Name */
     background-color: rgb(0,0,0,50%); /* Red Green Blue Alpha Channel*/
@@ -49,6 +58,7 @@ div {
     background-size: 200px;
     background-repeat: no-repeat;
 }
+
 /* --------------------------------------------------------------------------------- */
 /* Lesson 6 (Background Attachment, Position, Size) */
 
@@ -62,12 +72,14 @@ div {
     background-size: 100%; */
     background-size: cover; 
 }
+
 /* --------------------------------------------------------------------------------- */
 /* Lesson 7 (Padding) */
 
 .div2 p {
     color: #ff0000;
 }
+
 .div2 {
     background: #ddd;
     /* Top Right Bootom Left */
@@ -84,6 +96,7 @@ div {
     padding-top: 10px;
     }
     /* padding does not accept a negative value  */
+
     /* --------------------------------------------------------------------------------- */
     /* Lesson 8 (Margin) */
     
@@ -91,6 +104,7 @@ div {
         padding: 21.5%;
         margin: 16%;
     }
+
     /* --------------------------------------------------------------------------------- */
     /* Lesson 9 (Border) */
     
