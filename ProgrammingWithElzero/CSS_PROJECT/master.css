@@ -131,7 +131,7 @@ h3 {
         border: 10px solid red;
         border-width: 10px;
         border-color: red green blue yellow;
-        border-style: solid;
+        border-style: ridge;
     }
     /* --------------------------------------------------------------------------------- */
     /* Lesson 10 (Outline) */
