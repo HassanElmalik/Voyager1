@@ -42,35 +42,50 @@ h3 {
 /* --------------------------------------------------------------------------------- */
 /* Lesson 5 (Background Color, Image, Repeat) */
 
-div p {
+.div1 p {
     color: white;
 }
 
-div h2 {
+.div1 h2 {
     color: blue;
 }
 
-div {
+.div1 {
     background-color: red; /* Color Name */
-    background-color: rgb(0,0,0,50%); /* Red Green Blue Alpha Channel*/
+    background-color: rgb(0,0,0,50%); /* Red Green Blue AlphaChannel*/
     background-color: #ff0000; /* Color Hex Code */
-    background-image: url("../imgs/0x0.webp");
+    background-image: url("imgs/0x0.webp");
     background-size: 200px;
     background-repeat: no-repeat;
+    background-repeat: repeat-y;
 }
 
 /* --------------------------------------------------------------------------------- */
 /* Lesson 6 (Background Attachment, Position, Size) */
 
-div {
-    /* background-attachment: fixed;
+.div0 {
+    background-image: url("imgs/0x0.webp");
+    background-attachment: fixed;
     background-position: right center;
     background-position: 100px 50px;
     background-position: 100% 20%; 
     background-size: contain;
     background-size: 200px 200px; 
-    background-size: 100%; */
+    background-size: 100%;
     background-size: cover; 
+}
+
+.div-1 {
+    background-image: url("imgs/0x0.webp");
+    background-attachment: fixed;
+    background-position: left center;
+    /* background-position: 100px 50px; */
+    /* background-position: 100% 20%;  */
+    background-repeat: no-repeat;
+    background-size: 200px 200px; 
+    /* background-size: contain; */
+    /* background-size: 100%; */
+    /* background-size: cover;  */
 }
 
 /* --------------------------------------------------------------------------------- */
@@ -82,15 +97,19 @@ div {
 
 .div2 {
     background: #ddd;
+
     /* Top Right Bootom Left */
     /* 10px 10px 10px 10px */
     padding: 10px;
+
     /* Top Right Bootom Left */
     /* 10px 20px 10px 20px */
     padding: 10px 20px;
+
     /* Top Right Bootom Left */
     /* 10px 20px 15px 20px */
     padding: 10px 20px 15px;
+    
     padding: 0 0 10px;
     padding-bottom: 10px;
     padding-top: 10px;
