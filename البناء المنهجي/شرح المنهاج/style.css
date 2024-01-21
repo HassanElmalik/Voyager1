@@ -36,7 +36,9 @@ body {
 }
 
 .dl1,
-.dl2 {
+.dl2,
+.ul1,
+.ul2 {
     background-color: #ddd;
     font-size: 20px;
     padding: 5px;
@@ -51,3 +53,67 @@ body {
 .dt2 {
     font-size: 30px;
 }
+
+.dt3,
+.dt4 {
+    font-size: 17px;
+    margin: 15px;
+    padding: 10px;
+}
+
+img {
+    width: 300px;
+    height: 45px;
+}
+
+.dt3 img {
+    vertical-align: bottom;
+}
+
+.span1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+.ul1 li,
+.ul2 li {
+    line-height: 1.6;
+    margin: 0 25px;
+    padding: 10px;
+}
+
+.dt4 img {
+    vertical-align: middle;
+    height: 150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
