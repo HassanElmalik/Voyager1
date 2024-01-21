@@ -228,7 +228,7 @@ h3 {
     }
     
     /* --------------------------------------------------------------------------------- */
-    /* Lesson 13 (Element Visibility And Use Cases) */
+    /* Lesson 13 (Grouping Multiple Selectors) */
     
     .one {
         border-bottom: 2px solid red;
@@ -321,85 +321,46 @@ h3 {
 
     /* --------------------------------------------------------------------------------- */
     /* Lesson 16 (Overflow X And Y) */
-    
-    .div13 {
-        width: 150px;
-        height: 150px;
-        background-color: #eee;
-        margin: 20px auto;
-        border-radius: 6px;
-        overflow: hidden;
-        display: inline-block;
-    }
-    
-    .div14 {
-        width: 150px;
-        height: 150px;
-        background-color: #eee;
-        margin: 20px auto;
-        border-radius: 6px;
-        overflow: scroll;
-        display: inline-block;
-    }
-    
-    .div15 {
-        width: 150px;
-        height: 150px;
-        background-color: #eee;
-        margin: 20px auto;
-        border-radius: 6px;
-        overflow: scroll;
-        display: inline-block;
-    }
-    
-    .div16 {
-        width: 150px;
-        height: 150px;
-        background-color: #eee;
-        margin: 20px auto;
-        border-radius: 6px;
-        overflow: auto;
-        display: inline-block;
-    }
-    
-    .div17 {
-        width: 150px;
-        height: 150px;
-        background-color: #eee;
-        margin: 20px auto;
-        border-radius: 6px;
-        overflow: auto;
-        display: inline-block;
-    }
-        
-    .div18 {
-        width: 150px;
-        height: 150px;
-        background-color: #eee;
-        margin: 20px auto;
-        border-radius: 6px;
-        overflow-y: auto;
-        display: inline-block;
-    }
 
-    .div19 {
-        width: 150px;
-        height: 150px;
-        background-color: #eee;
-        margin: 20px auto;
-        border-radius: 6px;
-        overflow-y: hidden;
-        display: inline-block;
-    }
-    
+    .div00,
+    .div13,
+    .div14,
+    .div15,
+    .div16,
+    .div17,
+    .div18,
+    .div19,
     .div20 {
         width: 150px;
         height: 150px;
         background-color: #eee;
         margin: 20px auto;
         border-radius: 6px;
-        overflow-x: hidden;
         display: inline-block;
+    }
+    
+
+    .div13 {
+        overflow: hidden;
+    }
+    
+    .div14,
+    .div15 {
+        overflow: scroll;
+    }
+
+    .div16,
+    .div17,
+    .div18 {
+        overflow: auto;
+    }
+
+    .div19 {
+        overflow-y: hidden;
+    }
+    
+    .div20 {
+        overflow-x: hidden;
     }
 
     /* --------------------------------------------------------------------------------- */
