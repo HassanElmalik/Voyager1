@@ -644,6 +644,13 @@ h3 {
     /* --------------------------------------------------------------------------------- */
     /* Lesson 28 (Master The CSS Calculation) */
     
+    /*  
+    Content Width Is: 100%
+    5 Spaces 1% * 5 => 5% From Content Width
+    95% Available Space
+    4 Elements The Width IS: 95% / 4
+    */
+
     .parent1 {
         padding: 10px 0;
         text-align: center;
@@ -652,12 +659,12 @@ h3 {
         margin-left: 1%;
         width: calc(95% / 4) ;
     }
-
-    /*  
+    
+    /*
     Content Width Is: 100%
-    5 Spaces 1% * 5 => 5% From Content Width
-    95% Available Space
-    4 Elements The Width IS: 95% / 4
+    6 Spaces 1% * 6 => 6% From Content Width
+    94% Available Space
+    4 Elements The Width IS: 94% / 5
     */
     
     .parent2 {
@@ -672,9 +679,9 @@ h3 {
     
     /*
     Content Width Is: 100%
-    6 Spaces 1% * 6 => 6% From Content Width
-    94% Available Space
-    4 Elements The Width IS: 94% / 5
+    6 Spaces 15px * 6 => 90px From Content Width
+    100% - 90px Available Space
+    4 Elements The Width IS: (100% - 90px) / 5
     */
     
     .parent3 {
@@ -687,17 +694,10 @@ h3 {
         margin-top:1% ;
     }
 
-    h3 {
-        margin-top: 5%;
+    .hr1 {
+        margin-top: 25%;
     }
         
-    /*
-    Content Width Is: 100%
-    6 Spaces 15px * 6 => 90px From Content Width
-    100% - 90px Available Space
-    4 Elements The Width IS: (100% - 90px) / 5
-    */
-    
     /* --------------------------------------------------------------------------------- */
     /* Lesson 29 (Opacity) */
     
@@ -721,28 +721,38 @@ h3 {
         - Fixed
         - Sticky
         */
-        
-        body {
-            min-height: 20000px;
-        }
-        
-        .div41 {
-            color: white;
-            background-color: red;
-            width: 100px;
-            padding: 10px;
-            position: relative;
-            top: 100px;
-            left: 50px;
-        }
-        
-        .div42 {
-            color: white;
-            background-color: green;
-            width: 100px;
-            padding: 10px;
-            position: absolute;
-        }
+    
+    body {
+        min-height: 20000px;
+    }
+    
+    .div40h {
+        color: white;
+        background-color: red;
+        width: 100px;
+        padding: 10px;
+        position: static; /* the default value that used to reset the other positions values*/
+        top: 100px;
+        left: 50px;
+    }
+
+    .div41 {
+        color: white;
+        background-color: red;
+        width: 100px;
+        padding: 10px;
+        position: relative;
+        top: 100px;
+        left: 50px;
+    }
+    
+    .div42 {
+        color: white;
+        background-color: green;
+        width: 100px;
+        padding: 10px;
+        position: absolute;
+    }
 
     .div43 {
         color: white;
@@ -797,6 +807,15 @@ h3 {
         position: sticky;
         bottom: 0;
     }
+
+    .div47h {
+        color: rgb(226, 16, 16);
+        background-color: #eee;
+        width: 200px;
+        padding: 10px;
+        position: sticky;
+        bottom: 30px;
+    }
     
     /* --------------------------------------------------------------------------------- */
     /* Lesson 31 (Z-Index) */
@@ -805,7 +824,13 @@ h3 {
     
     .div48,
     .div49,
-    .div50 {
+    .div50,
+    .div51,
+    .div52,
+    .div53, 
+    .div54,
+    .div55,
+    .div56 {
         padding: 10px;
         width: 100px;
         color: #fff;
@@ -829,16 +854,6 @@ h3 {
         background-color: blue;
     }
     
-    .div51,
-    .div52,
-    .div53 {
-        padding: 10px;
-        width: 100px;
-        color: #fff;
-        text-align: center;
-        position: absolute;
-    }
-    
     .div51 {
         background-color: #ff0000;
         margin-top: 15px;
@@ -855,16 +870,6 @@ h3 {
     
     .div53 {
         background-color: blue;
-    }
-    
-    .div54,
-    .div55,
-    .div56 {
-        padding: 10px;
-        width: 100px;
-        color: #fff;
-        text-align: center;
-        position: absolute;
     }
     
     .div54 {
