@@ -1623,3 +1623,58 @@ table thead td {
 /* --------------------------------------------------------------------------------- */
 /* Lesson 45 (CSS Variables) */
 
+/*
+CSS Variables
+Global Variable
+Local Variable
+var(Variable Name, Fallback Value)
+*/
+
+:root {
+    --mainColor: #39457d;
+    --mainPadding: 25px;
+}
+
+.main {
+    background-color: var(--mainColor, black);
+    color: white;
+    padding: calc(var(--mainPadding) + 5px);
+}
+
+.h2 {
+    color: var(--mainColor);
+    background-color: white;
+    padding: var(--mainPadding);
+}
+
+.p12 {
+    color: var(--mainColor);
+    border: 2px solid var(--mainColor);
+    padding: var(--mainPadding);
+}
+
+.link1:hover {
+    color: var(--mainColor);
+}
+
+.local {
+    --mainColor: black;
+    background-color: var(--mainColor);
+    color: white;
+    padding: var(--mainPadding);
+    margin-top: var(--mainPadding);
+}
+
+/* --------------------------------------------------------------------------------- */
+/* Lesson 46 (Flex Box - Parent Direction, Wrap, Flow) */
+
+
+
+
+
+
+
+
+
+
+
