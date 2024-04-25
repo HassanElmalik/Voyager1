@@ -1,0 +1,50 @@
+/* 1 */
+
+.assign1 {
+    font-size: 80px;
+    text-transform: capitalize;
+    text-shadow: 2px 2px 0 rgb(218, 81, 81), 4px 4px 0 rgb(45, 115, 207), 6px 6px 0 #9f33b3;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* 2 */
+
+.one {
+    text-transform: uppercase;
+}
+
+.two {
+    text-transform: capitalize;
+}
+
+.three {
+    text-transform: lowercase;
+}
+
+/* 3 */
+
+.assign3 {
+    width: 400px;
+    background-color: #eee;
+    padding: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
+/* 4 */
+
+a {
+    text-decoration: none;
+    color: white;
+    width: 200px;
+    display: block;
+    text-transform: capitalize;
+    font-size: 40px;
+    font-weight: bold;
+    background-color: #009688;
+    border-bottom: 10px solid rgb(37, 81, 26);
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+}
