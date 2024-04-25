@@ -1,0 +1,63 @@
+/* 1 */
+.assign1 {
+    border: 3px solid orangered;
+    padding: 20px;
+    width: 600px;
+    margin: auto;
+}
+
+.p1 {
+    font-size: 40px;
+    background-color: #d9d9d9;
+    border: inherit;
+    padding: inherit;
+    text-align: center;
+}
+
+/* ---------------------------------------------------------------- */
+/* 2 */
+
+.assign2-1 {
+    font-size: 40px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.assign2-2 {
+    font-size: 40px;
+    font-family: "Cairo", sans-serif;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.assign2-3 {
+    font-size: 40px;
+    font-family: "Jomhuria", serif;
+    font-weight: 400;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+/* ------------------------------------------------------------------ */
+/* 3 */
+
+.assign3-1 {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    text-align: center;
+}
+.assign3-2 {
+    font-size: 2rem;
+    text-transform: capitalize;
+    text-align: center;
+}
+.assign3-3 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    text-align: center;
+}
+
