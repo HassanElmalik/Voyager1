@@ -1,0 +1,60 @@
+/* 1 */
+
+.parent {
+    width: 800px;
+    /* width: 1000px; */
+    background-color: #eee;
+    overflow: hidden;
+}
+
+.third,
+.half,
+.fourth,
+.fullwidth {
+    background-color: #d9d9d9;
+    padding: 15px;
+    margin: 15px 15px 0 15px;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+}
+
+.fullwidth {
+    float: none;
+}
+
+.third {
+    width: calc((100%  - 180px)/3);
+}
+
+.half {
+    width: calc((100% - 120px)/2);
+}
+
+.fourth {
+    width: calc((100% - 240px)/4);
+    margin-bottom: 15px;
+}
+
+/* 2 */
+
+.normal,
+.one,
+.two {
+    margin: 20px auto;
+    width: 300px;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 20px;
+    background-color: rgb(217, 217, 217); /* Get The Background From Image */
+    color: black;
+  }
+
+  .one {
+    background-color: rgb(217, 217, 217,0.1);
+  }
+
+  .two {
+    opacity: 0.1;
+  }
+
