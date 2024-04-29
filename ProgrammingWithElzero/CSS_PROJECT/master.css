@@ -278,15 +278,15 @@ p {
     font-size: 18px;
 }
 
-div {
+.nest {
     background-color: white;
 }
 
-div h2 {
+.nest h2 {
     color: black;
 }
 
-div p {
+.nest p {
     color: black;
 }
 
@@ -1667,6 +1667,319 @@ var(Variable Name, Fallback Value)
 
 /* --------------------------------------------------------------------------------- */
 /* Lesson 46 (Flex Box - Parent Direction, Wrap, Flow) */
+
+/* 
+    Flexible Box
+    For Parent
+    display: flex => To Start Flexible Box
+    flex-direction: row => default value
+    flex-wrap: nowrap => default value
+    flex-row: [Flex-Direction] + [Flex-Wrap] 
+    */
+
+.flex {
+    /* direction: rtl; */
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    display: flex;
+    /* flex-direction: row; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+    /* flex-wrap: wrap; */
+    /* flex-wrap: wrap-reverse; */
+    flex-flow: row wrap;
+}
+
+.flex div {
+    background-color: red;
+    color: white;
+    width: 25%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.float {
+    /* direction: rtl; */
+    overflow: hidden;
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+.float div {
+    /* float: right; */
+    background-color: red;
+    color: white;
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------------- */
+/* Lesson 47 (Flex Box - Parent Justify Content) */
+
+/*
+    Flexible Box
+    For Parent
+    
+    justify-content: flex-start => Default Value
+*/
+
+.flex1 {
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: flex-start; */
+    /* justify-content: flex-end; */
+    justify-content: center;
+}
+
+.flex1 div {
+    background-color: red;
+    color: white;
+    width: 25%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.float1 {
+    overflow: hidden;
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+.float1 div {
+    background-color: red;
+    color: white;
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.float-five {
+    margin-left: 37.5%;
+}
+
+.flex2 {
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: flex-start; */
+    /* justify-content: flex-end; */
+    /* justify-content: center; */
+    /* justify-content: space-between; */
+    justify-content: space-around;
+    /* justify-content: space-evenly; */
+}
+
+.flex2 div {
+    background-color: red;
+    color: white;
+    width: calc(94% / 3);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.float2 {
+    overflow: hidden;
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+.float2 div {
+    background-color: red;
+    color: white;
+    float: left;
+    width: calc(94% / 3);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0 1%;
+}
+
+.float-two {
+    margin: 0 1%;
+}
+
+/* --------------------------------------------------------------------------------- */
+/* Lesson 48 (Flex Box - Parent Align Items) */
+
+/* 
+    Flexible Box
+    For Parent
+    
+    align-items: stretch => Default Value
+    */
+    
+    .flex3 {
+        background-color: #eee;
+        width: 600px;
+        padding: 20px;
+        margin: 20px auto;
+        box-sizing: border-box;
+        display: flex;
+        align-items: stretch;
+        align-items: flex-start;
+        align-items: flex-end;
+        align-items: center;
+    }
+    
+.flex3 div {
+    background-color: red;
+    color: white;
+    width: calc(100% /3);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.float3 {
+    overflow: hidden;
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+.float3 div {
+    background-color: red;
+    color: white;
+    float: left;
+    width: calc(100% /3);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.flex3-one {
+    height: 120px;
+}
+
+.flex3-two {
+    height: 80px;
+}
+
+.float3-one {
+    height: 80px;
+}
+
+.float3-two {
+    height: 120px;
+}
+
+.center {
+    background-color: blue;
+    color: white;
+    width: 300px;
+    height: 200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --------------------------------------------------------------------------------- */
+/* Lesson 49 (Flex Box - Parent Align Content) */
+
+/*
+    Flexible Box
+    For Parent
+    
+    align-content: stretch => Default Value
+    */
+    
+    .flex4 {
+        background-color: #eee;
+        width: 600px;
+        height: 400px;
+        padding: 20px;
+        margin: 20px auto;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+    
+    .flex4 div {
+        background-color: red;
+        color: white;
+        width: calc(100% /3);
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    
+    .flex5 {
+        background-color: #eee;
+        width: 600px;
+        height: 400px;
+        padding: 20px;
+        margin: 20px auto;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        /* align-items: flex-end; */
+        align-content: flex-end;
+        align-content: space-around;
+        align-content: space-between;
+        align-content: space-evenly;
+    }
+    
+    .flex5 div {
+        background-color: red;
+        color: white;
+        width: calc(100% /3);
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    /* --------------------------------------------------------------------------------- */
+    /* Lesson 50 (Flex Box -  Child Grow, Shrink, Order) */
+
+    
+
+    
+    
+    
+    
+
+
+
+
+
+
 
 
 
