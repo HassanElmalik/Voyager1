@@ -1837,20 +1837,20 @@ var(Variable Name, Fallback Value)
     
     align-items: stretch => Default Value
     */
-    
-    .flex3 {
-        background-color: #eee;
-        width: 600px;
-        padding: 20px;
-        margin: 20px auto;
-        box-sizing: border-box;
-        display: flex;
-        align-items: stretch;
-        align-items: flex-start;
-        align-items: flex-end;
-        align-items: center;
-    }
-    
+
+.flex3 {
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    display: flex;
+    align-items: stretch;
+    align-items: flex-start;
+    align-items: flex-end;
+    align-items: center;
+}
+
 .flex3 div {
     background-color: red;
     color: white;
@@ -1918,62 +1918,263 @@ var(Variable Name, Fallback Value)
     
     align-content: stretch => Default Value
     */
-    
-    .flex4 {
-        background-color: #eee;
-        width: 600px;
-        height: 400px;
-        padding: 20px;
-        margin: 20px auto;
-        box-sizing: border-box;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: flex-start;
-    }
-    
-    .flex4 div {
-        background-color: red;
-        color: white;
-        width: calc(100% /3);
-        text-align: center;
-        padding: 20px;
-        box-sizing: border-box;
-    }
-    
-    .flex5 {
-        background-color: #eee;
-        width: 600px;
-        height: 400px;
-        padding: 20px;
-        margin: 20px auto;
-        box-sizing: border-box;
-        display: flex;
-        flex-wrap: wrap;
-        /* align-items: flex-end; */
-        align-content: flex-end;
-        align-content: space-around;
-        align-content: space-between;
-        align-content: space-evenly;
-    }
-    
-    .flex5 div {
-        background-color: red;
-        color: white;
-        width: calc(100% /3);
-        text-align: center;
-        padding: 20px;
-        box-sizing: border-box;
-    }
 
-    /* --------------------------------------------------------------------------------- */
-    /* Lesson 50 (Flex Box -  Child Grow, Shrink, Order) */
+.flex4 {
+    background-color: #eee;
+    width: 600px;
+    height: 400px;
+    padding: 20px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
 
-    
+.flex4 div {
+    background-color: red;
+    color: white;
+    width: calc(100% /3);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
 
+.flex5 {
+    background-color: #eee;
+    width: 600px;
+    height: 400px;
+    padding: 20px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: flex-end; */
+    align-content: flex-end;
+    align-content: space-around;
+    align-content: space-between;
+    align-content: space-evenly;
+}
+
+.flex5 div {
+    background-color: red;
+    color: white;
+    width: calc(100% /3);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------------- */
+/* Lesson 50 (Flex Box -  Child Grow, Shrink, Order) */
+
+/*
+    Flexible Box
+    For Child
     
-    
-    
-    
+    flex-grow: 0 => Default Value
+    flex-shrink: 1 => Default Value
+    order: 0 => Default Value
+    */
+
+.flex6 {
+    background-color: #eee;
+    width: 900px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.flex6 div {
+    background-color: #ff0000;
+    color: white;
+    width: 80px;
+    text-align: center;
+    padding: 20px;
+    margin-right: 5px;
+    flex-grow: 1;
+    box-sizing: border-box;
+}
+
+.flex7 {
+    background-color: #eee;
+    width: 500px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.flex7 div {
+    background-color: #ff0000;
+    color: white;
+    width: 80px;
+    text-align: center;
+    padding: 20px;
+    margin-right: 5px;
+    box-sizing: border-box;
+}
+
+.flex6-one {
+    order: 6;
+}
+
+.flex6-two {
+    order: 5;
+}
+
+.flex6-three {
+    order: 4;
+}
+
+.flex6-four {
+    order: 3;
+}
+
+.flex6-five {
+    order: 7;
+}
+
+/* --------------------------------------------------------------------------------- */
+/* Lesson 51 (Flex Box -  Child Flex-Basis, Flex Shorthand) */
+
+/*
+        Felxiable Box
+        For Child
+        
+        flex-basis: auto => Default Value
+        flex-basis attribute only work in flex items
+        flex: [Flex Grow] [Flex Shrink] [Flex Basis] 0 1 Auto => Default Values
+        */
+
+.flex8 {
+    background-color: #eee;
+    width: 800px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.flex8 div {
+    background-color: #ff0000;
+    color: white;
+    width: 80px;
+    text-align: center;
+    padding: 20px;
+    margin-right: 5px;
+    box-sizing: border-box;
+}
+
+.flex8 .flex8-two {
+    width: 300px;
+    box-sizing: border-box;
+}
+
+.flex9 {
+    background-color: #eee;
+    width: 800px;
+    padding: 20px;
+    margin: 20px auto;
+    display: inline-flex;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.flex9 div {
+    background-color: #ff0000;
+    color: white;
+    width: 80px;
+    text-align: center;
+    padding: 20px;
+    margin-right: 5px;
+    box-sizing: border-box;
+}
+
+.flex9 .flex9-two {
+    flex-basis: 300px;
+    /* max-height: 200px; */
+    box-sizing: border-box;
+}
+
+.flex9 .flex9-four {
+    flex: 200px 3;
+    box-sizing: border-box;
+}
+
+.in1 {
+    display: inline-block;
+}
+
+/* --------------------------------------------------------------------------------- */
+/* Lesson 52 (Flex Box -  Child Align Self, Games, Task) */
+
+/*
+        Flexible Box
+        For Child
+        
+        align-self: auto => Default Value
+        */
+
+.flex10 {
+    background-color: #eee;
+    width: 800px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    box-sizing: border-box;
+    height: 400px;
+}
+
+.flex10 div {
+    background-color: #ff0000;
+    color: white;
+    width: 80px;
+    text-align: center;
+    padding: 20px;
+    margin-right: 5px;
+    box-sizing: border-box;
+}
+
+.flex10 .flex10-two {
+    align-self: flex-end;
+    align-self: flex-start;
+    align-self: center;
+}
+
+.flex11 {
+    background-color: #eee;
+    width: 800px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    box-sizing: border-box;
+    height: 400px;
+    align-items: flex-start;
+    align-items: flex-end;
+    align-items: center;
+}
+
+.flex11 div {
+    background-color: #ff0000;
+    color: white;
+    width: 80px;
+    text-align: center;
+    padding: 20px;
+    margin-right: 5px;
+    box-sizing: border-box;
+}
+
+.flex11 .flex11-two {
+    align-self: stretch;
+}
+
+/* --------------------------------------------------------------------------------- */
+/* Lesson 53 (Finish Flex Froggy Game) */
+
+
 
 
 

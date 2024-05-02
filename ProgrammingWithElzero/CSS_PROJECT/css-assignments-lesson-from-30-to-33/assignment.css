@@ -104,29 +104,31 @@
   .ul1 {
       width: 400px;
       margin: auto;
-      margin-bottom: 10px;
-      background-color: #d9d9d9;
+      margin-bottom: 20px;
       padding: 20px;
-      /* height: 200px; */
   }
 
+
+
   .li1 {
-      margin: 10px auto;
+      margin: 20px auto;
       list-style: none;
-      height: 150px;
+      background-color: #d9d9d9;
+      padding: 15px;
   }
 
   .li2 {
-      margin: 10px auto;
-      padding: 10px;
+      margin: 20px auto;
       list-style: none;
-      height: 150;
+      background-color: #d9d9d9;
+      padding: 15px;
   }
 
   .li3 {
       margin: 10px auto;
-      padding: 10px;
       list-style: none;
+      background-color: #d9d9d9;
+      padding: 15px;
   }
 
   .li1 li {
@@ -154,19 +156,17 @@
 
   table {
       background-color: #d9d9d9;
-      /* padding: 20px; */
       margin: auto;
       width: 700px;
-      border: 1px solid #eee;
+      border-spacing: 0px;
   }
 
   td,
   th {
-      padding: 5px;
       padding-bottom: 20px;
       text-align: center;
-      border-left: 2px solid #eee;
-      border-bottom: 2px solid #eee;
+      border: 1px solid #eee;
+      padding: 10px;
   }
 
   th {
@@ -180,15 +180,21 @@
   }
 
   .span1 {
+      font-size: 15px;
       color: white;
       background-color: blue;
       width: fit-content;
-      padding: 7px;
+      padding: 5px;
   }
 
   .span2 {
+      font-size: 15px;
       color: white;
       background-color: red;
       width: fit-content;
-      padding: 7px;
+      padding: 5px;
+  }
+
+  .tr-foot td {
+      border-bottom-color: green;
   }
