@@ -1703,6 +1703,46 @@ var(Variable Name, Fallback Value)
     box-sizing: border-box;
 }
 
+.flex0 {
+    background-color: #eee;
+    width: 600px;
+    height: 250px;
+    padding: 20px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.flex0 div {
+    background-color: red;
+    color: white;
+    width: 25%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.flex00 {
+    background-color: #eee;
+    width: 600px;
+    height: 200px;
+    padding: 20px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.flex00 div {
+    background-color: red;
+    color: white;
+    width: 25%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
 .float {
     /* direction: rtl; */
     overflow: hidden;
@@ -1778,6 +1818,12 @@ var(Variable Name, Fallback Value)
 .float-five {
     margin-left: 37.5%;
 }
+
+/*
+difference between space-around and space-evenly , space-around will put the margin
+two times between the elements one margin for the left element and one for the right element
+, space-evenly will make the margin between the elements and in the start and end all even
+*/
 
 .flex2 {
     background-color: #eee;
@@ -2036,6 +2082,10 @@ var(Variable Name, Fallback Value)
     order: 7;
 }
 
+.flex7-six {
+    order:-1;
+}
+
 /* --------------------------------------------------------------------------------- */
 /* Lesson 51 (Flex Box -  Child Flex-Basis, Flex Shorthand) */
 
@@ -2181,7 +2231,19 @@ var(Variable Name, Fallback Value)
 
 
 
-
+.life {
+    font-size: 20px;
+    line-height: 1.8;
+    word-spacing: 2px;
+    letter-spacing: 1.6px;
+    background-color: bisque;
+    height: 400px;
+    overflow: auto;
+    width: 500px;
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    float: right;
+}
 
 
 
