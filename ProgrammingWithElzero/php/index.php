@@ -16,7 +16,7 @@
 echo "<h3>Lesson 4</h3>";
 echo 'we love php'; // echo is a built in fn to print a string
 print '<br>'; // print is a built in fn to print a string
-?> <?= 'we love php with short tag' ?> //short tag
+?> <?= 'we love php with short tag'  //short tag ?> 
 <?php
 echo '<hr>';
 

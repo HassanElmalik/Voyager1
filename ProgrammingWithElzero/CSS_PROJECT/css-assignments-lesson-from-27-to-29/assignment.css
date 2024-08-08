@@ -12,29 +12,50 @@
 .fourth,
 .fullwidth {
     background-color: #d9d9d9;
-    padding: 15px;
-    margin: 15px 15px 0 15px;
+    padding: 20px;
+    margin-left: 15px;
+    margin-bottom: 15px;
     float: left;
     text-align: center;
     font-weight: bold;
 }
 
+/* .parent div {
+    background-color: #d9d9d9;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    padding: 20px;
+} */
+
 .fullwidth {
     float: none;
+    margin-top: 15px;
+    margin-right: 15px;
 }
 
+/* .fullwidth {
+    margin-top: 15px;
+    float: left;
+    width: calc( 100% - 70px );
+} */
+
 .third {
-    width: calc((100%  - 180px)/3);
+    width: calc((100%  - 180px) / 3);
 }
 
 .half {
-    width: calc((100% - 120px)/2);
+    width: calc((100% - 125px)/2);
 }
 
 .fourth {
-    width: calc((100% - 240px)/4);
-    margin-bottom: 15px;
+    width: calc((100% - 235px)/4);
 }
+
+/* .clear {
+    clear: both;
+} */
+
 
 /* 2 */
 

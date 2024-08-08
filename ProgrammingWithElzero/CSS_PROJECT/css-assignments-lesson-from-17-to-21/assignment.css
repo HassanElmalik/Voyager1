@@ -37,14 +37,14 @@
 a {
     text-decoration: none;
     color: white;
-    width: 200px;
+    width: 300px;
     display: block;
     text-transform: capitalize;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bold;
     background-color: #009688;
     border-bottom: 10px solid rgb(37, 81, 26);
-    padding: 20px;
+    padding: 50px;
     margin: auto;
     text-align: center;
 }
