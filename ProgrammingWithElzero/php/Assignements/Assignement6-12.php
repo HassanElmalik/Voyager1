@@ -1,7 +1,7 @@
 <?php
 
 //1
-echo (int)15.2 + (int)14.7 + (10.5 + 10.5) ."<br>"; // 50
+echo (int)15.2 + (int)14.7 + (int) (10.5 + 10.5) ."<br>"; // 50
 echo gettype((int)(15.2 + 14.7 + (10.5 + 10.5))) . "<br>"; // Integer
 
 
@@ -16,7 +16,7 @@ var_dump(100);
 
 
 //3
-echo "Hello \"Elzero\" \\\ \"\"\" We Love \"\$\$PHP\" ";
+echo "Hello \"Elzero\" \\\\ \"\"\" We Love \"\$\$PHP\" ";
 echo '<br>';
 
 // Needed Output

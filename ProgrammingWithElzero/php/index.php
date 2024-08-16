@@ -13,7 +13,7 @@
 <?php 
 
 // --------------- Lesson 4(PHP Tags & Instruction Sepration) ---------
-echo "<h3>Lesson 4</h3>";
+echo "<h3><u>Lesson 4</u></h3>";
 echo 'we love php'; // echo is a built in fn to print a string
 print '<br>'; // print is a built in fn to print a string
 ?> <?= 'we love php with short tag'  //short tag ?> 
@@ -21,7 +21,7 @@ print '<br>'; // print is a built in fn to print a string
 echo '<hr>';
 
 // -------------- Lesson 5(Comments & Best Practices) ------------------
-echo "<h3>Lesson 5</h3>";
+echo "<h3><u>Lesson 5</u></h3>";
 // single line comment
 echo 'Test';// single line comment
 echo 'Test';# single line comment
@@ -39,7 +39,7 @@ line 2
 echo 'Test' /*single Line */;echo '<hr>';
 
 // -----------------Lesson 6(Introduction to data types)--------
-echo "<h3>Lesson 6</h3>";
+echo "<h3><u>Lesson 6</u></h3>";
 /* 
     Data Types
         
@@ -61,7 +61,7 @@ echo gettype(array("Egypt","Suadi Arabia")). '<br>';
 echo gettype(["Egypt","Suadi Arabia"]).'<br>'. '<hr>';
 
 // ----- Lesson 7(Type Juggling And Automatic Type Conversion) -------
-echo "<h3>Lesson 7</h3>";
+echo "<h3><u>Lesson 7</u></h3>";
 
 echo 1 + "2". '<br>';
 echo gettype(1 + "2"); /*Integer --> Notice:the output data are converted 
@@ -73,7 +73,7 @@ echo 5 + '5 Lessons'.'<br>'. gettype(5 + '5 Lessons'). '<br>';
 echo 10+15.5. '<br>'. gettype(10+15.5). '<hr>';
 
 // ----------------- Lesson 8(Type Casting) ---------------------------
-echo "<h3>Lesson 8</h3>";
+echo "<h3><u>Lesson 8</u></h3>";
 /*
 Type Casting 
 "boolean" or "bool"
@@ -90,22 +90,29 @@ echo 5 + (int)"5 lessons". '<br>'. 5 + (integer)"5 lessons". '<br>';
 echo gettype( 5 + (int)"5 lessons"). '<br>'. 10 + (int)15.5.'<br>';
 echo gettype(10 + (int)15.5). '<br>'. 10.5+10.5. '<br>';
 echo gettype(10.5 + 10.5).'<br>'. (int) 10.5+ (int)10.5. '<br>';
+echo 5 + (int) "lessons 8";
+echo '<br>';
+echo 5 + (int) "6 lessons 7";
+echo '<br>';
 echo gettype((int) 10.5+ (int)10.5). '<br>'. (int)(10.5 + 10.5). '<hr>';
 
 // ----------- Lesson 9(Boolean And Converting To Boolean) -----------
-echo "<h3>Lesson 9</h3>";
+echo "<h3><u>Lesson 9</u></h3>";
 
 var_dump((bool)""); /*built in fn that gives u details about the data u put it ,
  varDump echos the data automatically*/
 var_dump((bool)array());var_dump((bool)[]);
 var_dump((bool)0);var_dump((bool)"0");
-var_dump((bool)"hassan");var_dump((bool)array(1));
+var_dump((bool)"hassan");var_dump((bool)array(0));
 var_dump((bool)[1]);var_dump((bool)[0]);
 var_dump((bool)100);var_dump((bool)-100);
+echo '<br>';
+var_dump((bool) "0.0");
+echo '<br>';
 var_dump((bool)10.5);echo '<hr>'. (bool) 5 . (bool) "0". "<hr>";
 
 // -------------- Lesson 10(String And Escaping) ---------------------
-echo "<h3>Lesson 10</h3>";
+echo "<h3><u>Lesson 10</u></h3>";
 /*
 nl2br() --> new line to break
 */
@@ -122,7 +129,7 @@ On Multiple
 Lines');echo '<hr>';
 
 // ---------------- Lesson 11(Heredoc And Nowdoc) --------------------
-echo "<h3>Lesson 11</h3>";
+echo "<h3><u>Lesson 11</u></h3>";
 $name = "Hassan";
 
 //Heredoc
@@ -149,7 +156,7 @@ echo <<<"navlinks"
 navlinks; echo '<hr>';
 
 // -------------- Lesson 12(Array With Complex Tests) ----------------
-echo "<h3>Lesson 12</h3>";
+echo "<h3><u>Lesson 12</u></h3>";
 /*
     Array With Key
     Array Without Key
@@ -167,7 +174,7 @@ print_r([
 ]); echo "</pre>"; echo '<hr>';
 
 // -------- Lesson 13(Introduction To Variable And Naming Rules) --------
-echo "<h3>Lesson 13</h3>";
+echo "<h3><u>Lesson 13</u></h3>";
 /*
     Variables
         Naming Rules + Info
@@ -188,12 +195,12 @@ echo $username;echo '<br>';echo $Username;echo '<br>';
 echo  'Hello $username';echo '<br>';echo "Hello $username";echo '<hr>';
 
 // ---------- Lesson 14(Testing Variables In Real World) -----------------
-echo "<h3>Lesson 14</h3>";
+echo "<h3><u>Lesson 14</u></h3>";
 
 include("test.php");echo '<hr>';
 
 // ------------------ Lesson 15(Variable Variable) -----------------------
-echo "<h3>Lesson 15</h3>";
+echo "<h3><u>Lesson 15</u></h3>";
 # Takes The Value Of A Variable And Treats It As The Name Of A Variable
 
 $a = "hassan";$$a = "elmalik";$$$a = "school";
@@ -205,7 +212,7 @@ echo "Hello $$a";echo '<br>';echo "Hello {$$a}";echo '<br>';
 echo "Hello {$$$a}";echo '<hr>';
 
 // ----------- Lesson 16(Assign By Value And By Refrence) -----------------
-echo "<h3>Lesson 16</h3>";
+echo "<h3><u>Lesson 16</u></h3>";
 /*
 By Default , Variables Are Always Assigned By Value
 Assigned By Reference Make Variable Alias Or Point To Another
@@ -219,7 +226,7 @@ $a = "Hassan"; $b=&$a; $b = "ElMalik"; $a="school";
 echo $a;echo '<br>';echo $b;echo '<hr>';
 
 // -------------- Lesson 17(Predefined Variables And Test) ---------------
-echo "<h3>Lesson 17</h3>";
+echo "<h3><u>Lesson 17</u></h3>";
 # Search Pre-Defined Variables
 
 //echo '<pre>';
@@ -246,7 +253,7 @@ echo $_POST["username"];
 <?php
 echo '<hr>';
 // --------------- Lesson 18(Introduction To Constants) ------------------
-echo "<h3>Lesson 18</h3>";
+echo "<h3><u>Lesson 18</u></h3>";
 /*
     Constants
         That Value Cannot Change During The Execution
@@ -261,7 +268,7 @@ define("MAIN_NUMBER",10) */
 echo DB_NAME;  echo '<br>';echo MAIN_NUMBER * 50;echo '<hr>';
 
 // --- Lesson 19(Predefined And Magic Constants And Reserved Keywords) ---
-echo "<h3>Lesson 19</h3>";
+echo "<h3><u>Lesson 19</u></h3>";
 /*
     Pre-Defined Constants [Case Sensitive]
         PHP_VERSION
@@ -302,7 +309,7 @@ function hello(){ return "Hello";}echo hello();
 echo "<hr>";
 
 // ---------------- Lesson 20(Arithmetic Operators) ---------------------
-echo "<h3>Lesson 20</h3>";
+echo "<h3><u>Lesson 20</u></h3>";
 /*
     Operators
         Used To Perform Operations On Values
@@ -342,7 +349,7 @@ echo gettype(-"-100"). "<br>". -"100"."<br>";
 echo gettype(-"100")."<br>". gettype((int)"100 test") . "<hr>";
 
 // ----------------- Lesson 21(Assignment Operators) ----------------
-echo "<h3>Lesson 21</h3>";
+echo "<h3><u>Lesson 21</u></h3>";
 /*
     Assignment Operators
         Used To Write Value To Another
@@ -365,7 +372,7 @@ $c=4;    $c**=4; // $c=$c**4;
 echo $c ."<hr>";
 
 // ---------------- Lesson 22(Comparison Operators 1) --------------------
-echo "<h3>Lesson 22</h3>";
+echo "<h3><u>Lesson 22</u></h3>";
 /*
     Comparison Operators
         Used To Compare Two Values
@@ -387,7 +394,7 @@ var_dump(100.0 === "100");var_dump(100.0 === 100);
 var_dump(100.0 !== "100");var_dump(100.0 !== 100);echo '<HR>';
 
 // ------------- Lesson 23(Comparison Operators 2) --------------------
-echo "<h3>Lesson 23</h3>";
+echo "<h3><u>Lesson 23</u></h3>";
 /*
     Part 2
     >        ==> Larger Than
@@ -407,7 +414,7 @@ var_dump(100<=>200);  var_dump(100<=>100);
 var_dump(100<=>50);   echo "<hr>";
 
 // --------------- Lesson 24(Increment And Decrement Operators) -----------
-echo "<h3>Lesson 24</h3>";
+echo "<h3><u>Lesson 24</u></h3>";
 /* 
     Incrementing & Decrementing Operators
         Increase And Decrease Values
@@ -425,7 +432,7 @@ $e=0;echo $e--;echo '<br>';echo $e;
 $b = 0;echo '<br>';echo --$b;echo '<br>';echo $b;echo '<hr>';
 
 // ----------------- Lesson 25(Logical Operators) -----------------------
-echo "<h3>Lesson 25</h3>";
+echo "<h3><u>Lesson 25</u></h3>";
 /*
     Logical Operators
         Compare Conditions
@@ -447,7 +454,7 @@ var_dump(100>50 xor 100>80 );
 var_dump(100>100 xor 100>110 );  echo "<hr>";
 
 // -------------------- Lesson 26(String Operators) --------------------
-echo "<h3>Lesson 26</h3>";
+echo "<h3><u>Lesson 26</u></h3>";
 /*
     String Operators
         Concatenate Strings
@@ -465,7 +472,7 @@ echo "$as $b $c " . HASSAN . " " . testing();echo "<br>";
 $x="Elmalik "; $x .= "Web"; $x .= " School";echo $x;echo "<hr>";
 
 // ----------------- Lesson 27(Array Operators) ---------------------
-echo "<h3>Lesson 27</h3>";
+echo "<h3><u>Lesson 27</u></h3>";
 /*
     Array Operators
         Deal With Arrays
@@ -489,7 +496,7 @@ $arr6=[1=>100 , 2=>200,];$arr7=[1=>100 , 2=>200];var_dump($arr6===$arr7);
 echo "<hr>";
 
 // ----------------- Lesson 28(Error Control Operator) -------------------
-echo "<h3>Lesson 28</h3>";
+echo "<h3><u>Lesson 28</u></h3>";
 /*
     Error Control Operator
         Control The Errors
@@ -513,7 +520,7 @@ echo "<pre>";print_r($f);echo "</pre>";
 echo "<hr>";
 
 // --------------- Lesson 29(Operator Precedence) ---------------------
-echo "<h3>Lesson 29</h3>";
+echo "<h3><u>Lesson 29</u></h3>";
 /*
     Operator Precedence
         "||" Has A Greater Precedence Than "or"
@@ -528,7 +535,7 @@ echo 10||false;echo "<br>";$a = 10||false;echo $a;echo "<br>";
 $b=10 or false;echo $b;echo "<br>";$e = 5 or 10 ;echo $e;echo "<hr>";
 
 // ------------------- Lesson 30(IF,Elseif,Else) ------------------------
-echo "<h3>Lesson 30</h3>";
+echo "<h3><u>Lesson 30</u></h3>";
 /*
     Control Structure
         If, Elseif, Else <= Basics
@@ -550,7 +557,7 @@ if (10>10){
 }echo "<hr>";
 
 // ----------- Lesson 31(If,Elseif,Else - Real Life Examples) -------------
-echo "<h3>Lesson 31</h3>";
+echo "<h3><u>Lesson 31</u></h3>";
 $page = "About";
 if($page == "About"){
     echo "This Is The Page";
@@ -575,7 +582,7 @@ if ($lang == "Arabic"){
 }echo "<hr>";
 
 // ------------ Lesson 32(If,Elseif,Else - Advanced Practice) -------------
-echo "<h3>Lesson 32</h3>";
+echo "<h3><u>Lesson 32</u></h3>";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -612,7 +619,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 }echo "<hr>";
 
 // ---------- Lesson 33(IF,Elseif,Else - Alternate Syntax) --------------
-echo "<h3>Lesson 33</h3>";
+echo "<h3><u>Lesson 33</u></h3>";
 // you can unuse the {} if it's only one line of code inside if
 if(10>5){echo "Good";}else{echo "Bad";} echo "<br>";
 if(10>5)echo "Good";else echo "Bad";echo "<br>"; 
@@ -646,7 +653,7 @@ if (10>5): ?>
 <?php 
 
 // ----------- Lesson 34(Nested If And Advanced Trainings) --------------
-echo "<h3>Lesson 34</h3>";
+echo "<h3><u>Lesson 34</u></h3>";
 
 $name = "hassan";
 $country = "Egypt";
@@ -687,7 +694,7 @@ if($country == "Egypt"){
 }echo "<hr>";
 
 // ------------- Lesson 35(Ternary Conditional Operator) ---------------
-echo "<h3>Lesson 35</h3>";
+echo "<h3><u>Lesson 35</u></h3>";
 // Trenary Operator => Short If
 
 $a = 10;
@@ -716,7 +723,7 @@ echo "<br>";
 echo "I Love PHP Because Its A $result Language"; echo "<hr>";
 
 // ---------------------- Lesson 36(Switch) ------------------------------
-echo "<h3>Lesson 36</h3>";
+echo "<h3><u>Lesson 36</u></h3>";
 /* 
     Control Structure 
         Switch
@@ -756,7 +763,7 @@ switch ($day){
 }echo "<hr>";
 
 // ----------- Lesson 37(While Loop And The Concept Of Loop) -------------
-echo "<h3>Lesson 37</h3>";
+echo "<h3><u>Lesson 37</u></h3>";
 $i = 1;
 
 while ($i<=3){
@@ -771,7 +778,7 @@ while ($a<=3):
 endwhile; echo "<hr>";
 
 // ----------------------- Lesson 38(Do While) --------------------------
-echo "<h3>Lesson 38</h3>";
+echo "<h3><u>Lesson 38</u></h3>";
 $i = 4;
 
 while ($i<=3){
@@ -792,7 +799,7 @@ while($index <= 100){
 }echo "<hr>";
 
 // ---------------------- Lesson 39(Loop For) -------------------------
-echo "<h3>Lesson 39</h3>";
+echo "<h3><u>Lesson 39</u></h3>";
 /*
     For
         Expression One Run Once At The First Of The Loop
@@ -815,7 +822,7 @@ for(;;):
 endfor; echo '<hr>';
 
 // -------------------- Lesson 40(Loop Foreach) -------------------------
-echo "<h3>Lesson 40</h3>";
+echo "<h3><u>Lesson 40</u></h3>";
 $countries = ["EG","SA","QA","SY"];
 
 echo '<pre>';
@@ -837,7 +844,7 @@ foreach($countries_with_discount as $con => $dis):
 endforeach; echo '<hr>';
 
 // ----------------- Lesson 41(Break, Continue) ---------------------
-echo "<h3>Lesson 41</h3>";
+echo "<h3><u>Lesson 41</u></h3>";
 /*
     Break Ends Execution Of (For, Foreach, While, Do While or Switch)
     Skip Current Iteration
@@ -858,7 +865,7 @@ foreach (["EG","SA","QA","SY","USA","GER"] as $country){
 }echo '<hr>';
 
 // -------------------- Lesson 42(Include, Require) ----------------------
-echo "<h3>Lesson 42</h3>";
+echo "<h3><u>Lesson 42</u></h3>";
 
 include("variable.php");
 echo $a . "<br>";
@@ -868,7 +875,7 @@ echo $a . "<br>";
 echo "continue"; echo '<hr>';
 
 // -------- Lesson 43(Function Introduction And Dry Concept) ----------
-echo "<h3>Lesson 43</h3>";
+echo "<h3><u>Lesson 43</u></h3>";
 /*
     Function
         Introduction And DRY Concept (Don't Repeat Yourself)
@@ -888,7 +895,7 @@ say_hello_to("Nabil //");
 say_hello_to("Elmalik //");echo '<hr>';
 
 // ---- Lesson 44(Advanced Examples With Parameters And Arguments) ----
-echo "<h3>Lesson 44</h3>";
+echo "<h3><u>Lesson 44</u></h3>";
 function say_hello($one,$two){
     echo "Hello Mr $one $two";
 }
@@ -938,7 +945,7 @@ deep_freezer("remote");echo "<hr>";
 // deep_freezer2('remote');
 
 // -------------- Lesson 45(Function Return And Echo) -------------------
-echo "<h3>Lesson 45</h3>";
+echo "<h3><u>Lesson 45</u></h3>";
 /*
     Optional Return & Null
     End After Return
@@ -957,7 +964,7 @@ var_dump($prize_number);
 echo $prizes[get_number(2,1)]; echo '<hr>';
 
 // ---------- Lesson 46(Function Default Parameter Value) --------------
-echo "<h3>Lesson 46</h3>";
+echo "<h3><u>Lesson 46</u></h3>";
 /*
     Function
         Default Parameter Value
@@ -1016,7 +1023,7 @@ echo $x;
 echo "<hr>";
 
 // ------------- Lesson 47(Function Variable Arguments List) -------------
-echo "<h3>Lesson 47</h3>";
+echo "<h3><u>Lesson 47</u></h3>";
 /*
     Variable Arguments List
         func_num_args()
@@ -1048,7 +1055,7 @@ function calculate(...$nums){
 calculate (30,20,60,80,50,100); echo "<hr>";
 
 // -------- Lesson 48(Function Training And Unpacking Arguments) ---------
-echo "<h3>Lesson 48</h3>";
+echo "<h3><u>Lesson 48</u></h3>";
 /*
         Function Advanced Training
         Unpacking In Arguments 
@@ -1070,7 +1077,7 @@ function get_data1($name , $country="Private", ...$skills){
  get_data1 ("Hassan","Egypt",...["HTML","CSS","JS","PHP"]); echo "<hr>";
 
  // -------- Lesson 49(Function Variable And Function Exists) ------------
- echo "<h3>Lesson 49</h3>";
+ echo "<h3><u>Lesson 49</u></h3>";
  /*
      Variable Function
         PHP Allow To Use Variable Like Function
@@ -1108,7 +1115,7 @@ $fun3 = "strlen"; echo "<br>";
 echo $fun3 ("Elmalik"); echo "<hr>";
 
 // - Lesson 50(Passing Arguments By Reference And Return Type Declaration) -
-echo "<h3>Lesson 50</h3>";
+echo "<h3><u>Lesson 50</u></h3>";
 /*
         Passing Arguments by Reference
             By Default, Function Arguments Are Passed By Value
@@ -1155,7 +1162,7 @@ echo calculate2(20.5,10);echo "<br>";
 echo gettype(calculate2(10,20.7));echo "<hr>";
 
 // ------------------ Lesson 51(Anonymous Function) --------------------- 
-echo "<h3>Lesson 51</h3>";
+echo "<h3><u>Lesson 51</u></h3>";
 /*
     Function
         Anonymous Function
@@ -1221,7 +1228,7 @@ print_r ($nums_after_adding_10);
 echo "</pre>"; echo '<hr>';
 
 // ------------------- Lesson 52(Arrow Function) ----------------------
-echo "<h3>Lesson 52</h3>";
+echo "<h3><u>Lesson 52</u></h3>";
 /*
     Function
         Arrow Function
@@ -1265,7 +1272,7 @@ print_r($nums_after_adding_10);
 echo '</pre>'; echo '<hr>';
 
 // ----------- Lesson 53(String Access And Update Elements) --------------
-echo "<h3>Lesson 53</h3>";
+echo "<h3><u>Lesson 53</u></h3>";
 /*
     String
         Access Elements 
@@ -1295,7 +1302,7 @@ $str[9] = "A";
 echo $str . "<br>"; echo "<hr>";
 
 // -------- Lesson 54(String Functions - Part1 - 6 Functions) ------------
-echo "<h3>Lesson 54</h3>";
+echo "<h3><u>Lesson 54</u></h3>";
 /*
     String Functions
         lcfirst(String[Required])
@@ -1317,7 +1324,7 @@ echo ucwords("elmalik  web  @school", "@") . "<br>";
 echo str_repeat("Hassan ",3); echo "<hr>";
 
 // -------- Lesson 55(String  Functions - part2 - 7 Functions) ----------
-echo "<h3>Lesson 55</h3>";
+echo "<h3><u>Lesson 55</u></h3>";
 /*
     String Functions
         implode(Separator[Optional], Array[Required]) => join() Is Alias
@@ -1363,7 +1370,7 @@ echo rtrim("#@@Elmalik@@@###", "#@") . "<br>";
 echo ltrim("#@@Elmalik@@@###", "#@") . "<br>"; echo "<hr>";
 
 // -------- Lesson 56(String Functions - Part3 - 5 Functions) ---------
-echo "<h3>Lesson 56</h3>";
+echo "<h3><u>Lesson 56</u></h3>";
 /*
     String Functions
         chunk_split(String[Required], Length[Optional,End[Optional])
@@ -1393,7 +1400,7 @@ echo nl2br("Elmalik\nWeb\nSchool\n");
 echo nl2br("Elmalik\nWeb\nSchool",false); echo '<hr>';
 
 // --------- Lesson 57(String Functions - Part4 - 5 Functions) ---------
-echo "<h3>Lesson 57</h3>";
+echo "<h3><u>Lesson 57</u></h3>";
 /*
     String Functions
         strpos(String[Required], Value[Required], Start Position[Optional]) Case_Sensitive
@@ -1425,7 +1432,7 @@ var_dump(substr_count("Hello Hello", "He", 1, 6)); // 0
 var_dump(substr_count("abcdabcda", "abcda"));  echo "<hr>"; // 1 
 
   // ------- Lesson 58(String Functions - Part 5 - 4 Functions) --------
-  echo "<h3>Lesson 58</h3>";
+  echo "<h3><u>Lesson 58</u></h3>";
   /*
     String Functions
         parse_str(String[Required], Array[Required])
