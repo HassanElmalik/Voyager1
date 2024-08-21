@@ -192,7 +192,12 @@ echo "<h3><u>Lesson 13</u></h3>";
 $username = "Hassan";$Username = "Elmalik";
 
 echo $username;echo '<br>';echo $Username;echo '<br>';
-echo  'Hello $username';echo '<br>';echo "Hello $username";echo '<hr>';
+echo  'Hello $username';echo '<br>';echo "Hello $username";
+echo '<br>';
+echo '"$username"';
+echo '<br>';
+echo "'$username'";
+echo '<hr>';
 
 // ---------- Lesson 14(Testing Variables In Real World) -----------------
 echo "<h3><u>Lesson 14</u></h3>";
@@ -207,6 +212,9 @@ $a = "hassan";$$a = "elmalik";$$$a = "school";
 
 echo $a;echo '<br>';echo $$a;echo '<br>';echo $hassan;echo '<br>';
 echo $$$a;echo '<br>';echo $elmalik;echo '<br>';
+echo $$hassan;echo '<br>';
+
+
 
 echo "Hello $$a";echo '<br>';echo "Hello {$$a}";echo '<br>';
 echo "Hello {$$$a}";echo '<hr>';
