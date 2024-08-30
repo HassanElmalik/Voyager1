@@ -342,6 +342,21 @@ echo 10 *20 . "<br>". gettype(10*20). "<br>";
 echo 9.5 *20.5 ."<br>".gettype(9.5*20.5)."<br>";
 echo 20/10 ."<br>".gettype(20/10)."<br>";
 echo 20/8 ."<br>".gettype(20/8)."<br>";
+echo 8.5/8.5;
+echo '<br>';
+echo gettype(8.5/8.5);
+echo '<br>';
+echo '<br>';
+/*
+* when we add 2 integer numbers there is no propapilty of
+getting a double result so the type will always be integer
+* and when we add 2 double numbers the type will always 
+be double
+* but when we divide 2 integer numbers there is a propapilty of
+getting a double result so the type will depend on the result
+* and when we divide 2 double numbers the type will always
+be double
+*/
 
 echo 21%10 ."<br>". 23%10 ."<br>". 29%10 ."<br>";
 echo 30%10 ."<br>". 21%8 ."<br>". 21%4 ."<br>";
@@ -395,7 +410,8 @@ echo "<h3><u>Lesson 22</u></h3>";
 // Test Equal
 var_dump(100 == 100);var_dump(100 == "100");
 var_dump(100.0 == "100");var_dump(100.0 != 100);
-var_dump(100.0 <> 100);echo "###########";echo "<br>";
+var_dump(100.0 <> 100);echo "<br>";
+echo "###########";echo "<br>";
 // Test Identical
 var_dump(100 === 100);var_dump(100 === "100");
 var_dump(100.0 === "100");var_dump(100.0 === 100);
@@ -431,6 +447,10 @@ echo "<h3><u>Lesson 24</u></h3>";
 $Likes=0; $Likes++;$Likes++; $Likes++; $Likes--;
 echo $Likes;echo '<br>';
 
+$a=0;
+echo ($a++);
+echo '<br>';
+echo '<br>';
 $a=0;echo $a++;echo '<br>';echo $a;
 
 $ez= 0;echo '<br>';echo ++$ez;echo '<br>';echo $ez;echo '<br>';
@@ -456,8 +476,9 @@ echo "<h3><u>Lesson 25</u></h3>";
 var_dump(100>50 and 100>80 and 100>90);
 var_dump(100>50 && 100>80 && 100>100);
 var_dump(100>50 or 100>110 || 100>100);
-var_dump(100>50 xor 100>110 xor 100>100);
-var_dump(100>50 xor 100>80 xor 100>30);
+echo '<br>';
+var_dump(100>50 xor 100>110 xor 100>=100); /* true xor true => false */
+var_dump(100>50 xor 100>80 xor 100>30); /* false xor true => true */
 var_dump(100>50 xor 100>80 );
 var_dump(100>100 xor 100>110 );  echo "<hr>";
 
@@ -474,6 +495,7 @@ echo "<h3><u>Lesson 26</u></h3>";
 $as = "Elmallik"; $b="Web" ; $c="school";
 
 define ("HASSAN","1");function testing(){ return 1;}
+
 echo "$as $b $c <br>";  echo "{$as} {$b} {$c} <br>";
 echo $as . " " . $b . " " . $c;echo "<br>";
 echo "$as $b $c " . HASSAN . " " . testing();echo "<br>";
@@ -497,10 +519,13 @@ $arr1 = [1=>"A",2=>"B"];$arr2 = [3=>"C",4=>"D"];$arr3 = $arr1 + $arr2;
 
 echo '<pre>';print_r ($arr1+$arr2);print_r ($arr3);echo '</pre>';
 
-$arr4 = [1=> "10" , 2=>"20" , 3 => 5.0];$arr5 = [3 => 5, 2=> 20 , 1=>10 ];
-var_dump($arr4==$arr5);var_dump($arr4!=$arr5);var_dump($arr4<>$arr5);
+$arr4 = [1=> "10" , 2=>"20" , 3 => 5.0];
+$arr5 = [3 => 5, 2=> 20 , 1=>10 ];
+var_dump($arr4==$arr5);var_dump($arr4!=$arr5);
+var_dump($arr4<>$arr5);
 
-$arr6=[1=>100 , 2=>200,];$arr7=[1=>100 , 2=>200];var_dump($arr6===$arr7);
+$arr6=[1=>100 , 2=>200,];$arr7=[1=>100 , 2=>200];
+var_dump($arr6===$arr7);
 echo "<hr>";
 
 // ----------------- Lesson 28(Error Control Operator) -------------------
@@ -515,16 +540,20 @@ echo "<h3><u>Lesson 28</u></h3>";
         Include
 */
 //Variable
-$s = 10;
-@$b = $s  or die("Variable Not Found");
-echo "Test $s <br>";
+$ad = 10;
+@$b = $ad  or die("Variable Not Found");
+echo "Test $ad <br>";
+
+@$bd = $ad || die("not found");
+echo $bd;
+
 
 //File
-$f = @file("hassan.text") or die("File Not Found");
+$f = @file("files/hassan.text") or die("File Not Found");
 echo "<pre>";print_r($f);echo "</pre>";
 
 //Include
-(@include ("hassan.php")) or die("Included File Not Found");
+(@include ("files/hassan.php")) or die("Included File Not Found");
 echo "<hr>";
 
 // --------------- Lesson 29(Operator Precedence) ---------------------
@@ -536,11 +565,14 @@ echo "<h3><u>Lesson 29</u></h3>";
 */
 
 echo 2+4*5;echo "<br>";echo (2+4)*5;echo "<br>";
-echo 10 || false || 0 || [] || "" ;echo "<br>";echo true;echo "<br>";
+echo 10 || false || 0 || [] || "" ;echo "<br>";
+echo true;echo "<br>";
 var_dump(10 || false || 0 || [] || "");echo "<br>";
 
-echo 10||false;echo "<br>";$a = 10||false;echo $a;echo "<br>";
-$b=10 or false;echo $b;echo "<br>";$e = 5 or 10 ;echo $e;echo "<hr>";
+echo 10||false;echo "<br>";$a = 10||false;echo $a;
+echo "<br>";
+$b=10 or false;echo $b;echo "<br>";$e = 5 or 10 ;
+echo $e;echo "<hr>";
 
 // ------------------- Lesson 30(IF,Elseif,Else) ------------------------
 echo "<h3><u>Lesson 30</u></h3>";
@@ -2619,7 +2651,7 @@ echo "<h3><u>Lesson 86</u></h3>";
             Closes An Open File Pointer
 */
 
-$handle = fopen("hassan.text", "r");
+$handle = fopen("files/hassan.text", "r");
 
 echo fgets($handle, 4) . '<br>';
 rewind($handle);
@@ -2654,7 +2686,7 @@ echo "<h3><u>Lesson 87</u></h3>";
             Length => Maximum Number Of Bytes To Write
 */
 
-$handle = fopen("hassan.text", "r");
+$handle = fopen("files/hassan.text", "r");
 
 fwrite($handle, "\r\nThis Is A New Line 1", 5);
 fwrite($handle, "\r\nThis Is A New Line 2");
@@ -2694,12 +2726,12 @@ echo "<h3><u>Lesson 88</u></h3>";
 */
 
 echo '<pre>';
-print_r(file("hassan.text"));
+print_r(file("files/hassan.text"));
 echo '</pre>';
 
-echo count(file("hassan.text")) . '<br> <br>';
+echo count(file("files/hassan.text")) . '<br> <br>';
 
-$handle = fopen("hassan.text", "r");
+$handle = fopen("files/hassan.text", "r");
 
 $line = 1;
 while(!feof($handle)){
@@ -2708,8 +2740,8 @@ while(!feof($handle)){
 }
 echo '<br>';
 // rewind($handle);
-$handle = fopen("hassan.text", "r");
-for($i = 0; $i< count(file("hassan.text")); $i++){
+$handle = fopen("files/hassan.text", "r");
+for($i = 0; $i< count(file("files/hassan.text")); $i++){
     echo fgets($handle) . "<br>";
 }
 
@@ -2735,7 +2767,7 @@ echo "<h3><u>Lesson 89</u></h3>";
             SEEK_END => EOF + Offset [Accept Negative]
 */
 
-$handle = fopen("hassan.text", "r");
+$handle = fopen("files/hassan.text", "r");
 echo ftell($handle) . '<br>';
 
 echo fgets($handle) . '<br>';
