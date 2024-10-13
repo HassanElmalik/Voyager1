@@ -712,26 +712,43 @@ if($country == "Egypt"){
         if($is_orphan==true){
     echo "Hello $name";
     echo "<br>";
-    echo "u have a Country Discount <br> and a Student Discount <br> and and Orphan Discount <br> The Final price is " . $price-$country_discount-$student_discount - $orphan_discount .'$';
+    echo "u have a Country Discount $country_discount<br>
+    and a Student Discount $student_discount <br> 
+    and an Orphan Discount $orphan_discount <br>
+    The Final price is " . $price-$country_discount-$student_discount - $orphan_discount .'$';
         }
         else{
     echo "Hello $name";
     echo "<br>";
-    echo "u have a country and a student discount <br> the price is " . $price-$country_discount-$student_discount .'$';
+    echo "u have a country Discount $country_discount 
+    and a student discount $student_discount <br>
+    the price is " . $price-$country_discount-$student_discount .'$';
         }
-    }elseif($is_orphan == true){
-        echo "Hello $name <br> you have a country discount and an orphan discount <br> The Final Price Is " . $price - $country_discount - $orphan_discount .'$';
-    }else{
-    echo "Hello $name";
-    echo "<br>";
-    echo "ur country have a discount <br> the price is " . $price-$country_discount .'$';
     }
-
-}else{
+    // elseif($is_orphan == true){
+    //     echo "Hello $name <br> you have a country discount and an orphan discount <br> The Final Price Is " . $price - $country_discount - $orphan_discount .'$';
+    // }
+    else{
     echo "Hello $name";
     echo "<br>";
-    echo "there is no discount , the price is " . $price .'$';
-}echo "<hr>";
+    echo "ur country have a discount $country_discount
+    <br> the price is " . $price-$country_discount .'$';
+    }
+}
+else{
+    echo "Hello $name";
+    echo "<br>";
+    echo "there is no discount ,
+    the price is " . $price .'$';
+}
+/*
+the differenc between nestedif and elseif , in elseif if it checked 
+the condition and found it true it will excute the code inside and 
+will ignore the rest conditions, but in nestedif if it found the
+condition true it will keep checking the other ifs nested in till it
+find the first false condition and will excute the past true conditions
+*/ 
+echo "<hr>";
 
 // ------------- Lesson 35(Ternary Conditional Operator) ---------------
 echo "<h3><u>Lesson 35</u></h3>";

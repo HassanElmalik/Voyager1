@@ -27,7 +27,12 @@ $a = 10;
 $b = 20;
 echo ($a<=>$b);
 echo "<br>";
+echo gettype(($a<=>$b));
+echo "<br>";
+
 echo ($a-$b)/$a;
+echo '<br>';
+echo gettype(($a-$b)/$a);
 echo '<br>';
 
 
