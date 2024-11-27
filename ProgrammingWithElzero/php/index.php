@@ -648,11 +648,11 @@ echo "<h3><u>Lesson 32</u></h3>";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     
     if($_POST["lang"] == 'ar'){
-       include("ar.php");
+       include("files/ar.php");
     } elseif($_POST["lang"] == 'en'){
-        include("en.php");
+        include("files/en.php");
     } elseif($_POST["lang"] == 'es'){
-        include("es.php");    
+        include("files/es.php");    
     }else{
         echo "Unknown Page";
     }
@@ -710,8 +710,7 @@ if($country == "Egypt"){
     if($is_student == true){
 
         if($is_orphan==true){
-    echo "Hello $name";
-    echo "<br>";
+    echo "Hello $name <br>";
     echo "u have a Country Discount $country_discount<br>
     and a Student Discount $student_discount <br> 
     and an Orphan Discount $orphan_discount <br>
@@ -742,10 +741,10 @@ else{
     the price is " . $price .'$';
 }
 /*
-the differenc between nestedif and elseif , in elseif if it checked 
+the difference between nestedif and elseif , in elseif if it checked 
 the condition and found it true it will excute the code inside and 
-will ignore the rest conditions, but in nestedif if it found the
-condition true it will keep checking the other ifs nested in till it
+will ignore the next conditions, but in nestedif if it found the
+condition true it will keep checking the other (ifs) nested in till it
 find the first false condition and will excute the past true conditions
 */ 
 echo "<hr>";
@@ -826,6 +825,7 @@ $i = 1;
 while ($i<=3){
     echo "$i <br>";
     $i++;
+    echo "-------$i <br>";
 }
 $a = 1;
 
@@ -846,6 +846,12 @@ while ($i<=3){
 do {
     echo "$i <br>";
     $i++;
+}while ($i<=3);
+
+$i = 1;
+do {
+    $i++;
+    echo "$i <br>";
 }while ($i<=3);
 
 $index = 0;
@@ -889,6 +895,10 @@ echo '</pre>';
 foreach($countries as $country){
     echo" $country //";
 }
+echo '<br>';
+foreach($countries as $index => $country){
+    echo" $index => $country //";
+}
 
 $countries_with_discount = ["EG"=> 50,"SA"=>30,"QA"=>50,"SY"=>70];
 
@@ -924,10 +934,10 @@ foreach (["EG","SA","QA","SY","USA","GER"] as $country){
 // -------------------- Lesson 42(Include, Require) ----------------------
 echo "<h3><u>Lesson 42</u></h3>";
 
-include("variable.php");
+include("files/variable.php");
 echo $a . "<br>";
 $a = 20;
-include_once("variable.php");
+include_once("files/variable.php");
 echo $a . "<br>";
 echo "continue"; echo '<hr>';
 
