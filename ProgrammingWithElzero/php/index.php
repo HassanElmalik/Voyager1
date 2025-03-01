@@ -968,18 +968,6 @@ function say_hello($one,$two){
 }
 say_hello("Hassan","elmalik"); echo "<br>";
 
-// function deep_freezer($item){
-//     switch($item){
-//         case "water" : echo "make it ice <br>";
-//         break;
-//         case "cocacola" : echo "make it cold <br>";
-//         break;
-//         case "fruit": echo "make it fresh <br>";
-//         break;
-//         default : echo "unknown item";
-//     }
-// }
-
 function deep_freezer($item){
     if($item == "water"){
         echo "Make It Ice <br>";
@@ -997,6 +985,19 @@ deep_freezer("water");
 deep_freezer("coca cola");
 deep_freezer("fruits");
 deep_freezer("remote");echo "<hr>";
+
+// function deep_freezer($item){
+//     switch($item){
+//         case "water" : echo "make it ice <br>";
+//         break;
+//         case "cocacola" : echo "make it cold <br>";
+//         break;
+//         case "fruit": echo "make it fresh <br>";
+//         break;
+//         default : echo "unknown item";
+//     }
+// }
+
 // function deep_freezer2($item)
 // {
 //    echo  match ($item){
@@ -1419,6 +1420,7 @@ echo join("!",$friends);
 $str = "Hassan Web  School Is Cool";
 echo "<pre>";
 print_r(explode(" ", $str));
+print_r(explode("  ", $str));
 print_r(explode(" I", $str));
 print_r(explode(" ", $str,0));
 print_r(explode(" ", $str,1));
@@ -1531,8 +1533,9 @@ var_dump(substr_count("abcdabcda", "abcda"));  echo "<hr>"; // 1
 
  echo strtr("Elmalik Web School", "l","@"); echo "<br>";
  $translation = ["l" => "@" , "o" => "#"];
- echo strtr("Elmalik Web School", $translation); echo "<hr>";
+ echo strtr("Elmalik Web School", $translation) . "<br>";
 //  echo strtr("Elmalik Web School", ["l", "o"],["A", "B"]); echo "<br>";
+echo strtr("Elmalik Web School", ["l" => "A", "o" => "B"]) . "<hr>";
 
 // -- Lesson 59(String Functions - part 6 - Str_Replace, str_Irreplace) --
  echo "<h3><u>Lesson 59</u></h3>";
@@ -1545,11 +1548,12 @@ var_dump(substr_count("abcdabcda", "abcda"));  echo "<hr>"; // 1
 // str_replace("<h3>", "<h3><u>" , __FILE__);
 
 echo str_replace("o","@", "Elmalik Web School", $r); echo "<br>";
-echo "replace count is $r";echo "<br>";
+echo "replace count is $r<br>";
 echo str_replace("oo","@", "Elmalik Web School", $r); echo "<br>";
-echo "replace count is $r";echo "<br>";
+echo "replace count is $r<br>";
 echo str_replace(["l","o"],"A", "Elmalik Web School", $r); echo "<br>";
 echo "<mark>" . str_replace(["l","o","e"],["#","@"], "Elmalik Web School", $r) . "</mark>". "<br>";
+echo "replace count is $r<br>";
 
 echo '<pre>';
 print_r (str_replace("One","1", ["One", "Two", "Three", "One", "one"]));
@@ -1642,15 +1646,17 @@ echo '<br>';
 echo ord("a"); // 97
 echo '<br>';
 
-$s = "A";
+$s = "AZ";
 if ((ord($s) >= 97 & ord($s) <= 122)){
     echo "The Char Is Small And It's Ascii Code Is " .ord($s);
 }elseif((ord($s) >= 65 & ord($s) <= 90)){
     echo "The Char Is Capital And It's Ascii Code Is " .ord($s);
+}else {
+    echo 'Char Not Found';
 }
 
 echo '<br>';
-echo chr(97); // a
+echo chr(1500); // a
 echo '<br>';
 
 echo similar_text("Elm@alik", "Elm_alikk");
@@ -1673,25 +1679,25 @@ echo "<h3><u>Lesson 62</u></h3>";
         number_format(Number[Required], Decimals[Optional], Decimal_String[Optional], Separator[Optional])
 */
 
-echo strstr("Elmalik Web School","l");echo "<br>"; // lmalik Web School
-echo strstr("Elmalik Web School","W");echo "<br>"; // Web School
-echo strstr("Elmalik Web School","W",True);echo "<br>"; // Elmalik 
-echo strlen(strstr("Elmalik Web School","W",True));echo "<br>"; // 8
+echo strstr("Elmalik Web School","l") . "<br>"; // lmalik Web School
+echo strstr("Elmalik Web School","W") . "<br>"; // Web School
+echo strstr("Elmalik Web School","W",True) . "<br>"; // Elmalik 
+echo strlen(strstr("Elmalik Web School","W",True)) ."<br>"; // 8
 
-echo strstr("Elmalik Web School","w");echo "<br>"; // false
+echo strstr("Elmalik Web School","w") . "<br>"; // false
 var_dump(strstr("Elmalik Web School","w")); // boolean false
 echo strstr("Elzero Web", "e") . "<br>"; // ero Web
 
 
-echo stristr("Elmalik Web School","w");echo "<br>"; // Web School
-var_dump(stristr("Elmalik Web School","w"));echo "<br>"; // string Web School
+echo stristr("Elmalik Web School","w") . "<br>"; // Web School
+var_dump(stristr("Elmalik Web School","w"))  . "<br>"; // string Web School
 
 echo 10_000_000;echo "<br>";
 
-echo number_format(10000000.156032);echo "<br>";
-echo number_format(10000000.156032,2);echo "<br>";
-echo number_format(10000000.156032,2,"@");echo "<br>";
-echo number_format(10000000.156032,2,"@","#");echo "<br>";echo "<hr>";
+echo number_format(10000000.156032) . "<br>";
+echo number_format(10000000.156032,2) . "<br>";
+echo number_format(10000000.156032,2,"@") . "<br>";
+echo number_format(10000000.156032,2,"@","#") . "<br>";echo "<hr>";
 
 // ---------- Lesson 63(Array Functions - Part 1 - 4 Functions) -----------
 echo "<h3><u>Lesson 63</u></h3>";
@@ -1754,10 +1760,10 @@ echo "<h3><u>Lesson 64</u></h3>";
                 0 => Default => Does Not Count Elements Of Multidimensional Arrays
                 1 => Count Elements Of Multidimensional Arrays
 
-            in_array(Search[Required], Array[Required], Type[Optional])
+        in_array(Search[Required], Array[Required], Type[Optional])
                 Checks If A Value Exists In An Array
 
-            array_key_exists(Key[Required], Array[Required])
+        array_key_exists(Key[Required], Array[Required])
                 Check If Key Is Exists
 */
 
@@ -1777,7 +1783,7 @@ echo count($counting);echo '<br>';
 echo count($counting, 1 /* or true*/ );echo '<br>';
 
 $search = ["1", 2, 3, 4];
-var_dump( in_array("1", $search, 1));
+var_dump( in_array("1", $search, 1));echo '<br>';
 if(in_array(1, $search)){
     echo 'The Element Is Found';
 }echo '<br>';
