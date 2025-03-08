@@ -2194,11 +2194,16 @@ echo rand() . "<br>" . mt_getrandmax() . "<br>" . rand(50, 60) . "<br>" ;
 echo PHP_INT_MAX . '<br>';
 
 echo 10/5 . "<br>" . gettype(10/5) . "<br>";
-echo 11/5 . "<br>" . gettype(11/5) . "<br>";
+echo 11/5 . "<br>" . gettype(11/5) . "<br>" ;
+echo "---------- <br>";
+
 echo intdiv(11, 5) . "<br>" . gettype(intdiv(11, 5)) . "<br>";
 echo (int)(11/5) . "<br>";
+echo "---------- <br>";
+
 echo 11/4 . "<br>" . gettype(11/4) . "<br>";
 echo intdiv(11, 4) . "<br>" . gettype(intdiv(11, 4)) . "<br>";
+echo "---------- <br>";
 
 echo 11%5 . "<br>" . gettype(11%5) . "<br>" ;
 echo fmod(11, 5) . "<br>" . gettype(fmod(11, 5)) . "<br>";
@@ -2558,10 +2563,10 @@ echo round(disk_total_space("c:") /1024 /1024 /1024 ). "<br>";
 
 echo round(disk_free_space("c:") /1024 /1024 /1024 ). "<br>";
 
-var_dump(file_exists("hassan.text"));
+var_dump(file_exists("files/hassan.text"));
 echo '<br>';
 
-echo filesize("hassan.text");echo '<hr>';
+echo filesize("files/hassan.text");echo '<hr>';
 
 // ----------------- Lesson 83(Is_Dir, MkDir, RmDir) --------------------
 echo "<h3><u>Lesson 83</u></h3>";
@@ -2581,9 +2586,9 @@ echo "<h3><u>Lesson 83</u></h3>";
         rmdir(Name[Required], Context[Optional])
 */
 
-var_dump(is_dir("h2"));
+var_dump(is_dir("files"));
 echo '<br>';
-var_dump(is_dir("hassan.text"));
+var_dump(is_dir("files/hassan.text"));
 echo '<br>';
 
 if(file_exists("Test/Upload/Files") == false){
@@ -2612,14 +2617,17 @@ echo "<h3><u>Lesson 84</u></h3>";
         Change Group chgrp()
 */
 
-// mkdir("Y", 0700);
-echo fileperms("Y");
+// mkdir("files/Y", 0700);
+echo fileperms("files/Y");
 echo '<br>';
-chmod("Y", 0644);
+
+chmod("files/Y", 0644);
 clearstatcache();
-echo fileperms("Y");
+
+echo fileperms("files/Y");
+
 echo '<br>';
-echo fileperms("hassan.text"); echo '<hr>';
+echo fileperms("files/hassan.text"); echo '<hr>';
 
 // ---------- Lesson 85(Basename, Dirname, Realpath, Pathinfo) ----------
 echo "<h3><u>Lesson 85</u></h3>";
@@ -2644,15 +2652,19 @@ echo "<h3><u>Lesson 85</u></h3>";
 */
 
 echo basename("index.php") . "<br>";
+echo basename(__FILE__) . "<br>";
 echo basename(__FILE__, ".php") . "<br>";
 
-echo dirname(__FILE__, 1). "<br>";
+echo dirname(__FILE__, 1). "<br>"; // Default
 echo dirname(__FILE__, 2). "<br>";
 echo dirname(__FILE__, 3). "<br>";
 echo dirname(__FILE__, 4). "<br>";
 echo dirname(__FILE__, 5). "<br>";
-echo __DIR__ . "<br>";
+echo dirname(__FILE__, 6). "<br>";
+echo dirname(__FILE__, 10). "<br>";
+echo "------------------------------<br>";
 
+echo __DIR__ . "<br>";
 echo realpath(__FILE__). "<br>";
 
 echo "<pre>";
@@ -2691,8 +2703,8 @@ rewind($handle);
 echo fgets($handle, 1024) . '<br>';
 rewind($handle);
 
-echo fread($handle, 4) . '<br>';
-rewind($handle);
+echo fread($handle, 4) . '<br><br>';
+// rewind($handle);
 echo fread($handle, 1024);
 
 fclose($handle);echo '<hr>';
@@ -2709,8 +2721,8 @@ echo "<h3><u>Lesson 87</u></h3>";
             [w] For Write => Pointer At The Beginning + Truncate To 0 Length => Creat If Not Exists
             [w+] For Read And Write => Pointer At The Begining + Truncate To 0 Length => Create If Not Exists
 
-            [a] For Write => Pointer At The End + Creat If Not Exists
-            [a+] For Read & Write => Pointer At The End + Creat If Not Exists
+            [a] For Write => Pointer At The End + Create If Not Exists
+            [a+] For Read & Write => Pointer At The End + Create If Not Exists
             [x] Creat + Open For Write => Pointer At The Beginning
             [x+] Creat + Open For Read & Write => Pointer At The Beginning
 
@@ -2772,8 +2784,9 @@ while(!feof($handle)){
     $line++;
 }
 echo '<br>';
-// rewind($handle);
-$handle = fopen("files/hassan.text", "r");
+
+$handle = fopen("files/hassan.text", "r");  // rewind
+
 for($i = 0; $i< count(file("files/hassan.text")); $i++){
     echo fgets($handle) . "<br>";
 }
@@ -2806,6 +2819,7 @@ echo ftell($handle) . '<br>';
 echo fgets($handle) . '<br>';
 echo fgets($handle) . '<br>';
 echo ftell($handle) . '<br>';
+echo "-------------<br>";
 
 rewind($handle);
 echo ftell($handle) . '<br>';
@@ -2816,20 +2830,25 @@ echo ftell($handle) . '<br>';
 echo fgets($handle) . '<br>';
 echo fgets($handle) . '<br>';
 echo ftell($handle) . '<br>';
+echo "-------------<br>";
 
 fseek($handle, 0); // Rewind
 echo ftell($handle) . '<br>';
 echo fgets($handle) . '<br>';
 echo ftell($handle) . '<br>';
+echo "-------------<br>";
 
-fseek($handle, 10); 
+fseek($handle, 15); 
 echo fgets($handle) . '<br>';
+echo "-------------<br>";
 
-fseek($handle, 58); 
+fseek($handle, 63); 
 echo fgets($handle) . '<br>';
+echo "-------------<br>";
 
 fseek($handle, 7 , SEEK_CUR); 
 echo fgets($handle) . '<br>';
+echo "-------------<br>";
 
 fseek($handle, -10 , SEEK_END); 
 echo fgets($handle) . '<br>';
@@ -2837,7 +2856,7 @@ echo ftell($handle) . '<br>';
 
 fclose($handle);
 
-echo mb_strlen("Elmalik\r\nWeb\r\nschool\r\nI Love Elmalik Web School\r\nI Love El", "8bit");
+echo mb_strlen("Elmalik <br>\r\nWeb\r\nschool\r\nI Love Elmalik Web School\r\nI Love El", "8bit");
 echo '<hr>';
 
 // -------------- Lesson 90(Glob, Rename, Copy, Unlink) ------------------
@@ -2913,10 +2932,12 @@ echo "<h3><u>Lesson 91</u></h3>";
 */
 
 echo get_include_path() . "<br>";
-// echo file_get_contents("hassan1.text", true, null, 4, 5);
+echo file_get_contents("files/hassan1.text", true, null, 4, 10);
+// echo file_get_contents("https://elzero.net");
+// print_r (file("https://elzero.net"));
 
-// file_put_contents("hassan1.text", "\r\nHello Elmalik Web School <3", FILE_APPEND);
-// echo file_put_contents("hassan1.text", "\r\nThis Is New Line", FILE_APPEND);
+// file_put_contents("files/hassan1.text", "\r\nHello Elmalik Web School <3", FILE_APPEND);
+// echo file_put_contents("files/hassan1.text", "\r\nThis Is New Line", FILE_APPEND);
 echo '<hr>';
 
 // ------- Lesson 92(Datetime Functions - Part 1 - Five Functions) --------

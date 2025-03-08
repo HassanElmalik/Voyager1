@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-require_once 'C:\xampp\htdocs\elmalik\ProgrammingWithGIO\OOP\app\Enums\Status.php';
+require_once 'app\Enums\Status.php';
 
 class Transaction 
 {

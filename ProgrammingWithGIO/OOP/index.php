@@ -2,29 +2,100 @@
 
 
 // 34-PHP_OOP_Tutorial_Section_2_-_Intro_to_Object_Oriented_Programming_-_Full_PHP_8_Tutorial
-
+echo "<h3><u>Lesson 34 \"PHP OOP Tutorial Section-2 Intro to Object Oriented Programming\"</u></h3>";
+echo "OOP have 4 main principles are: <b>Encapsulation-Abstraction-Inheritance-Polymorphism</b> <br>";
+echo "what we will learn in this section: ";
+echo "<li>Objects & Classes</li>";
+echo "<li>Magic Methods</li>";
+echo "<li>Code Style & PSR</li>";
+echo "<li>Name Spaces , Auto Loading & Composer</li>";
+echo "<li>Encapsulation</li>";
+echo "<li>Abstraction</li>";
+echo "<li>Inheritance</li>";
+echo "<li>Polymorphism</li>";
+echo "<li>Traits & Statics</li>";
+echo '<li>Super Globals (_$POST,...)</li>';
+echo '<li>Cookies & Sessions</li>';
+echo '<li>Connect to Databases</li>';
+echo '<hr>';
 
 // 35-PHP_Docker_Tutorial_-_Nginx_-_PHPFPM_VS_Apache_-_Full_PHP_8_Tutorial
-
+echo "<h3><u>Lesson 35 \"PHP Docker Tutorial Nginx PHPFPM VS Apache\"</u></h3>";
+echo "docker vs exampp
+exampp is good for local develop , but its not meant for production , this will make issues if your loacl inviroment
+is diffn from your production inviroment and what works in your loacl might not work in production and vice versa
+this is where docker might help you , this will make sure that your loac devlopment inviroment is very close to your production
+inviroment , this will allows you to work in multiple projects at the same time even if your php versions are
+diffn , it basicly let you bundel your development inviroment in isolated containers that are portable , this 
+is hard to achive with exampp if sometimes it is impossible, for example say that you have three clients
+or working with three diffn projects and all three of those use 3 diffn versions of php
+as well as some other services , docker can be used to set up this easily you can containeries your dependcies
+and your entire project which then can be easily shared deleted or ported over to another os as shown here we 
+pundel every this that a project needs in a single container so we have a container that have php webserver 
+database and so on this can work but probably its not ideal because you coupling all your services into a single container , 
+you can split this to a multiple containers and have a separate cotainer for a web server , a separate container fo a php, 
+a separate container for a database ,and so on , decoupling the services is always good because you can easily swap on 
+containers out with another instead of messing with the container that have everything
+i do want to cover some basics and explain the terms that you will hear and use when working with docker , 
+like container images docker-file docker-compose and so on , a container as mentioned befor basicly bundels up the 
+application with all of its dependceies and nessecary configration you could have all your dependcies installed under one container 
+or you could have separate containers for thos dependncies , docker container begines as a simple vanilla linux machine that
+does not have anything installed for the application , then we tell the container what needs to be installed like all the dependncies
+that are needed to run the application , this is done through a file called docker file , a docker file is a text file 
+where you write a constructions on how to build a docker image and the docker image is a read only excutable packege that 
+includes everything that you need to run your application like source-code dependencies enviroment variables configurations 
+and so on , so docker images and containers are prrety much the same , the diffn is that the images are read only and they 
+can exsist without containers , however for containers to run they need an image in a way you can think of images like 
+template you cant run or start this images instead you can use them as a base or template to build your containers so 
+essantially a container is just a run time instance of an image that can now be modified , these images are containers are 
+stored in repositories that might stored in private or public repositories like docker hub for example , you can then pull those 
+image from the repository and use them to build your containers on local stageing or in production.
+we will be install php with nginx and php-fpm an i will explain what fpm is, apache by default come with something called 
+mod-php it basicaly means that php inteperater is empaded within apache webserver and runs php as an apache module , 
+if you look at php from dump from our application in the browser that is running apache with exampp we see that the server 
+api says that its apache 2.0 handler that basicly indicator that we are using mod-php , the down side of mod-php is that 
+the foot print for each apache process is larger because it require more resources when the php intepreater is empaded within apache
+, the process will still contain php intepreter even if is the request is for non php files like static files for example , 
+though this can be solved by using conant delivery network (CDN) to load ur acids but thats a topic maybe for another lesson, 
+php-fpm satnds for php fast cgi process manager which is basicly an alternative more advanced implmentation of fast cgi 
+its a gate way tha seats between your web server and your php code , so when the php file is requested , 
+ngix will comunicate with php-fpm and have it process only the php files and not the static files like style sheets or images , 
+note that u can use php fpm with apache as well as nginx but for this lesson we will set it up with nginx , 
+so would u use nginx with php-fpm instead of apache? , it realy depends on ur application and what u want to do if u already 
+work with apache u dont have to switch to nginx unless u facing some issues and want to try nginx but usually its not worth the 
+time u need to spend to switch from apache to nginx  ";
+echo "<pre>";
+print_r ($_SERVER);
+echo "</pre>";
+echo '<hr>';
 
 // 36-PHP_Classes_Objects_-_Typed_Properties_-_Constructors_Destructors_-_Full_PHP_8_Tutorial
+echo "<h3><u>Lesson 36</u></h3>";
+
 require_once 'Transaction.php';
+echo "<pre>";
 $transaction1 = new Transaction(20, 'Transaction');
 var_dump($transaction1);
+echo "<br>";
 var_dump($transaction1->view);
+echo "<br>";
 // $transaction1->getAmount() = 15;
 var_dump($transaction1->getAmount());
+echo "<br>";
 $transaction1 = null;
 
 $transaction2 = new Transaction(100, 'Transaction');
 var_dump($transaction2);
+echo "<br>";
 
 $transaction2->addTax(8);
 $amount = $transaction2 ->getAmount();
 var_dump($amount);
+echo "<br>";
 
 $transaction2->applyDiscount(10);
 var_dump($transaction2->getAmount());
+echo "<br>";
 unset($transaction2);
 
 $class = 'Transaction';
@@ -33,30 +104,45 @@ $transaction3 = (new $class(30, 'Transaction'))
 ->applyDiscount(40)
 ->getAmount();
 var_dump($transaction3);
+echo "<br>";
 
 $str = '{"a":1,"b":2,"c":3}';
 $arr = json_decode($str, true);
 var_dump($arr);
+echo "<br>";
 $arr = json_decode($str);
 var_dump($arr);
+echo "<br>";
 var_dump($arr->a);
+echo "<br>";
 var_dump($arr->c);
+echo "<br>";
 
 $obj = new \stdClass();
 $obj->a =1;
 $obj->b =2;
 var_dump($obj);
+echo "<br>";
 
 $arr = [1,2,3];
 var_dump((object) $arr);
+echo "<br>";
 var_dump(((object) $arr)->{1});
+echo "<br>";
 var_dump(((object) $arr)->{0});
+echo "<br>";
 
 var_dump((object) 1);
+echo "<br>";
 var_dump(((object) 1)->scalar);
+echo "<br>";
 var_dump((object) false);
+echo "<br>";
 var_dump(((object) false)->scalar);
+echo "<br>";
 var_dump((object) null);
+// echo "</pre>";
+echo '<hr>';
 
 
 // 37-Constructor_Property_Promotion_-_Nullsafe_Operator_-_Full_PHP_8_Tutorial
@@ -82,7 +168,7 @@ echo '<hr>';
 
 
 // 38-PHP_Namespace_Tutorial_-_Full_PHP_8_Tutorial
-$direc = 'C:\xampp\htdocs\elmalik\ProgrammingWithGIO\OOP\app';
+$direc = 'app';
 require_once $direc . '\Stripe\Transaction.php';
 require_once $direc . '\Paddle\Transaction.php';
 require_once $direc . '\Paddle\Customer.php';
