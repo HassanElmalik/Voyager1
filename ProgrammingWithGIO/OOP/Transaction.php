@@ -107,7 +107,7 @@ class Transaction2
         private ?string $description = null
         )
     {
-        echo $amount;
+        echo $amount . "<br>";
       $this->price = $price;
     }
 }

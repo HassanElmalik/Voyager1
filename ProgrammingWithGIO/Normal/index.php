@@ -1,5 +1,34 @@
 <?php
+//1-Full_PHP_8_Tutorial_-_Learn_PHP_The_Right_Way_In_2023
+echo "<u><h3>Lesson 1 Full-PHP-8-Tutorial Learn-PHP-The-Right-Way-In-2023</u></h3>";
 
+echo "What is PHP ? : php stands for hypertext preprocessor which is an open source scripting language
+that is mainly used for web development, scripting languages are also programming languages the main defrrence
+between scripting and programming languages lies within its excuation while programming languages needs to be compiled to machine languages 
+scripting languages needs to be interpretered for example (Java,C,C++) are programming languages that need to be combiled in oreder to run,
+while (PHP,Javascript) need an interpreter unlike javascript which runs on the clinet on the browser, php requires a server to run, this is 
+a very simple representation of how php runs client or the browser makes a request to the server which then inerpreter and processes php , 
+it can also do other things like connect to a database or a third party API and so on, finally it sends the response back <br> --------- <br>";
+
+echo "This course will be split in three sections:<br> The first section will be basic php which will be mostly precudoral<br>
+The second section will be intermediate php where we transation to OOP<br> The third section will be advanced php which we will learn some advanced topics and ticniacs ";
+echo '<hr>';
+
+//------------------------------------------------------------------------------------------------------------------------------------
+//2-How_To_Install_PHP_What_Are_Web_Servers_-_PHP_8_Tutorial
+echo "<u><h3>Lesson 2 How To Install PHP What Are Web Servers</u></h3>";
+
+echo "when talking about web server you could either refer to a hardware or software or both hardware and software together,a web server on a hardware
+is just a computer that stores the web server software,sourcecode and some other stuff , a web server can process incoming requests using different protocols 
+typically its http protocol , whis is the protocol whic is used by the browser to view the web pages, a web server can host either a single or a multible web sites 
+on the same sever using the same resource , this is done by something called virtual hosts where the single web server is able to alocate and share resources across 
+multible web sites , here is a simple diagram of how the communication between the client and the server happens , when you visit the web site the browser request 
+for the file from the server , the web server will process this request and respond accordingly , if it cannot locate the file then it will respond with the 404 statis code
+we can actually see this in action by visiting any website and opening the devoleper tools to inspect the request";
+
+echo '<hr>';
+
+//------------------------------------------------------------------------------------------------------------------------------------
 //4-What_Are_Constants_Variable_Variables
 echo "<u><h3>Lesson 4</u></h3>";
 
@@ -941,7 +970,7 @@ foreach ($paymentstatus as $payment){
     switch($payment){
         case 1:
             echo 'Paid';
-            continue; // will give us a warning but it will continue the loop
+            continue /*2*/ ; // will give us a warning but it will continue the loop
         case 2:      
         case 3:
             echo 'Payment Declined';

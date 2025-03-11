@@ -70,7 +70,7 @@ echo "</pre>";
 echo '<hr>';
 
 // 36-PHP_Classes_Objects_-_Typed_Properties_-_Constructors_Destructors_-_Full_PHP_8_Tutorial
-echo "<h3><u>Lesson 36</u></h3>";
+echo "<h3><u>Lesson 36 PHP-Classes-Objects Typed-Properties Constructors-Destructors</u></h3>";
 
 require_once 'Transaction.php';
 echo "<pre>";
@@ -93,6 +93,7 @@ $amount = $transaction2 ->getAmount();
 var_dump($amount);
 echo "<br>";
 
+$transaction2 = new Transaction(100, 'Transaction');
 $transaction2->applyDiscount(10);
 var_dump($transaction2->getAmount());
 echo "<br>";
@@ -141,11 +142,18 @@ echo "<br>";
 var_dump(((object) false)->scalar);
 echo "<br>";
 var_dump((object) null);
-// echo "</pre>";
+echo "</pre>";
 echo '<hr>';
 
 
 // 37-Constructor_Property_Promotion_-_Nullsafe_Operator_-_Full_PHP_8_Tutorial
+echo "<h3><u>Lesson 37 Constructor-Property_Promotion Nullsafe-Operator</u></h3>";
+echo "<pre>";
+
+echo "constructor property promotion is a feature that was added in php 8.0, it allows you to get rid of 
+boilar break code where you define properties and assigen them to arguments that passed in your constructor
+basically let you combine class-properties consturctor and assigenment into one shorter syntax<br><br>";
+
 $class = new Transaction2(10,'Hi', 5,);
 var_dump($class);
 
@@ -164,10 +172,13 @@ if($customer = $transaction->getCustomer()){
 }
 
 echo $profileId;
+echo "</pre>";
 echo '<hr>';
 
 
 // 38-PHP_Namespace_Tutorial_-_Full_PHP_8_Tutorial
+echo "<h3><u>Lesson 38-PHP_Namespace_Tutorial</u></h3>";
+echo "<pre>";
 $direc = 'app';
 require_once $direc . '\Stripe\Transaction.php';
 require_once $direc . '\Paddle\Transaction.php';
@@ -177,13 +188,13 @@ require_once $direc . '\Notification\Email.php';
 
 
 // spl_autoload_register(function($class){
-//     $path = __DIR__ . '\\' . lcfirst(str_replace('\\OOP\\Paddle\\TransactionStripe', '\\Paddle\\Transaction',$class)) . '.php';
-//    if(file_exists($path)){
-//       require $path;
-//   }  
-//     var_dump($path);
-// });
-
+    //     $path = __DIR__ . '\\' . lcfirst(str_replace('\\OOP\\Paddle\\TransactionStripe', '\\Paddle\\Transaction',$class)) . '.php';
+    //    if(file_exists($path)){
+        //       require $path;
+        //   }  
+        //     var_dump($path);
+        // });
+        
 use App\OOP\Paddle as PA;
 //or
 use App\OOP\Paddle\TransactionStripe;
@@ -193,6 +204,7 @@ var_dump(new PA\TransactionStripe());
 var_dump(new TransactionStripe());
 
 var_dump(new App\OOP\Stripe\TransactionStripe());
+echo "</pre>";
 echo '<hr>';
 
 
