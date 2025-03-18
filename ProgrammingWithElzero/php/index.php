@@ -2963,6 +2963,8 @@ echo "<h3><u>Lesson 92</u></h3>";
             date_format()
 */
 
+echo '<pre>';
+
 // Get Timezone
 echo date_default_timezone_get() . '<br>';
 
@@ -2982,21 +2984,22 @@ echo date_default_timezone_get() . '<br>';
 $d = date_create("", timezone_open("Indian/Antananarivo"));
 
 // Echo Date With Format
-echo date_format($d, "Y-m-d H:i:s");
+echo date_format($d, "Y-m-d H:i:s") , '<br>';
 
 // Check Date
 var_dump(checkdate(10, 25, 1982));
 var_dump(checkdate(2, 31, 1982));
 var_dump(checkdate(2, 10, 3500));
-var_dump(checkdate(2, -10, 3500));
+var_dump(checkdate(2, -10, 1982));
+echo '</pre>';
 echo '<hr>';
 
 // ----- Lesson 93(Datetime Functions - Part 2 - Date Format Part 1) -----
 echo "<h3><u>Lesson 93</u></h3>";
 /*
-    Date And Time Functions
+Date And Time Functions
 
-        date_format()
+date_format()
 
     [Year]
         Y => Four Digits
@@ -3031,6 +3034,7 @@ echo "<h3><u>Lesson 93</u></h3>";
         s => 00-59
         u => Microseconds
 */
+echo '<pre>';
 
 date_default_timezone_set("Africa/Cairo");
 $d = date_create();
@@ -3048,12 +3052,13 @@ echo date_format($d, "Y-m-j") . '<br>';
 echo date_format($d, "Y-m-D") . '<br>';
 echo date_format($d, "Y-m-l") . '<br>';
 echo date_format($d, "Y-m-l // z") . '<br>';
-echo date_format($d, "Y-m-l // z // d/j/D/l") . '<br>';
+echo date_format($d, "Y,m,l // z // d/j/D/l") . '<br>';
 echo date_format($d, "Y-m-l , dS") . '<br>';
 $d = date_create("2022-10-1");
 echo date_format($d, "Y-m-l , dS") . '<br>';
 $d = date_create("2022-10-2");
 echo date_format($d, "Y-m-l , dS") . '<br>';
+echo '</pre>';
 echo '<hr>';
 
 // ----- Lesson 94 (Datetime Functions - Part 3 - Date Format Part 2) ----
@@ -3061,7 +3066,7 @@ echo "<h3><u>Lesson 94</u></h3>";
 /*
     Date And Time Functions
 
-        date_format()
+    date_format()
 
     [Year]
         Y => Four Digits

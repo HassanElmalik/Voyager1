@@ -1,5 +1,5 @@
 <?php
-declare(strict_types=1);
+// declare(strict_types=1);
 
 echo disk_total_space("f:") / 1024 / 1024 / 1024 . "<br>";
 echo disk_free_space("f:") / 1024 / 1024 / 1024 . "<br>";
@@ -94,19 +94,15 @@ echo "</pre>";
 // )
 echo "<hr>";
 // -------------------------------------------------
+// data types & type casting
+echo '<pre>';
 
-require_once 'paymentgateway/stripe/transaction2.php';
-require_once 'paymentgateway/paddle/transaction2.php';
-require_once 'paymentgateway/paddle/customerprofile.php';
-require_once 'notification/email.php';
+$d = date_create();
 
-use paymentgateway\paddle\transaction2;
-use paymentgateway\stripe\transaction2 as stripetransaction;
+echo date_format($d, "(year)Y,m,l") . '<br>';
 
-$paddletransaction = new transaction2();
-$stripetransaction = new stripetransaction();
 
-var_dump($paddletransaction,$stripetransaction);
+echo '</pre>';
 
 //-------------------------------------------
 

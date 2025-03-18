@@ -4,13 +4,13 @@
 
 class Status
 {
-    public const STATUS_PENDING = 'pending';
-    public const STATUS_DECLINED = 'declined';
-    public const STATUS_PAID = 'paid';
+    public const PENDING = 'pending';
+    public const DECLINED = 'declined';
+    public const PAID = 'paid';
 
     public const ALL_STATUES = [
-        self::STATUS_PAID       => 'Paid',
-        self::STATUS_PENDING    => 'Pending',
-        self::STATUS_DECLINED   => 'Declined',
+        self::PAID       => 'Paid',
+        self::PENDING    => 'Pending',
+        self::DECLINED   => 'Declined',
     ];
 }

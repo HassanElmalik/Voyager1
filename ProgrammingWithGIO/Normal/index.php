@@ -2,16 +2,49 @@
 //1-Full_PHP_8_Tutorial_-_Learn_PHP_The_Right_Way_In_2023
 echo "<u><h3>Lesson 1 Full-PHP-8-Tutorial Learn-PHP-The-Right-Way-In-2023</u></h3>";
 
+echo "<pre>";
 echo "What is PHP ? : php stands for hypertext preprocessor which is an open source scripting language
 that is mainly used for web development, scripting languages are also programming languages the main defrrence
 between scripting and programming languages lies within its excuation while programming languages needs to be compiled to machine languages 
 scripting languages needs to be interpretered for example (Java,C,C++) are programming languages that need to be combiled in oreder to run,
 while (PHP,Javascript) need an interpreter unlike javascript which runs on the clinet on the browser, php requires a server to run, this is 
 a very simple representation of how php runs client or the browser makes a request to the server which then inerpreter and processes php , 
-it can also do other things like connect to a database or a third party API and so on, finally it sends the response back <br> --------- <br>";
+it can also do other things like connect to a database or a third party API and so on, finally it sends the response back<br>--------------<br>";
 
-echo "This course will be split in three sections:<br> The first section will be basic php which will be mostly precudoral<br>
-The second section will be intermediate php where we transation to OOP<br> The third section will be advanced php which we will learn some advanced topics and ticniacs ";
+echo "This course will be split in three sections:<br>
+The first section will be basic php which will be mostly precudoral and it will contains:
+
+<li>php installation & setup</li>
+<li>syntax & operators</li>
+<li>variables & data types</li>
+<li>control structures & functions</li>
+<li>type casting & error handling</li>
+<li>php.ini / web server configs</li>
+<li>working with arrays & dates</li>
+And More ....
+
+The second section will be intermediate php where we transation to OOP and it will cover things like:
+
+<li>classes & methods</li>
+<li>object oriented PHP</li>
+<li>Code Style & PSR</li>
+<li>Namespaces & Autoloading</li>
+<li>Dependency Management</li>
+<li>Super Globals (\$_*)</li>
+<li>Cookies & Sessions</li>
+<li>Databases</li>
+And More ....
+
+The third section will be advanced php which we will learn some advanced topics and ticniacs and it will cover somethings like:
+
+<li>Testing,phpUnit,TDD,BDD</li>
+<li>Intro to MVC & Routing</li>
+<li>Dependency Injection Container</li>
+<li>Caching & Security</li>
+<li>Frameworks & PHP 8 Best Practices</li>
+<li>Hosting & Deployment</li>
+And More ....";
+
 echo '<hr>';
 
 //------------------------------------------------------------------------------------------------------------------------------------
@@ -20,42 +53,109 @@ echo "<u><h3>Lesson 2 How To Install PHP What Are Web Servers</u></h3>";
 
 echo "when talking about web server you could either refer to a hardware or software or both hardware and software together,a web server on a hardware
 is just a computer that stores the web server software,sourcecode and some other stuff , a web server can process incoming requests using different protocols 
-typically its http protocol , whis is the protocol whic is used by the browser to view the web pages, a web server can host either a single or a multible web sites 
+typically its http protocol , which is the protocol which is used by the browser to view the web pages, a web server can host either a single or a multible web sites 
 on the same sever using the same resource , this is done by something called virtual hosts where the single web server is able to alocate and share resources across 
 multible web sites , here is a simple diagram of how the communication between the client and the server happens , when you visit the web site the browser request 
-for the file from the server , the web server will process this request and respond accordingly , if it cannot locate the file then it will respond with the 404 statis code
+for the file from the server , the web server will process this request and respond accordingly , if it cannot locate the file then it will respond with the 404 status code
 we can actually see this in action by visiting any website and opening the devoleper tools to inspect the request";
+echo "</pre>";
 
 echo '<hr>';
 
 //------------------------------------------------------------------------------------------------------------------------------------
+//3-Basic_PHP_Syntax_-_PHP_8_Tutorial
+echo "<u><h3>Lesson 3 Basic PHP Syntax</u></h3>";
+
+echo 'Hello World <br>';
+print 'Hello World <br>';
+echo print 'Hello World';
+echo '<br>';
+echo " print returns 1 , this means that print can be used for expressions while echo cant 
+so if we do print echo hello world it will throw a syntax error <br>";
+echo ('Hello World <br>');
+print ('Hello World <br>');
+echo 'Hello', ' ', 'World', '<br>'; // u cant do this with print
+echo " also echo is marginaly faster than print so i would suggest to stick with echo unless u have a specific reason to use print <br>";
+echo "Joe's Invoice <br>";
+echo 'Joe\'s Invoice <br>';
+
+$name = 'Hassan';
+echo $name , '<br>';
+
+echo 'Variable are assigned by Value not by refrrence <br>';
+
+$y =1;
+$x = 2;
+$y = $x;
+$x = 3;
+
+echo $y,'<br>', $x, '<br>' ;
+
+$f =1;
+$r = 2;
+$f = &$r;
+$r = 3;
+
+echo $f,'<br>', $r ;
+?>
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1><?php echo 'Hello World' ?></h1>
+        <h1>
+            <?php 
+            // comment 1 
+            # comment 2
+            /*
+                Multi line
+            */
+
+            $x = 10;
+            $y = 5;
+            echo '<p>' . $x , ', ', $y . '</p>' ;
+# comment ?> Hello2
+            <?= 'Hello World' ?>
+        </h1>
+        <p>My First Paragraph</p>
+    </body>
+</html>
+
+<?php
+echo '<hr>';
+//------------------------------------------------------------------------------------------------------------------------------------
 //4-What_Are_Constants_Variable_Variables
-echo "<u><h3>Lesson 4</u></h3>";
+echo "<u><h3>Lesson 4 What Are Constants Variable Variables</u></h3>";
+
+echo "Constants are the values that cannot change once they defined , unlike variables 
+where you could define and override those variables after they defined <br>";
 
 // declare(strict_types=1);
 define ('STATUS_PAID', 'paid');
 
-echo STATUS_PAID;
+echo STATUS_PAID , '<br>';
 
 var_dump(defined('STATUS_PAID'));
+echo '<br>';
 
 const STATUS_PAID2 = "paid2";
-
 echo STATUS_PAID2;
 echo '<br>';
 
-/*
-constants created with const keyword are defined at the compile time
-while constants created with the define function are defined at a run time
-*/
+echo 'constants created with const keyword are defined at the compile time
+while constants created with the define function are defined at a run time 
+so you cant define constants with the const keyword within ur control structure
+like loops or if for example but you can define constants using the define function 
+within the control structures<br>';
 
+echo "so when we would use constants , whenever u have some static data that doesnot change too often<br>";
 if(1 == 1){
     // const foo = 'bar';
     define ('FOO', 'bar');
 }
-echo PHP_VERSION;
+echo PHP_VERSION; // predefined constants
 echo '<br>';
-echo __LINE__;
+echo __LINE__; // magic constant
 echo '<br>';
 echo __FILE__;
 echo '<br>';
@@ -65,15 +165,15 @@ $foo = 'bar';
 $$foo = 'baz';
 echo "$foo  {$$foo}";
 echo '<br>';
-
-echo "Joe's Invoice";
+echo $foo , $bar , '<br>';
 echo '<hr>';
+
 // ---------------------------------------------------------------
 //5-PHP_Data_Types_-_Typecasting_Overview_How_It_Works
-echo "<u><h3>Lesson 5</u></h3>";
+echo "<u><h3>Lesson 5-PHP Data Types Typecasting Overview How It Works</u></h3>";
 
-/*
-PHP is dinamically typed or also know as weakly typed language where you 
+echo '<pre>';
+echo 'PHP is dinamically typed or also know as weakly typed language where you 
 are not required to define a type of your variable  and also the type of the 
 variable can change after it has been defined , dinamically typed languages
 means that the type checking happens at the runtime while statically 
@@ -83,68 +183,73 @@ such type system it is more flexiable , but that flexiblity comes at a price
 of performance and can some times results an unexpected bugs , However PHP
 has improved its type system alot in later veirsions and it even supports
 strict types , PHP supports 10 primitive types which are below and there are
-also 2 sudo types which are mainly used for readability
-*/
+also 2 sudo types which are mainly used for readability this are mix and void <br>';
+
 
 # 4 Scalar Types
-    # bool --> true / false
-    $completed = true;
-    # int --> 1, 2, 3, 0, -5 (no decimal)
-    $score = 75;
-    # float --> 1.5, 0.1, 0.005, -15.8
-    $price = 0.99;
-    # string --> "Gio", "Hello World"
-    $greeting = "Hello Hassan";
+# bool --> true / false
+$completed = true;
+# int --> 1, 2, 3, 0, -5 (no decimal)
+$score = 75;
+# float --> 1.5, 0.1, 0.005, -15.8
+$price = 0.99;
+# string --> "Gio", "Hello World"
+$greeting = "Hello Hassan";
 
-    echo $completed . '<br>';
-    echo $score . '<br>';
-    echo $price . '<br>';
-    echo $greeting . '<br>';
-    echo gettype($completed) . '<br>';
-    echo gettype($score) . '<br>';
-    echo gettype($price) . '<br>';
-    echo gettype($greeting) . '<br>';
+echo $completed . '<br>';
+echo $score . '<br>';
+echo $price . '<br>';
+echo $greeting . '<br>';
+echo gettype($completed) . '<br>';
+echo gettype($score) . '<br>';
+echo gettype($price) . '<br>';
+echo gettype($greeting) . '<br>';
+
+var_dump($completed);
+var_dump($score);
+var_dump($price);
+var_dump($greeting);
 
 # 4 Compound Types
-    # array (List of items)
-    $companies = [1, 2, 3, 0.5, -9.2, 'A', 'b', true];
-    echo $companies;
-    echo '<br>';
-    print_r ($companies);
-    # object
-    # callable
-    # iterable
+# array (List of items)
+$companies = [1, 2, 3, 0.5, -9.2, 'A', 'b', true];
+echo $companies;
+echo '<br>';
+print_r ($companies);
+# object
+# callable
+# iterable
 
 # 2 Special Types
-    # resource
-    # null
+# resource
+# null
 
 # 2 Sudo Types (used for readability)
-    # mix
-    # void
+# mix
+# void
 
-    // declare(strict_types=1);
-    function summ1($x,$y){
-        // $x = 5.5;
-        var_dump($x, $y);
-        return $x + $y;
-    }
-    function sum(int $x, int $y){ // the data type is guranteed to be integer untill to this point
-        // $x = 5.5;
-        var_dump($x, $y);
-        return $x + $y;
-    }// here php converted this datatypes (4.5,'3') into integers
-    function summ2(array $x, int $y){
-        // $x = 5.5;
-        var_dump($x, $y);
-        return $x + $y;
-    }// here php cannot converte (4.5) to an array so it will throw an error
-    function summ3(int $x, int $y){
-        $x = 5.5; //we can here change the data type of x from int to float and this is acceptable in php
-        var_dump($x, $y);
-        return $x + $y;
-    }
-    
+// declare(strict_types=1);
+function summ1($x,$y){
+    // $x = 5.5;
+    var_dump($x, $y);
+    return $x + $y;
+}
+function sum(int $x, int $y){ // the data type is guranteed to be integer untill to this point
+    // $x = 5.5;
+    var_dump($x, $y);
+    return $x + $y;
+}// here php converted this datatypes (4.5,'3') into integers
+function summ2(array $x, int $y){
+    // $x = 5.5;
+    var_dump($x, $y);
+    return $x + $y;
+}// here php cannot converte (4.5) to an array so it will throw an error
+function summ3(int $x, int $y){
+    $x = 5.5; //we can here change the data type of x from int to float and this is acceptable in php
+    var_dump($x, $y);
+    return $x + $y;
+}
+
 $summ1 = summ1(4.5,'3');
 var_dump($summ1);
 echo $summ1 . '<br>';
@@ -168,11 +273,15 @@ echo '<br>';
 $x = (int)'5';
 var_dump($x);
 var_dump(-0.0);
+echo '</pre>';
 echo '<hr>';
+
 // ------------------------------------------------------------------
 //6-Boolean_Data_type
-echo "<u><h3>Lesson 6</u></h3>";
+echo "<u><h3>Lesson 6-Boolean Data type</u></h3>";
 
+echo '<pre>';
+echo "true or false are a predefined constants that come with php <br>";
 $isComplete = -0;
 // integers 0 , -0 = false
 // floats 0.0, -0.0 = false
@@ -185,14 +294,14 @@ if($isComplete){
 }else{
     echo 'fail';
 }
-echo false;
+echo false , '<br>';
 $c = (string) false;
 var_dump($c);
 var_dump(is_bool($isComplete)) ;
-/* when you printing something in PHP it will cast it into a string and
-when boolean is cast to a string false becomes an empty string and true 
-becomes 1
-*/
+
+echo "when you printing something in PHP it will cast it into a string and
+when boolean is cast to a string false becomes an empty string and true becomes 1 <br>";
+
 $iscomplete2 = (string) true;
 var_dump(is_bool($iscomplete2));
 $iscomplete3 = true;
@@ -200,15 +309,16 @@ var_dump(is_bool($iscomplete3));
 
 $x = (bool)'false';
 var_dump($x);
+echo '</pre>';
 echo '<hr>';
 
 // ---------------------------------------------------------------
 //7-Integers_Data_type
-echo "<u><h3>Lesson 7</u></h3>";
-
+echo "<u><h3>Lesson 7-Integers Data type</u></h3>";
+echo '<pre>';
 $x = 5 ; // decimal integer
 $y = 0x2a ; // hexdecimal integer
-$z = 055; // octa number
+$z = 055; // octal number
 $e = 0b11; // binary number
 $l = 0b110; // binary number
 
@@ -245,63 +355,66 @@ $x =  '2_000_000_000';
 var_dump($x);
 $x = (int) '2_000_000_000';
 var_dump($x);
+echo '</pre>';
 echo '<hr>';
 
 //-------------------------------------------------------------------
 //8-Float_Data_type
-echo "<u><h3>Lesson 8</u></h3>";
+echo "<u><h3>Lesson 8-Float Data type</u></h3>";
 
- $x = 13.5e3;
- $y = 13.5e-3;
- echo $x . '<br>';
- echo $y . '<br>';
- var_dump($x);
- var_dump($y);
- $x = 13_000.5;
- var_dump($x);
- $x = 13_234.5;
- var_dump($x);
- 
- echo PHP_FLOAT_MAX . '<br>';
- 
- $x = floor((0.1 + 0.7) * 10); // in binary this ((0.1 + 0.7) * 10) will equal to (7.9999999999991118) and applying floor on it will result to 7 
- $y = ceil((0.1 + 0.7) * 10);
- $z = ceil((0.1 + 0.2) * 10); // in binary this (0.1 + 0.2) = (0.300000000000004) and (0.300000000000004 * 10) = (3.00000000000004) and applying ceil on it will result to 4
- echo $x . '<br>';
- echo $y . '<br>';
- echo $z . '<br>';
+echo '<pre>';
+$x = 13.5e3;
+$y = 13.5e-3;
+echo $x . '<br>';
+echo $y . '<br>';
+var_dump($x);
+var_dump($y);
+$x = 13_000.5;
+var_dump($x);
+$x = 13_234.5;
+var_dump($x);
 
- $x = 0.23;
- $y = 1 - 0.77;
+echo PHP_FLOAT_MAX . '<br>';
 
- var_dump($x , $y);
+$x = floor((0.1 + 0.7) * 10); // in binary this ((0.1 + 0.7) * 10) will equal to (7.9999999999991118) and applying floor on it will result to 7 
+$y = ceil((0.1 + 0.7) * 10);
+$z = ceil((0.1 + 0.2) * 10); // in binary this (0.1 + 0.2) = (0.300000000000004) and (0.300000000000004 * 10) = (3.00000000000004) and applying ceil on it will result to 4
+echo $x . '<br>';
+echo $y . '<br>';
+echo $z . '<br>';
 
- if ($x == $y){
+$x = 0.23;
+$y = 1 - 0.77;
+
+var_dump($x , $y);
+
+if ($x == $y){
     echo 'yes . <br>';
- }else{
+}else{
     echo 'no . <br>';
- }
+}
 
- echo NAN . '<br>';
- echo log(-1) . '<br>';
- echo INF . '<br>';
- echo PHP_FLOAT_MAX * 2;
+echo NAN . '<br>';
+echo log(-1) . '<br>';
+echo INF . '<br>';
+echo PHP_FLOAT_MAX * 2;
 
- $x = PHP_FLOAT_MAX * 2;
- var_dump($x);
- var_dump(is_infinite($x));
- var_dump(is_finite($x));
- var_dump(is_nan($x));
- var_dump(is_nan(log(-1)));
+$x = PHP_FLOAT_MAX * 2;
+var_dump($x);
+var_dump(is_infinite($x));
+var_dump(is_finite($x));
+var_dump(is_nan($x));
+var_dump(is_nan(log(-1)));
 
- $x = 5;
- var_dump((float)$x);
- var_dump(floatval($x));
- $x = '15a';
- $y = 'asdasdw';
- var_dump((float)$x);
- var_dump((float)$y);
- echo '<hr>';
+$x = 5;
+var_dump((float)$x);
+var_dump(floatval($x));
+$x = '15a';
+$y = 'asdasdw';
+var_dump((float)$x);
+var_dump((float)$y);
+echo '<pre>';
+echo '<hr>';
 
 // ------------------------------------------------------------------
 //9-PHP_String_Data_Type_-_Heredoc_Nowdoc_Syntax_-_Full_PHP_8_Tutorial
