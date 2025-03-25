@@ -103,7 +103,7 @@ var_dump($transaction2);
 echo "<br>";
 
 $transaction2->addTax(8);
-$amount = $transaction2 ->getAmount();
+$amount = $transaction2->getAmount();
 var_dump($amount);
 echo "<br>";
 
@@ -115,9 +115,9 @@ unset($transaction2);
 
 $class = 'Transaction';
 $transaction3 = (new $class(30, 'Transaction'))
-->addTax(30)
-->applyDiscount(40)
-->getAmount();
+    ->addTax(30)
+    ->applyDiscount(40)
+    ->getAmount();
 var_dump($transaction3);
 echo "<br>";
 
@@ -134,12 +134,12 @@ var_dump($arr->c);
 echo "<br>";
 
 $obj = new \stdClass();
-$obj->a =1;
-$obj->b =2;
+$obj->a = 1;
+$obj->b = 2;
 var_dump($obj);
 echo "<br>";
 
-$arr = [1,2,3];
+$arr = [1, 2, 3];
 var_dump((object) $arr);
 echo "<br>";
 var_dump(((object) $arr)->{1});
@@ -168,19 +168,19 @@ echo "constructor property promotion is a feature that was added in php 8.0, it 
 boilar break code where you define properties and assigen them to arguments that passed in your constructor
 basically let you combine class-properties consturctor and assigenment into one shorter syntax<br><br>";
 
-$class = new Transaction2(10,'Hi', 5,);
+$class = new Transaction2(10, 'Hi', 5,);
 var_dump($class);
 
 require_once 'PaymentProfile.php';
 require_once 'Customer.php';
 require_once 'Transaction.php';
 
-$transaction = new Transaction3(5,'Test');
+$transaction = new Transaction3(5, 'Test');
 echo $transaction->getCustomer()?->getPaymentProfile()?->id ?? 'foo';
 
 $profileId = null;
-if($customer = $transaction->getCustomer()){
-    if($paymentProfile = $customer->getPaymentProfile()){
+if ($customer = $transaction->getCustomer()) {
+    if ($paymentProfile = $customer->getPaymentProfile()) {
         $profileId = $paymentProfile->id;
     }
 }
@@ -204,42 +204,46 @@ require_once $direc . '\Notification\Email.php';
 
 
 // spl_autoload_register(function($class){
+//     $path = __DIR__ . '\\' . lcfirst(str_replace('\\OOP\\Paddle\\TransactionStripe', '\\Paddle\\Transaction',$class)) . '.php';
+//    if(file_exists($path)){
+    //       require $path;
+//   }  
+//     var_dump($path);
+// });
+
+use App\OOP\Paddle as PA;
+//or
+use App\OOP\Paddle\TransactionStripe;
+use Ramsey\Uuid\UuidFactory;
+
+var_dump(new PA\TransactionStripe());
+//or
+var_dump(new TransactionStripe());
+
+var_dump(new App\OOP\Stripe\TransactionStripe());
+echo "</pre>";
+echo '<hr>';
+
+//--------------------------------------------------------------
+// 39-PHP_Coding_Standards_Autoloading_PSR-4_Composer_-_Full_PHP_8_Tutorial
+echo "<h3><u>Lesson 39-PHP Coding Standards Autoloading PSR-4 Composer</u></h3>";
+
+echo "<pre>";
+// spl_autoload_register(function($class){
     //     $path = __DIR__ . '\\' . lcfirst(str_replace('\\OOP\\Paddle\\TransactionStripe', '\\Paddle\\Transaction',$class)) . '.php';
     //    if(file_exists($path)){
         //       require $path;
         //   }  
         //     var_dump($path);
         // });
-        
-        use App\OOP\Paddle as PA;
-        //or
-        use App\OOP\Paddle\TransactionStripe;
-        
-        var_dump(new PA\TransactionStripe());
-        //or
-        var_dump(new TransactionStripe());
-        
-        var_dump(new App\OOP\Stripe\TransactionStripe());
-    echo "</pre>";
-    echo '<hr>';
-    
-//--------------------------------------------------------------
-// 39-PHP_Coding_Standards_Autoloading_PSR-4_Composer_-_Full_PHP_8_Tutorial
-echo "<h3><u>Lesson 39-PHP Coding Standards Autoloading PSR-4 Composer</u></h3>";
-
-// spl_autoload_register(function($class){
-//     $path = __DIR__ . '\\' . lcfirst(str_replace('\\OOP\\Paddle\\TransactionStripe', '\\Paddle\\Transaction',$class)) . '.php';
-//    if(file_exists($path)){
-    //       require $path;
-    //   }  
-//     var_dump($path);
-// });
-// require __DIR__ . '/../vendor/autoload.php';
-// $id = new /Ramesy/Uuid/UuidFactory();
-// echo $id->uuid4();
-// $paddleTransaction = new TransactionStripe();
-// var_dump($paddleTransaction);
-echo '<hr>';
+        $paddleTransaction = new TransactionStripe();
+        require  '/xampp/htdocs/Voyager1/vendor/autoload.php';
+        $id = new UuidFactory();
+        echo $id->uuid4() , '<br>';
+        var_dump($paddleTransaction);
+        echo '<br>';
+        echo "</pre>";
+        echo '<hr>';
 
 //---------------------------------------------------------------
 // 40-Object_Oriented_PHP_-_Class_Constants_-_Full_PHP_8_Tutorial
@@ -318,7 +322,7 @@ echo '<hr>';
 
 
 // 42-PHP_-_Encapsulation_Abstraction_-_Full_PHP_8_Tutorial 
-$transaction5 = new Transaction(25,'ok');
+$transaction5 = new Transaction(25, 'ok');
 $transaction5->process();
 echo '<br>';
 $transaction5->setAmount(125);
@@ -332,7 +336,7 @@ var_dump($reflectionProperty->getvalue($transaction5));
 $transaction5->process();
 echo '<br>';
 
-$transaction5->copyFrom(new Transaction(500,'yes'));
+$transaction5->copyFrom(new Transaction(500, 'yes'));
 echo '<hr>';
 
 
@@ -357,13 +361,15 @@ $toaster2->foofunc();
 
 bar($toaster2);
 //bar($toaster); this is not going to work because toaster is not a toasterpro
-function bar(ToasterPro $toasterpro){
+function bar(ToasterPro $toasterpro)
+{
     $toasterpro->toast();
     $toasterpro->toastBegel();
 }
 bar2($toaster2); // this is going to work because toasterpro is a toaster
-bar2($toaster); 
-function bar2(Toaster $toaster){
+bar2($toaster);
+function bar2(Toaster $toaster)
+{
     $toaster->toast();
     // $toaster->toastBegel(); this method is not in Toaster class
 }
@@ -387,7 +393,7 @@ $fields = [
     new Checkbox('checkboxField'),
     new Radio('radioField'),
 ];
-foreach($fields as $field){
+foreach ($fields as $field) {
     echo $field->render() . '<br>';
 }
 echo '<hr>';
@@ -411,11 +417,11 @@ echo '<hr>';
 
 //What_Are_PHP_Magic_Methods_How_They_Work
 require_once $direc . '\Invoice\Invoice.php';
-$invoice = new Invoice (10);
-echo $invoice ->Inv;
+$invoice = new Invoice(10);
+echo $invoice->Inv;
 echo '<br>';
-$invoice ->Inv = 15;
-echo $invoice ->Inv;
+$invoice->Inv = 15;
+echo $invoice->Inv;
 
 require_once $direc . '\Invoice\Invoice2.php';
 $invoice2 = new Invoice2();
@@ -432,16 +438,16 @@ var_dump($invoice2);
 
 require_once $direc . '\Invoice\Invoice3.php';
 $invoice3 = new Invoice3();
-$invoice3 -> process();
-$invoice3 -> process(1, 2, 3);
+$invoice3->process();
+$invoice3->process(1, 2, 3);
 Invoice3::process(4, 5, 6); // with static call method we can access undifined method statically
 
 require_once $direc . '\Invoice\Invoice4.php';
 $invoice4 = new Invoice4();
-$invoice4 -> process2(1, 2, 3);
-$invoice4 -> process3(1, 2, 3);
-$invoice4 -> process4(1, 2, 3);
-$invoice4 -> process5(1, 2, 3);
+$invoice4->process2(1, 2, 3);
+$invoice4->process3(1, 2, 3);
+$invoice4->process4(1, 2, 3);
+$invoice4->process5(1, 2, 3);
 echo '<br>';
 
 require_once $direc . '\Invoice\Invoice5.php';
@@ -531,11 +537,8 @@ echo '<hr>';
 
 
 // Anonymous_Classes
-$obj = new class(1,2,3) {
-    public function __construct(public int $x, public int $y, public int $z)
-    {
-        
-    }
+$obj = new class(1, 2, 3) {
+    public function __construct(public int $x, public int $y, public int $z) {}
 };
 var_dump($obj);
 var_dump(get_class($obj));
@@ -546,7 +549,7 @@ function foo($obj)
 }
 
 require_once $direc . '\AnonymousClasses\ClassAB.php';
-$obj2 = new ClassAB(1,2);
+$obj2 = new ClassAB(1, 2);
 var_dump($obj2->bar());
 var_dump($obj2->bar2());
 echo '<hr>';
@@ -620,28 +623,28 @@ echo '<hr>';
  * want to provide some additional information about the argument or return type
  */
 
- /**
-  * @throws indicates what excepition or exceptions are expected to be 
-  * thrown by this method or the function
-  */
+/**
+ * @throws indicates what excepition or exceptions are expected to be 
+ * thrown by this method or the function
+ */
 
-  /**
-   * @var used to document the type of the properties, variables and constants
-   * these var tage is specially usefull when working with loops if u are looping
-   * over a collection or an arrray of objects where each element is an object
-   * of some class you can type hint that using the var tag
-   */
+/**
+ * @var used to document the type of the properties, variables and constants
+ * these var tage is specially usefull when working with loops if u are looping
+ * over a collection or an arrray of objects where each element is an object
+ * of some class you can type hint that using the var tag
+ */
 
-   /**
-    * @property this allow a class to know which magic properties are available
-    * @method this allow a class to know which magic methods are available
-    * with help of this tags you can speceify what properties and methods
-    * are avilable in this class (magic properties and methods)
-    * @property-read int $y this property is only for read
-    * @property-write int $x this property is only for write
-    * @property this gives avialble for both read and write
-    * @method int foo(string x)
-    */
+/**
+ * @property this allow a class to know which magic properties are available
+ * @method this allow a class to know which magic methods are available
+ * with help of this tags you can speceify what properties and methods
+ * are avilable in this class (magic properties and methods)
+ * @property-read int $y this property is only for read
+ * @property-write int $x this property is only for write
+ * @property this gives avialble for both read and write
+ * @method int foo(string x)
+ */
 
 
 // 52-Object_Cloning_Clone_Magic_Method

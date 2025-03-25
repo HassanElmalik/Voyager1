@@ -26,8 +26,8 @@ class Transaction
         $this->amount = $amount; 
         $this->description = $description; 
 
-        var_dump(Status::STATUS_DECLINED);
-        $this->setStatus(Status::STATUS_PENDING);
+        var_dump(Status::DECLINED);
+        $this->setStatus(Status::PENDING);
 
         self::$count2 ++;
     }
