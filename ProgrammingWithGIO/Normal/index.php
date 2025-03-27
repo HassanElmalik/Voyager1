@@ -477,7 +477,7 @@ Line 3 ' "
 TEXT;
 echo nl2br($text);
 echo '<hr>';
- 
+
 //-------------------------------------------------------------------
 //10-PHP_Null_Data_Type_-_Full_PHP_8_Tutorial
 echo "<u><h3>Lesson 10</u></h3>";
@@ -485,6 +485,8 @@ echo "<u><h3>Lesson 10</u></h3>";
 // null constant
 $x = null;
 echo $x . '<br>';
+echo "when echoing something out it first cast into a string and when null cast to a string
+it will converted to an empty string , thats why we see nothing to the screen<br>";
 var_dump($x);
 var_dump(is_null($x));
 var_dump($x === null);

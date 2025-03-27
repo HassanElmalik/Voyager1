@@ -1,20 +1,6 @@
 <?php
-// declare(strict_types=1);
 
-echo disk_total_space("f:") / 1024 / 1024 / 1024 . "<br>";
-echo disk_free_space("f:") / 1024 / 1024 / 1024 . "<br>";
-
-// echo fread ("https://elzero.org/", 10000);
-
-// echo phpinfo();
-
-// echo "<pre>";
-// print_r ($_SERVER);
-// echo "</pre>";
-
-// echo rand(11,19);
-
-$x = rand(10, 20);
+$x = rand (10, 20);
 
 switch ($x) {
     case "10":
@@ -22,9 +8,14 @@ switch ($x) {
     case "20":
         break;
     default:
-        echo $x;
+    echo $x;
 }
 echo "<br>";
+
+$y = rand (11,19);
+echo $y;
+echo "<hr>";
+//-----------------------------------------------------
 
 $friends = ["Osama", "Ahmed", "Sayed", "Ibrahim"];
 
@@ -33,11 +24,12 @@ $friends = ["Osama", "Ahmed", "Sayed", "Ibrahim"];
 // Ahmed
 
 echo $friends[rand(0, 3)];
-echo "<br>";
+echo "<hr>";
+//------------------------------------------------------
 
 $num1 = 11.5; // 11
 $num2 = 9.4898; // 9.5
-$num3 = -7.5; // -7
+$num3 = (-7.5); // -7
 
 echo round($num1, 0, PHP_ROUND_HALF_DOWN);
 echo "<br>";
@@ -45,29 +37,29 @@ echo round($num2, 1);
 echo "<br>";
 echo round($num3, 0, PHP_ROUND_HALF_DOWN);
 echo "<br>";
+echo floor(-7.5);
+echo "<hr>";
+//------------------------------------------------------
 
-$x = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+echo 1;
+$x = filter_list();
 
-function rounding(array $x)
-{
-    foreach (array_keys($x) as $y) {
-
-        if ($y) {
-            echo $x[$y];
-            echo '<br>';
-        }
-    }
-}
-// echo count($x) -1;
-
-rounding($x);
-
-echo mt_rand() / mt_getrandmax();
+$y= [257,258,259,272,277,273,274,275,
+276,513,514,515,522,516,517,518,519,520,523,1024]; 
+$z = array_keys($x);
 
 echo "<pre>";
-print_r(filter_list());
+print_r(array_replace($z,$y));
+print_r($z);
+echo "<pre>";
+
+echo "<pre>";
+print_r($x);
 echo "</pre>";
 
+// foreach (array_keys($x) as $y){
+//     echo $y , '<br>';
+// };
 // Array
 // (
 //   [257] => int
@@ -103,5 +95,29 @@ $x->process();
 var_dump($x);
 
 echo '</pre>';
+echo "<hr>";
 
 //-------------------------------------------
+
+echo intdiv(14,5) , '<br>';
+echo 11.5 % 5 , '<br>';
+echo gettype(11.5 % 5) , '<br>';
+echo fmod(11.5,5), '<br>';
+// $x = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+
+// function rounding(array $x)
+// {
+//     foreach (array_keys($x) as $y) {
+
+//         if ($y) {
+//             echo $x[$y];
+//             echo '<br>';
+//         }
+//     }
+// }
+// echo count($x) -1;
+
+// rounding($x);
+
+// echo mt_rand() / mt_getrandmax();
+echo gettype(fmod(11.5,5)) , '<br>';
