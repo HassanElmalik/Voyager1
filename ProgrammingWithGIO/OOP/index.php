@@ -34,7 +34,7 @@ echo '<hr>';
 
 // 35-PHP_Docker_Tutorial_-_Nginx_-_PHPFPM_VS_Apache_-_Full_PHP_8_Tutorial
 echo "<h3><u>Lesson 35 \"PHP Docker Tutorial Nginx PHP-FPM VS Apache\"</u></h3>";
-echo "<pre>";
+
 echo "docker vs exampp,
 exampp is good for local develop , but its not meant for production , this will make issues if your loacl inviroment
 is diffn from your production inviroment and what works in your loacl might not work in production and vice versa
@@ -79,7 +79,7 @@ so would u use nginx with php-fpm instead of apache? , it realy depends on ur ap
 work with apache u dont have to switch to nginx unless u facing some issues and want to try nginx but usually its not worth the 
 time u need to spend to switch from apache to nginx. <br> ";
 // print_r ($_SERVER);
-echo "</pre>";
+
 echo '<hr>';
 
 // ------------------------------------------------------------------------------------------------------------------------------
@@ -250,7 +250,6 @@ echo "<pre>";
 echo "<h3><u>Lesson 40-Object-Oriented-PHP Class-Constants</u></h3>";
 
 require_once $direc . '\Enums\Status.php';
-echo '<pre>';
 
 echo "class constants are alocated once per class and not per instance, which menas 
 that we dont need to have the instance of the class to access the class constants<br>",
@@ -258,8 +257,9 @@ that we dont need to have the instance of the class to access the class constant
 and keep refrencing all over the code , its better to move it to a class constant , so that way
 if you ever change it you only change it in one place, another use cases to define constants as 
 sort of enumeration or enums , the same i just did it for transaction , it allows you to not hardcode 
-this values, if you notice that u r hardcoding a peice of data , consider to change it to a constant";
+this values, if you notice that u r hardcoding a peice of data , consider replacing them with constants";
 
+echo '<pre>';
 echo Status::PAID;
 echo '<br>---------<br>';
 $transaction = new Transaction(1, 's'); // will print declined
@@ -280,8 +280,6 @@ echo '<hr>';
 // 41-Static_Properties_Methods_In_Object_Oriented_PHP_-_Full_PHP_8_Tutorial
 echo "<h3><u>Lesson 41-Static Properties Methods In Object Oriented PHP</u></h3>";
 
-echo '<pre>';
-
 echo "you dont actually need the objects to access the static methods and properties of the class
 because they not created and they not assosiated per object, they are created and they are asosiated
 on class basis , so they belong to class itself and not any particular object or instance, what that
@@ -291,12 +289,25 @@ and each one can have diffn values for those properties, you can think of static
 variables in a way thier values are shared across the objects, because they are not tide to a particular
 object or instance they tide to the class it self <br>",
 "Because the access of the static methods does not require an instance of the class and because they belong to the class itself and not to a particular
-object the variable \$this is not availabe in static method, so instead of using \$this variable u
+object the variable \$this is not availabe within the static method, so instead of using \$this variable u
 would have to use the self keyword , you cannot access non static objects statically and same applies to 
 methods<br>",
-"the use static properties and methods are generaly a bad practice , but there are some use cases where use
-statics come in handy , <br>";
+"the use static properties and methods is generaly considered a bad practice , but there are some use cases where use
+statics come in handy , one use case of static properties is to have some sort of counter as i did in this example or to cache values
+so it can often to be use to implement a technic called memoization which can spped up expensive operations by caching the results for 
+later access u might also come across a code that is using static property to implement a single tone pattern, we will talk about design 
+patterns later in the course , but single tone pattern maintain a single instance of a given class through out ur app excution
+i am only showing this to u , becuase u might come across a code that might emplement single tone pattern this way and it does not mean 
+its the right way, dependency injection is the right way , and we will talk about it in a more detail and about singlw tone pattern later 
+in this course so dont worry about it right now , another use case for static methods is to create some kind of utility methods that dont 
+really need instance of the class so maybe u had some kind of formater class that had some punch of methods to format ur currency and format 
+the amount or format the person value and so on, and it doesnot really depend on the object , so if those arenot tide to the object and they 
+dont need the instance of the class so it makes convinient for the devloper to access them , then u could use the static methods in that way 
+, another use case that u might see with static methods is with the factory pattern and we will talk about factory design pattern later as well 
+, but basically factory classess are responsible for creating objects of other classes and often developers implenting it using the static method 
+<br>";
 
+echo '<pre>';
 var_dump($transaction::$count);
 var_dump(Transaction::$count);
 var_dump(Transaction::$count2);
