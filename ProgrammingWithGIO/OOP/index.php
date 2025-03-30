@@ -7,16 +7,16 @@ echo "in procedural programming an application or a program is divided into a se
 so you basically have some sort of global state or variables and then bunch of functions that works with those variables , you could also have functions that call other functions 
 and so on ,in object orinted programming however you are basically combine or bundleing related functions and variables into something called a class from which you create objects,
 you could access variables and call function of the object if they publically avilable , we refer to the variables of the object or the class as properties ,and the functions as methods
-, so what actually is a class , and what is the difference betwn the class and an object,in simble term basically , a class is a blueprint, and an object is something that u create or build
+, so what exactly is a class , and what is the difference betwn the class and an object,in simble term basically , a class is a blueprint, and an object is something that u create or build
 from that blueprint, you can have many objects of the same class, but each of these objects can be diffn , lets take a house as an example, the blueprint of the house colud be ur class ,
 and the house itself could be the object, you colud have multible houses based in the same blueprint with slite diffns, in other words objects are simpley instances of the classes,
 the main advantage of oop is the ability to structure ur code in a better way which is easier to maintain , test , extend, debug, and so on, there are some use cases for a procedural programming
 it might be a good pick for a small project that does not require many features or much maintinance and you are the only one working on it or maybe its a simple cron script, but as ur code grows 
-and ur project requirments increase you will find ur self in a trap where modifing,maintaing and extending that code becomes diffculte espicially when u working with teams,this is where oop can
+and ur project requirments increase you will find ur self in a trap where modifing,extending and maintaining that code becomes diffculte espicially when u working with teams,this is where oop can
 help u <br> does OOP means MVC? No and this is the miss conception that i see alot , and oop php is not automatically implies mvc , oop is a programming paradigm , while mvc is an arcitucture pattern
 of modern view controller which uses the oop principles.<br>";
 
-echo "OOP have 4 main principles are: <b>Encapsulation-Abstraction-Inheritance-Polymorphism</b> <br>";
+echo "OOP has 4 main principles are: <b>Encapsulation-Abstraction-Inheritance-Polymorphism</b> <br>";
 echo "what we will learn in this section: ";
 echo "<li>Objects & Classes</li>";
 echo "<li>Magic Methods</li>";
@@ -34,22 +34,22 @@ echo '<hr>';
 
 // 35-PHP_Docker_Tutorial_-_Nginx_-_PHPFPM_VS_Apache_-_Full_PHP_8_Tutorial
 echo "<h3><u>Lesson 35 \"PHP Docker Tutorial Nginx PHP-FPM VS Apache\"</u></h3>";
-echo "<pre>";
+
 echo "docker vs exampp,
-exampp is good for local develop , but its not meant for production , this will make issues if your loacl inviroment
-is diffn from your production inviroment and what works in your loacl might not work in production and vice versa
-this is where docker can help you , this will make sure that your loac devlopment inviroment is very close to your production
+exampp is good for local develop , but it lacks of features and also its not meant for production , this can introduce some issues 
+if your loacal inviroment is diffn from your production inviroment and what works in your loacl might not work in production and 
+vice versa this is where docker can help you , you can be sure that your loacl devlopment inviroment is very close to your production
 inviroment , docker will also allows you to work in multiple projects at the same time even if your php versions are
 diffn , it basicly let you bundel your development inviroment in isolated containers that are portable , this 
 is hard to achive with exampp if sometimes it is impossible, for example say that you have three clients
 or working with three diffn projects and all three of those use 3 diffn versions of php
 as well as some other services , docker can be used to set up this easily you can containeries your dependcies
-and your entire project which then can be easily shared deleted or ported over to another os as shown here we 
+and your entire project which then can be easily shared deleted or ported over to another OS as shown here we 
 pundeling every thing that a project needs in a single container so we have a container that have php webserver 
 database and so on this can work probably but its not ideal because you coupling all your services into a single container , 
-you can split this to a multiple containers and have a separate cotainer for a web server , a separate container fo a php, 
+you can split this to a multiple containers and have a separate cotainer for a web server , a separate container for a php, 
 a separate container for a database ,and so on , decoupling the services is always good because you can easily swap on 
-containers out with another instead of messing with the container that have everything
+containers out with another instead of messing with the container that contain everything
 i do want to cover some basics and explain the terms that you will hear and use when working with docker , 
 like container images docker-file docker-compose and so on , a container as mentioned befor basicly bundels up the 
 application with all of its dependceies and nessecary configration you could have all your dependcies installed under one container 

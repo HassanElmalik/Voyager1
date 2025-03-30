@@ -1909,6 +1909,7 @@ echo "<h3><u>Lesson 67</u></h3>";
 $merge_one = ["One" => "PHP" , "Two" => "CSS", "Three" => "Javascript"];
 $merge_two = ["One" => "HTML", "Four" => "Python", "Five" => "Python"];
 echo '<pre>';
+echo "<u>array merge</u><br>";
 print_r(array_merge($merge_one, $merge_two));
 // print_r($merge_one);
 $merge_three = [10 => "PHP" , 20 => "CSS", 30 => "Javascript"];
@@ -1917,6 +1918,7 @@ print_r(array_merge($merge_three, $merge_four));
 
 $main = ["One" => "PHP" , "Two" => "CSS", "Three" => "Javascript"];
 $replace = ["One" => "HTML", "Four" => "Python"];
+echo "<u>array replace</u><br>";
 print_r(array_replace($main,$replace));
 // print_r($main);
 print_r(array_replace($merge_three,$merge_four));
@@ -1926,6 +1928,7 @@ $replace = ["Five", "Four"];
 print_r(array_replace($main,$replace));
 
 $nums = ["A", "B", "C", "D", "E"];
+echo "<u>array rand</u><br>";
 echo array_rand($nums);echo '<br>';
 echo $nums[array_rand($nums)] . "<br>";
 
@@ -1934,6 +1937,7 @@ foreach(array_rand($nums,3) as $num){
     echo($nums[$num]) . '<br>';
 }
 
+echo "<u>shuffle</u><br>";
 shuffle($nums);
 print_r($nums);
 echo '</pre>';echo '<hr>';
@@ -2025,12 +2029,19 @@ $chars_with_string_keys = ["A" => 1, "B" => 2, "C" => 3];
 $chars_with_numeric_keys = [10 => 1, 20 => 2, 30 => 3];
 
 echo '<pre>';
+echo '1';
 print_r(array_slice($chars, 2));
+echo '2';
 print_r(array_slice($chars, -4));
+echo '3';
 print_r(array_slice($chars, 2, 3));
+echo '4';
 print_r(array_slice($chars, 2, -1));
+echo '5';
 print_r(array_slice($chars_with_string_keys, 0, 2));
+echo '6';
 print_r(array_slice($chars_with_numeric_keys, 0, 2));
+echo '7';
 print_r(array_slice($chars_with_numeric_keys, 0, 2, true));
 print_r($chars);
 
