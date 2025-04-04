@@ -9,10 +9,10 @@
     Property: Value;
     PropertyTwo: Value
 } */
-p {
+/* p {
     color: red;
     font-size: 40px;
-}
+} */
 
 .my-p {
     color: blue;
@@ -51,12 +51,12 @@ h3 {
 }
 
 .div1 {
-    background-color: red;
     /* Color Name */
-    background-color: rgb(0, 0, 0, 50%);
+    background-color: red;
     /* Red Green Blue AlphaChannel*/
-    background-color: #ff0000;
+    background-color: rgb(0, 0, 0, 50%);
     /* Color Hex Code */
+    background-color: #ff0000;
     background-image: url("imgs/0x0.webp");
     background-size: 200px;
     background-repeat: no-repeat;
@@ -81,7 +81,7 @@ h3 {
 .div-1 {
     background-image: url("imgs/0x0.webp");
     background-attachment: fixed;
-    background-position: left center;
+    background-position: center;
     /* background-position: 100px 50px; */
     /* background-position: 100% 20%;  */
     background-repeat: no-repeat;
@@ -2083,7 +2083,7 @@ two times between the elements one margin for the left element and one for the r
 }
 
 .flex7-six {
-    order:-1;
+    order: -1;
 }
 
 /* --------------------------------------------------------------------------------- */
@@ -2244,12 +2244,3 @@ two times between the elements one margin for the left element and one for the r
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     float: right;
 }
-
-
-
-
-
-
-
-
-
