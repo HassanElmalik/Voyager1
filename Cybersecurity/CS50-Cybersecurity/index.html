@@ -11,7 +11,7 @@
 
     <h1><u>Introduction</u></h3>
 
-    <p>you will learn how to secure data , systems and software against todays threats,
+    <p>you will learn how to secure your accounts, data , systems and software against todays threats,
         and recognize and evaluates tomorrow's as well in home and at work , you learn
         how to preserve ur own privacy , you learn how to view cybersecurity , not in
         absolute terms but relative a function of risks and rewards for an adversiary
@@ -21,36 +21,56 @@
     <hr>
 
     <!-- -------------------------------------- -->
-    <h1><u>Lecture 0 - Securing Accounts</u></h3>
+    <h3><u>Lecture 0 - Securing Accounts</u></h3>
     
-    <dl>
-        <dt>Authentication</dt>
-        <dd>refers to this process digitally of proving 
-            who u are but that alone isnt nessecarly enough
-            to keep a system secure 
-        </dd>
-        <dt>Authorization</dt>
-    </dl>
-    
-    <p>usernames -- passowrds </p>
-    <p>Dictoinary Attacks -- Brute-Force Attacks</p>
-    <p><b>NIST</b>=> National Institute Of Standards and Technology</p>
-    <dl>
-        <dt>Two-Factor Authentication (2FA)</dt>
-        <dd>Knowledge <br>
-            Possession => One-Time Password (OTP) <br>
-            Inherence</dd>
-    </dl>
-        <p>SIM Swapping</p>
-        <p>Keylogging</p>
-        <p>Credential Stuffing</p>
-        <p>Social Engineering</p>
-        <p>Phishing</p>
-        <p>Machine-in-the-Middle Attacks</p>
-        <p><b>Defences like:</b></p>
-        <p>Single Sign-On (SSO)</p>
-        <p>Password Managers</p>
-        <p>PassKeys</p>
+    <ul>
+        <li>Authentication
+            <ul>
+                <li>
+                    refers to this process digitally of proving who u are but that alone isnt nessecarly enough to keep a system secure 
+                </li>
+            </ul>
+        </li>
+        <li>Authorization</li>
+        <li>Usernames</li>
+        <li>Passowrds</li>
+        <li>Dictoinary Attacks</li>
+        <li>Brute-Force Attacks</li>
+        <li><b>NIST</b>=> National Institute Of Standards and Technology
+            <ul>
+                <li>Memorized secrets SHALL be at leat 8 characters in lenght.</li>
+                <li>Verifiers SHOULD permit subescriber-chosen memorized secrets at least 64 characters in lenght. All printing ASCII characters as well as the space character SHOULD be acceptable in memorized secrets. Unicode characters SHOULD be accepted as well.</li>
+                <li>Verifiers SHALL compare the prospective against a list that cotains values known to be commonly-used, expected, or compromised.
+                </li>
+                    <ul>
+                        <li>Passowrds obtained from previous breach corpuses.</li>
+                        <li>Dictionary words.</li>
+                        <li>Repetitive or sequential characters (e.g. 'aaaaaaaa', '1234abcd').</li>
+                        <li>Context-specific words, such as the name of the service, the username, and derivatives thereof.</li>
+                    </ul>
+                <li>Memorized secrets verifiers SHALL NOT permit the subescriber to store a "hint" that is accessible to an unauthenticated claimant. Verifiers SHALL NOT prompt subescribers to use specific types of information (e.g., "What was the name of your first pet?") when choosing memorized secrets.</li>
+                <li>Verifiers SHOULD NOT require memorized secrets to be changed arbitrary (e.g. periodically).</li>
+                <li>Verifiers SHALL implement a rate-limiting mechanism that effectively limits the number of failed authentication attempts that can be made on the subscriber's account.</li>
+            </ul>
+        </li>
+        <li>Two-Factor Authentication (2FA) -- Multi-Factor Authentication
+            <ul>
+                <li>Knowledge</li>
+                <li>Possession => One-Time Password (OTP) </li>
+                <li>Inherence</li> 
+            </ul>
+        </li>
+        <li>SIM Swapping</li>
+        <li>Keylogging</li>
+        <li>Credential Stuffing</li>
+        <li>Social Engineering</li>
+        <li>Phishing</li>
+        <li>Machine-in-the-Middle Attacks</li>
+        <li><b>Defences like:</b></li>
+        <li>Single Sign-On (SSO)</li>
+        <li>Password Managers</li>
+        <li>PassKeys</li>
+    </ul>
     <hr>
     
     <!-- -------------------------------------- -->
