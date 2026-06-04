@@ -357,3 +357,140 @@ print(a)
 
 #---------------------------------------------------------------------------------------------------
 
+a= ["Hassan", "Ahmed", 2, 3]
+
+print(a);
+a.append("hussein")
+a.append(True)
+print(a);
+
+b = ["wael","said", False]
+a.append(b)
+print(a);
+print(a[6]);
+print(a[6][1]);
+
+c=["One","Two"]
+
+a.extend(b)
+a.extend(c)
+print(a);
+
+a = ["one", 1, "Hassan", 5, 4 , "Hassan", 2, 3 , "Hassan"]
+a.remove("Hassan")
+a.remove("Hassan")
+print(a)
+
+a = [1, 10 ,9, -10, 50, 5]
+a.sort()
+print(a)
+a.sort(reverse=True)
+print(a)
+
+a= ["H", "N", "L", "A"]
+a.sort()
+print(a)
+
+a = ["one", 1, "Hassan", 5, 4 , "Hassan", 2, 3 , "Hassan"]
+a.reverse()
+print(a)
+
+#---------------------------------------------------------------------------------------------------
+
+a= ["H", "N", "L", "A"]
+a.clear()
+print(a)
+
+a= ["H", "N", "L", "A"]
+b = a.copy()
+print(a)
+print(b)
+a.append("MH")
+print(a)
+print(b)
+
+a=[1,2,3,1,4,1,6,1,7]
+print(a.count(1))
+
+a = ["one", 1, "Hassan", 5, 4 , "Hassan", 2, 3 , "Hassan"]
+print(a.index("Hassan"))
+# print(a.index("Hassa"))
+
+a.insert(0,"Test")
+a.insert(-1,"Test")
+print(a)
+
+print(a.pop(3))
+print(a.pop(-1))
+print(a)
+
+#---------------------------------------------------------------------------------------------------
+
+a=("Hassan", "Elmalik")
+b="Hassan", "Elmalik"
+print(a)
+print(b)
+print(type(a))
+print(type(b))
+
+print(a[0])
+print(a[1])
+print(a[-1])
+
+# a[1] = "H"
+# print(a)
+
+a= ("Hassan","Hassan",1,10.5,True)
+print(a[1])
+print(a[-1])
+
+#---------------------------------------------------------------------------------------------------
+
+a=("Hassan")
+b="Hassan"
+print(type(a))
+print(type(b))
+print(len(a))
+print(len(b))
+
+a=("Hassan",)
+b="Hassan",
+print(type(a))
+print(type(b))
+print(len(a))
+print(len(b))
+
+a= ("Hassan","Hassan",1,10.5,True)
+b= (1,2,3)
+c=a+b
+d= a + (20,False,"Elmalik") + b
+print(c)
+print(d)
+
+a="Hassan"
+b=[1,2]
+c=(10,20)
+print(a*5)
+print(b*5)
+print(c*5)
+
+a=(1,2,3,1,5,6,1,6,7,1)
+print(a.count(1))
+
+print(a.index(3))
+print("the postions of 3 is index number: {:d}".format(a.index(3)))
+print(f"the postions of 3 is index number: {a.index(3)}")
+
+a=("A", "B", "C")
+x, y, z = a
+print(x)
+print(y)
+print(z)
+
+a=("A", "B", 4, "C")
+x, y,_, z = a
+print(x)
+print(y)
+print(z)
+
+#---------------------------------------------------------------------------------------------------
