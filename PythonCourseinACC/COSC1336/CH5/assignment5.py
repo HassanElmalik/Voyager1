@@ -4,12 +4,10 @@ def display_menu():
     print("\nChoose from the menu:\n1) Name formatter\n2) Average Calculator\n3) Password Checker\n4) Quit")
 
 # Step 2 – Tool #1: Name Formatter
-
 def format_name(firstName,lastName):
     return firstName + " " + lastName
 
 # Step 3 – Tool #2: Average Calculator
-
 def calculate_average(num1,num2,num3):   
     return (num1 + num2 + num3)/3
 
