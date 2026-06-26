@@ -1,0 +1,1 @@
+Name record is: g, Category record is: h, Score record is: 4, Name record is: mido, Category record is: nabil, Score record is: 4, Name record is: hassan, Category record is: r, Score record is: 4, 

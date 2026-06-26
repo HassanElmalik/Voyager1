@@ -1,0 +1,2 @@
+Name record is: has, Category record is: ew, Score record is: 4, 
+Name record is: as, Category record is: we, Score record is: 6, 
